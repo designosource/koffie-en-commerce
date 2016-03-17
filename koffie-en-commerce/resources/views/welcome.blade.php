@@ -38,7 +38,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Koffie en Commerce</div>
+                <div class="title">Koffie en Commerce.</div>
             </div>
         </div>
     </body>
