@@ -14,9 +14,7 @@ class TblCategory extends Migration
     {
         Schema::create('tbl_category', function (Blueprint $table) {
             $table->increments('category_id');
-            $table->integer('category_subcategory_id')->foreign('category_subcategory_id')->references('subcategory_id')->on('tbl_subcategory');
             $table->string('category_name');
-            $table->timestamps();
         });
     }
 
