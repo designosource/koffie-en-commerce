@@ -16,8 +16,7 @@ class TblVideo extends Migration
             $table->increments('video_id');
             $table->integer('video_category_id')->foreign('video_category_id')->references('category_id')->on('tbl_category');
             $table->string('video_title');
-            $table->string('video_description')->unique();
-            $table->rememberToken();
+            $table->string('video_description');
             $table->timestamps();
         });
     }
