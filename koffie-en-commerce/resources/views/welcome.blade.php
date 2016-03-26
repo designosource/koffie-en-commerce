@@ -39,6 +39,7 @@
         <div class="container">
             <div class="content">
                 <div class="title">Koffie en Commerce.</div>
+                <div>{{$data}}</div>
             </div>
         </div>
     </body>
