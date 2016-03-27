@@ -16,6 +16,21 @@ Route::get('/', [
     'uses' => 'HomeController@index'
 ]);
 
+Route::get('/videos', [
+	'as' => 'videos_index',
+	'uses' => 'VideoController@index'
+]);
+
+Route::get('/video/{id}', [
+	'as' => 'video_detail',
+	'uses' => 'VideoController@detail'
+]);
+
+Route::get('/speaker/{id}', [
+	'as' => 'speaker_detail',
+	'uses' => 'SpeakerController@detail'
+]);
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
