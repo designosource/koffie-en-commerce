@@ -1,0 +1,66 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'D:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'readable-stream/transform',
+1 verbose cli   '--no-bin-links' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose node symlink D:\Program Files\nodejs\\node.exe
+5 verbose readDependencies using package.json deps
+6 verbose cache add [ 'readable-stream/transform', null ]
+7 verbose cache add name=undefined spec="readable-stream/transform" args=["readable-stream/transform",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'readable-stream/transform',
+8 verbose parsed url   path: 'readable-stream/transform',
+8 verbose parsed url   href: 'readable-stream/transform' }
+9 silly lockFile 430afb73-readable-stream-transform readable-stream/transform
+10 verbose lock readable-stream/transform C:\Users\Ian\AppData\Roaming\npm-cache\430afb73-readable-stream-transform.lock
+11 info maybeGithub Attempting readable-stream/transform from git://github.com/readable-stream/transform
+12 silly lockFile b9d3c0b9-ub-com-readable-stream-transform git://github.com/readable-stream/transform
+13 verbose lock git://github.com/readable-stream/transform C:\Users\Ian\AppData\Roaming\npm-cache\b9d3c0b9-ub-com-readable-stream-transform.lock
+14 verbose addRemoteGit [ 'git://github.com/readable-stream/transform', 'master' ]
+15 warn `git config --get remote.origin.url` returned wrong result (git://github.com/readable-stream/transform)
+16 verbose git clone git://github.com/readable-stream/transform Cloning into bare repository 'C:\Users\Ian\AppData\Roaming\npm-cache\_git-remotes\git-github-com-readable-stream-transform-b9d3c0b9'...
+16 verbose git clone git://github.com/readable-stream/transform fatal: remote error:
+16 verbose git clone git://github.com/readable-stream/transform   Repository not found.
+17 silly lockFile b9d3c0b9-ub-com-readable-stream-transform git://github.com/readable-stream/transform
+18 silly lockFile b9d3c0b9-ub-com-readable-stream-transform git://github.com/readable-stream/transform
+19 info maybeGithub Attempting readable-stream/transform from git+ssh://git@github.com:readable-stream/transform
+20 silly lockFile 31400a7b-ub-com-readable-stream-transform git@github.com:readable-stream/transform
+21 verbose lock git@github.com:readable-stream/transform C:\Users\Ian\AppData\Roaming\npm-cache\31400a7b-ub-com-readable-stream-transform.lock
+22 verbose addRemoteGit [ 'git@github.com:readable-stream/transform', 'master' ]
+23 warn `git config --get remote.origin.url` returned wrong result (git@github.com:readable-stream/transform)
+24 error git clone git@github.com:readable-stream/transform Cloning into bare repository 'C:\Users\Ian\AppData\Roaming\npm-cache\_git-remotes\git-github-com-readable-stream-transform-31400a7b'...
+24 error git clone git@github.com:readable-stream/transform Warning: Permanently added 'github.com,192.30.252.128' (RSA) to the list of known hosts.
+24 error git clone git@github.com:readable-stream/transform ERROR: Repository not found.
+24 error git clone git@github.com:readable-stream/transform fatal: Could not read from remote repository.
+24 error git clone git@github.com:readable-stream/transform
+24 error git clone git@github.com:readable-stream/transform Please make sure you have the correct access rights
+24 error git clone git@github.com:readable-stream/transform and the repository exists.
+25 silly lockFile 31400a7b-ub-com-readable-stream-transform git@github.com:readable-stream/transform
+26 silly lockFile 31400a7b-ub-com-readable-stream-transform git@github.com:readable-stream/transform
+27 silly lockFile 430afb73-readable-stream-transform readable-stream/transform
+28 silly lockFile 430afb73-readable-stream-transform readable-stream/transform
+29 error addLocal Could not install readable-stream/transform
+30 error Error: ENOENT, stat 'D:\Data\documents\GitHub\designosource\koffie-en-commerce\koffie-en-commerce\readable-stream\transform'
+31 error If you need help, you may report this *entire* log,
+31 error including the npm and node versions, at:
+31 error     <http://github.com/npm/npm/issues>
+32 error System Windows_NT 6.2.9200
+33 error command "D:\\Program Files\\nodejs\\\\node.exe" "D:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "readable-stream/transform" "--no-bin-links"
+34 error cwd D:\Data\documents\GitHub\designosource\koffie-en-commerce\koffie-en-commerce
+35 error node -v v0.10.33
+36 error npm -v 1.4.28
+37 error path D:\Data\documents\GitHub\designosource\koffie-en-commerce\koffie-en-commerce\readable-stream\transform
+38 error code ENOENT
+39 error errno 34
+40 verbose exit [ 34, true ]

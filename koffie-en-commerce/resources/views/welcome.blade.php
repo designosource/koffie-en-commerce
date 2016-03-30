@@ -1,45 +1,22 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Koffie en Commerce</title>
+@extends('layout.master')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
+@section('title', 'Home')
 
-        <style>
-            html, body {
-                height: 100%;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 300;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Koffie en Commerce.</div>
-            </div>
-        </div>
-    </body>
-</html>
+@section('content')
+    <div class="container">
+        <h1>Home</h1>
+        <pre>{{var_dump($data)}}</pre>
+        <ul>
+            <li>
+                <a href="{{action('VideoController@index')}}">
+                    <b>Video Index</b> /videos
+                </a>
+            </li>
+            <li>
+                <a href="{{action('SpeakerController@detail',['id' => 1])}}">
+                    <b>Speaker Detail</b> /speaker/1
+                </a>
+            </li>
+        </ul>
+    </div>
+@endsection
