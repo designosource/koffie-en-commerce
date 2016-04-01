@@ -17,19 +17,24 @@ class CategorySeeder extends Seeder
 
         $category = [
             [
-                'category_name' => 'financieren'
+                'category_name' => 'financieren',
+                'category_description' => 'description'
             ],
             [
-                'category_name' => 'produceren'
+                'category_name' => 'produceren',
+                'category_description' => 'description'
             ],
             [
-                'category_name' => 'vermarkten'
+                'category_name' => 'vermarkten',
+                'category_description' => 'description'
             ],
             [
-                'category_name' => 'juridisch scherpstellen'
+                'category_name' => 'juridisch scherpstellen',
+                'category_description' => 'description'
             ],
             [
-                'category_name' => 'internationaliseren'
+                'category_name' => 'internationaliseren',
+                'category_description' => 'description'
             ],
         ];
 

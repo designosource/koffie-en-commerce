@@ -18,6 +18,7 @@ class TblSpeaker extends Migration
             $table->string('speaker_name');
             $table->string('speaker_title');
             $table->string('speaker_email');
+            $table->string('speaker_image');
             $table->string('speaker_description');
             $table->timestamps();
         });
