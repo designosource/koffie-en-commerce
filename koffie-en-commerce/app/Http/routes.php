@@ -31,6 +31,12 @@ Route::get('/speaker/{id}', [
 	'uses' => 'SpeakerController@detail'
 ]);
 
+Route::get('/category/{id}', [
+	'as' => 'category_detail',
+	'uses' => 'CategoryController@category'
+]);
+
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes

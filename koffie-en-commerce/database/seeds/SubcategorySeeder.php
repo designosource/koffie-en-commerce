@@ -13,54 +13,54 @@ class SubcategorySeeder extends Seeder
     {
         DB::table('tbl_subcategory')->delete();
 
-        $category = [
+        $subcategory = [
             [
-                'subcategory_category_id' => 1,
+                'fk_category_id' => 1,
                 'subcategory_name' => 'subcategory 1',
-                'category_description' => 'description'
+                'subcategory_description' => 'description'
             ],
             [
-                'subcategory_category_id' => 1,
+                'fk_category_id' => 1,
                 'subcategory_name' => 'subcategory 2',
-                'category_description' => 'description'
+                'subcategory_description' => 'description'
             ],
             [
-                'subcategory_category_id' => 2,
+                'fk_category_id' => 1,
                 'subcategory_name' => 'subcategory 3',
-                'category_description' => 'description'
+                'subcategory_description' => 'description'
             ],
             [
-                'subcategory_category_id' => 3,
+                'fk_category_id' => 1,
                 'subcategory_name' => 'subcategory 4',
-                'category_description' => 'description'
+                'subcategory_description' => 'description'
             ],
             [
-                'subcategory_category_id' => 3,
+                'fk_category_id' => 1,
                 'subcategory_name' => 'subcategory 5',
-                'category_description' => 'description'
+                'subcategory_description' => 'description'
             ],
             [
-                'subcategory_category_id' => 4,
+                'fk_category_id' => 4,
                 'subcategory_name' => 'subcategory 6',
-                'category_description' => 'description'
+                'subcategory_description' => 'description'
             ],
             [
-                'subcategory_category_id' => 4,
+                'fk_category_id' => 4,
                 'subcategory_name' => 'subcategory 7',
-                'category_description' => 'description'
+                'subcategory_description' => 'description'
             ],
             [
-                'subcategory_category_id' => 5,
+                'fk_category_id' => 5,
                 'subcategory_name' => 'subcategory 8',
-                'category_description' => 'description'
+                'subcategory_description' => 'description'
             ],
             [
-                'subcategory_category_id' => 5,
+                'fk_category_id' => 5,
                 'subcategory_name' => 'subcategory 5',
-                'category_description' => 'description'
+                'subcategory_description' => 'description'
             ],
         ];
 
-        DB::table('tbl_category')->insert($category);
+        DB::table('tbl_subcategory')->insert($subcategory);
     }
 }

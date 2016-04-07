@@ -4,19 +4,21 @@
 
 @section('content')
 	<div class="container">
+        <div class="">
 		<h1>Video Detail</h1>
-        <ul>
-            <li>
-                <a href="{{action('VideoController@index')}}">
-                    <b>Video Index</b> /videos
-                </a>
-            </li>
-            <li>
-            	<a href="{{action('HomeController@index')}}">
-		            <b>Home</b> /
-		        </a>
-            </li>
-        </ul>
+            <ul>
+                <li>
+                    <a href="{{action('VideoController@index')}}">
+                        <b>Video Index</b> /videos
+                    </a>
+                </li>
+                <li>
+                    <a href="{{action('HomeController@index')}}">
+                        <b>Home</b> /
+                    </a>
+                </li>
+            </ul>
+        </div>
 
         <div class="">
             <ul>
@@ -38,27 +40,21 @@
         <div class="">
             <h4>Meer videos van {{$speaker->speaker_name}}</h4>
             <ul>
+                {{print_r($speaker)}}
                 @if(!empty($speaker->speaker_id))
-                    @for($i = 0; $i < count($speaker->speaker_video_id); $i++)
-                        {{"hello"}}
+                    @for($i = 0; $i < 3; $i++)
+                        {{$i}}
                     @endfor
                 @endif
             </ul>
         </div>
 
-        <!--categorieen-->
+        <!--categorieen of tags-->
         <div class="">
             <ul>
                 <li>
-                    <a href="/{{$category->category_id}}"></a>
+
                 </li>
-                @if(!empty($subcategory))
-                    @foreach($subcategory as $subc)
-                        <li>
-                            <a href=""></a>
-                        </li>
-                    @endforeach
-                @endif
             </ul>
         </div>
         <!--/categorieen-->

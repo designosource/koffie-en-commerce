@@ -18,23 +18,31 @@ class VideoController extends Controller
     }
 
     public function detail($id){
-        
+
+        // - - get video - -
         $data = DB::table('tbl_video')
             ->where('video_id', $id)
             ->first();
+
+        // - - get speaker info and video from speaker- -
         $speaker = DB::table('tbl_video')
             ->select('*')
-            ->where('speaker_video_id', 2)
-            ->join('tbl_speaker','tbl_speaker.speaker_id','=', 'tbl_video.video_id')
-            ->first();
-        $category = DB::table('tbl_category')
+            ->join('tbl_speaker','tbl_video.video_speaker_id','=', 'tbl_speaker.speaker_id')
+            ->where('video_id', $id)
+            ->get();
+
+        // - - get categories - -
+        /*$category= DB::table('tbl_video')
             ->select('*')
-            ->first();
+            ->join('tbl_category', 'tbl_video.video_category_id' ,'=', 'tbl_category.category_id')
+            ->join('tbl_subcategory', 'tbl_category.category_subcategory_id' ,'=', 'tbl_subcategory.subcategory_id')
+            ->where('video_id','=', $id)
+            ->get();*/
 
         return view('video/detail',[
             'data' => $data,
             'speaker' => $speaker,
-            'category' => $category,
+            //'category' => $category,
         ]);
     }
 }
