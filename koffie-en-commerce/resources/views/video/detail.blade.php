@@ -40,10 +40,9 @@
         <div class="">
             <h4>Meer videos van {{$speaker->speaker_name}}</h4>
             <ul>
-                {{print_r($speaker)}}
-                @if(!empty($speaker->speaker_id))
-                    @for($i = 0; $i < 3; $i++)
-                        {{$i}}
+                @if(!empty($vidspeaker))
+                    @for($i = 0; $i < count($vidspeaker); $i++)
+                        <li>{{$vidspeaker[$i]->video_title}}</li>
                     @endfor
                 @endif
             </ul>
@@ -51,10 +50,9 @@
 
         <!--categorieen of tags-->
         <div class="">
+            <p>{{$category->category_name}}</p>
             <ul>
-                <li>
 
-                </li>
             </ul>
         </div>
         <!--/categorieen-->
