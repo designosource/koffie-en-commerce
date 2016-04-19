@@ -16,7 +16,6 @@ class DatabaseSeeder extends Seeder
         $this->call(CategorySeeder::class);
         $this->call(UserSeeder::class);
         $this->call(SpeakerSeeder::class);
-        $this->call(SubcategorySeeder::class);
     	Model::unguard();
         $this->call(VideoSeeder::class);
         Model::reguard();

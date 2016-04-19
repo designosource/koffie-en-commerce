@@ -25,7 +25,7 @@
                 <li>{{$data->video_id}}</li>
                 <li><h2>{{$data->video_title}}</h2></li>
                 <li>{{$data->video_description}}</li>
-                <li><iframe src="{{$data->video_url}}" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <li><iframe src="{{"https://player.vimeo.com/video/".$data->video_url}}" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </ul>
         </div>
 
