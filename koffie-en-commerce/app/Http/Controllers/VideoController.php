@@ -36,18 +36,15 @@ class VideoController extends Controller
             ->first();
 
         // - - get categories - -
-        $category = DB::table('tbl_video')
-            ->join('tbl_category','tbl_video.video_category_id', '=', 'tbl_category.category_id')
-            ->where('video_id','=', $id)
-            ->first();
-        $subcategory = DB::table('tbl_subcategory')->get();
+        $category = DB::table('tbl_category')
+            ->select('*')
+            ->get();
 
         return view('video/detail',[
             'data' => $data,
             'vidspeaker' => $vidspeaker,
             'speaker' => $speaker,
             'category' => $category,
-            'subcategory' => $subcategory,
         ]);
     }
 }
