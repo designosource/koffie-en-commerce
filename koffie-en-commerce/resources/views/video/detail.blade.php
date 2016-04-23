@@ -3,7 +3,7 @@
 @section('title', 'User Detail')
 
 @section('content')
-    <link rel="stylesheet" type="text/css" href="{{ asset("/css/vimeostyle.css") }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset("css/vimeostyle.css") }}">
 	<div class="container">
         <div class="">
 		<h1>Video Detail</h1>
@@ -23,9 +23,7 @@
 
         <div class="">
             <ul>
-                <li>{{$data->video_id}}</li>
                 <li><h2>{{$data->video_title}}</h2></li>
-                <li>{{$data->video_description}}</li>
                 <!--
                     autopause	Enables or disables pausing this video when another video is played. Defaults to 1.
                     autoplay	Play the video automatically on load. Defaults to 0. Note that this won’t work on some devices.
@@ -40,6 +38,7 @@
                 <li>
                     <iframe src="{{"https://player.vimeo.com/video/".$data->video_url."?portrait=0&color=30D0B1&title=0&controls=0"}}" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </li>
+                <li>{{$data->video_description}}</li>
             </ul>
         </div>
 
@@ -64,9 +63,10 @@
 
         <!--categorieen of tags-->
         <div class="">
-
             <ul>
-
+                @foreach($category as $cat)
+                    <li>{{$cat->category_name}}</li>
+                @endforeach
             </ul>
         </div>
         <!--/categorieen-->
