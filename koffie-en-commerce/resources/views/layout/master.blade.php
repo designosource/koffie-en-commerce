@@ -4,8 +4,7 @@
 	<meta charset="UTF-8">
 	<title>K&C - @yield('title')</title>
 	@yield('seo')
-	<link rel="stylesheet" type="text/css" href="../koffie-en-commerce/public/css/app.css">
-	<link rel="stylesheet" type="text/css" href="../../../public/css/vimeostyle.css">
+	<link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
 </head>
 <body>
 	@yield('content')

@@ -10,10 +10,26 @@ use App\Http\Requests;
 
 class VideoController extends Controller
 {
-    public function index(){
-        $data = DB::table('tbl_video')->get();
+    public function index(Request $req){
+        // get the "?filter=x" portion of the URI
+        $filter = $req->query();
+
+        // $filter will be false if none found
+        if (!$filter) {
+            $data = DB::table('tbl_video')->get();
+        }else{
+            $data = DB::table('tbl_video')
+                ->where('video_category_id', $filter)
+                ->get();
+        }
+
+        // get all categories
+        // Add where statement to exclude subcategories (if maincategory_id != null)
+        $categories = DB::table('tbl_category')->get();
+        
         return view('video/index',[
-            'data' => $data
+            'data' => $data,
+            'categories' => $categories
         ]);
     }
 

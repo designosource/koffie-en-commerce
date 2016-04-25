@@ -3,7 +3,6 @@
 @section('title', 'User Detail')
 
 @section('content')
-    <link rel="stylesheet" type="text/css" href="{{ asset("css/vimeostyle.css") }}">
 	<div class="container">
         <div class="">
 		<h1>Video Detail</h1>
