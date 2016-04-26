@@ -8,5 +8,8 @@
 </head>
 <body>
 	@yield('content')
+	<footer>
+		&#169; Designosource {{date("Y")}}
+	</footer>
 </body>
 </html>

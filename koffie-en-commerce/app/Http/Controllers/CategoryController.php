@@ -11,6 +11,10 @@ class CategoryController extends Controller
 {
     public function category($id){
 
+        $category = DB::table('tbl_category')
+            ->where('category_id', $id)
+            ->first();
+
         $videos = DB::table('tbl_video')
             ->select('*')
             ->join('tbl_category', 'tbl_video.video_category_id' ,'=', 'tbl_category.category_id')
@@ -19,7 +23,8 @@ class CategoryController extends Controller
 
 
         return view('category/index',[
-            'videos' => $videos,
+            'category' => $category,
+            'videos' => $videos
         ]);
     }
 
@@ -33,7 +38,7 @@ class CategoryController extends Controller
             ->get();
 
         return view('category/index',[
-            'videos' => $videos,
+            'videos' => $videos
         ]);
     }
 }

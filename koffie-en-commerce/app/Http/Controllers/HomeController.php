@@ -10,9 +10,13 @@ use App\Http\Requests;
 class HomeController extends Controller
 {
     public function index(){
-    	$data = "Hello World";
-    	return view('welcome',[
-    		'data' => $data
+    	
+    	$categories = DB::table('tbl_category')
+    		->where('maincategory_id','') //if maincategory_id is empty, category is not a sub category
+    		->get();
+
+    	return view('index',[
+    		'categories' => $categories
     	]);
     }
 }

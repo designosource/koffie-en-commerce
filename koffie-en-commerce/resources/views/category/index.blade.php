@@ -1,10 +1,10 @@
 @extends('layout.master')
 
-@section('title', 'Video Overview')
+@section('title', 'Category Overview')
 
 @section('content')
     <div class="container">
-        <h1>Videos</h1>
+        <h1>Category {{$category->category_name}}</h1>
         <a href="{{action('HomeController@index')}}">
             <b>Home</b> /
         </a>

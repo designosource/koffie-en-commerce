@@ -5,7 +5,6 @@
 @section('content')
     <div class="container">
         <h1>Home</h1>
-        <pre>{{var_dump($data)}}</pre>
         <ul>
             <li>
                 <a href="{{action('VideoController@index')}}">
@@ -17,6 +16,16 @@
                     <b>Speaker Detail</b> /speaker/1
                 </a>
             </li>
+        </ul>
+        <h2>Categories</h2>
+        <ul>
+            @foreach ($categories as $category)
+                <li>
+                    <a href="{{action('CategoryController@category',['id' => $category->category_id])}}">
+                        {{$category->category_name}} /category/{{$category->category_id}}
+                    </a>
+                </li>
+            @endforeach
         </ul>
     </div>
 @endsection

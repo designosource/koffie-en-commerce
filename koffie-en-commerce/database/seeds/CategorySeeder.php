@@ -18,34 +18,39 @@ class CategorySeeder extends Seeder
         $category = [
             [
                 'category_name' => 'financieren',
-                'maincategory_id' =>'1',
+                'maincategory_id' => '',
                 'category_description' => 'description'
             ],
             [
                 'category_name' => 'produceren',
-                'maincategory_id' =>'1',
+                'maincategory_id' => '',
                 'category_description' => 'description'
             ],
             [
                 'category_name' => 'vermarkten',
-                'maincategory_id' =>'1',
+                'maincategory_id' =>'',
                 'category_description' => 'description'
             ],
             [
                 'category_name' => 'juridisch scherpstellen',
-                'maincategory_id' =>'1',
+                'maincategory_id' => '',
                 'category_description' => 'description'
             ],
             [
                 'category_name' => 'internationaliseren',
-                'maincategory_id' =>'1',
+                'maincategory_id' => '',
                 'category_description' => 'description'
             ],
             [
-                'category_name' => 'Ondernemen',
-                'maincategory_id' =>'1',
+                'category_name' => 'ondernemen',
+                'maincategory_id' => '',
                 'category_description' => 'description'
             ],
+            [
+                'category_name' => 'subcategory_financieren',
+                'maincategory_id' => '1',
+                'category_description' => 'description'
+            ]  
         ];
 
         DB::table('tbl_category')->insert($category);
