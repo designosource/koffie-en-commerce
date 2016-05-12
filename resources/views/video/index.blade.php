@@ -10,7 +10,7 @@
         </a>
         <br>
         @foreach ($categories as $filter)
-			<br/><a href="?filter={{$filter->category_id}}">{{$filter->category_name}}</a>
+			<br/><a href="{{action('VideoController@category',['slug' => $filter->slug])}}">{{$filter->category_name}}</a>
 		@endforeach
 		@foreach ($data as $video)
 		    <p>This is video <a href="{{action('VideoController@detail',['id' => $video->video_id])}}"><b>{{$video->video_title}}</b></a></p>

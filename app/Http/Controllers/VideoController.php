@@ -11,17 +11,9 @@ use App\Http\Requests;
 class VideoController extends Controller
 {
     public function index(Request $req){
-        // get the "?filter=x" portion of the URI
-        $filter = $req->query();
 
-        // $filter will be false if none found
-        if (!$filter) {
-            $data = DB::table('tbl_video')->get();
-        }else{
-            $data = DB::table('tbl_video')
-                ->where('video_category_id', $filter)
-                ->get();
-        }
+        // Get all video's 
+        $data = DB::table('tbl_video')->get();
 
         // get all categories
         // Add where statement to exclude subcategories (if maincategory_id != null)
@@ -61,6 +53,34 @@ class VideoController extends Controller
             'vidspeaker' => $vidspeaker,
             'speaker' => $speaker,
             'category' => $category,
+        ]);
+    }
+
+    public function category($slug) {
+
+        // Twee aparte queries is niet nodig --> Kan perfect met een join maar dan kunnen we de null check niet doen of de category al dan niet bestaat.
+        $category = DB::table('tbl_category')
+                ->where('tbl_category.category_name', $slug)
+                ->first();
+
+        // Categorie bestaat niet --> opvangen in front-end
+        if(!$category) {
+            throw new \Exception('Category does not exist.');
+        }
+
+
+        // Twee aparte queries is niet nodig --> Kan perfect met een join maar dan kunnen we de null check niet doen of de category al dan niet bestaat.
+        $videos = DB::table('tbl_video')
+                ->where('video_category_id', $category->category_id)
+                ->get();
+
+        // get all categories
+        // Add where statement to exclude subcategories (if maincategory_id != null)
+        $categories = DB::table('tbl_category')->get();
+
+        return view('video/index',[
+            'data' => $videos,
+            'categories' => $categories
         ]);
     }
 }

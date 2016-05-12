@@ -21,6 +21,11 @@ Route::get('/videos', [
 	'uses' => 'VideoController@index'
 ]);
 
+Route::get('/videos/category/{slug}', [
+	'as' => 'videos_category',
+	'uses' => 'VideoController@category'
+]);
+
 Route::get('/video/{id}', [
 	'as' => 'video_detail',
 	'uses' => 'VideoController@detail'
