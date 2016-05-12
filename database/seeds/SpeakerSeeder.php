@@ -11,26 +11,32 @@ class SpeakerSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('tbl_speaker')->delete();
+        DB::table('speakers')->delete();
 
         $speaker = [
             [
-                'speaker_name' => 'Marijn',
-                'speaker_title' => 'CEO',
-                'speaker_email' => 'rut@mar.be',
-                'speaker_image' => 'default.jpg',
-                'speaker_description' => 'description',
+                'name' => 'Marijn',
+                'title' => 'CEO',
+                'email' => 'rut@mar.be',
+                'avatar' => null,
+                'description' => 'description'
             ],
             [
-                'speaker_name' => 'Sara',
-                'speaker_title' => 'specialist',
-                'speaker_email' => 'Riano@sara.be',
-                'speaker_image' => 'default.jpg',
-                'speaker_description' => 'description',
+                'name' => 'Sara',
+                'title' => 'specialist',
+                'email' => 'riano@sara.be',
+                'avatar' => null,
+                'description' => 'description'
             ],
-
+            [
+                'name' => 'Jasper De Smet',
+                'title' => 'CTO',
+                'email' => 'hello@jasperdesmet.be',
+                'avatar' => null,
+                'description' => 'description'
+            ]
         ];
 
-        DB::table('tbl_speaker')->insert($speaker);
+        DB::table('speakers')->insert($speaker);
     }
 }

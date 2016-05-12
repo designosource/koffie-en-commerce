@@ -58,10 +58,7 @@ class VideoController extends Controller
 
     public function category($slug) {
 
-        // Twee aparte queries is niet nodig --> Kan perfect met een join maar dan kunnen we de null check niet doen of de category al dan niet bestaat.
-        $category = DB::table('tbl_category')
-                ->where('tbl_category.category_name', $slug)
-                ->first();
+        $category = \App\Entity\Category::where('name' , '=', $slug)->first();
 
         // Categorie bestaat niet --> opvangen in front-end
         if(!$category) {
@@ -69,18 +66,12 @@ class VideoController extends Controller
         }
 
 
-        // Twee aparte queries is niet nodig --> Kan perfect met een join maar dan kunnen we de null check niet doen of de category al dan niet bestaat.
-        $videos = DB::table('tbl_video')
-                ->where('video_category_id', $category->category_id)
-                ->get();
-
-        // get all categories
-        // Add where statement to exclude subcategories (if maincategory_id != null)
-        $categories = DB::table('tbl_category')->get();
+        // Get all categories
+        $categories = \App\Entity\Category::All();
 
         return view('video/index',[
-            'data' => $videos,
-            'categories' => $categories
+            'categories' => $categories,
+            'videos' => $category->videos
         ]);
     }
 }

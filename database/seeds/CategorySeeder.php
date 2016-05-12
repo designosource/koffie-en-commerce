@@ -13,46 +13,41 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        DB::table('tbl_category')->delete();
+        DB::table('categories')->delete();
 
         $category = [
             [
-                'category_name' => 'financieren',
-                'maincategory_id' => '',
-                'category_description' => 'description'
+                'name' => 'financieren',
+                'description' => 'description',
+                'slug' => 'financieren'
             ],
             [
-                'category_name' => 'produceren',
-                'maincategory_id' => '',
-                'category_description' => 'description'
+                'name' => 'produceren',
+                'description' => 'description',
+                'slug' => 'produceren'
             ],
             [
-                'category_name' => 'vermarkten',
-                'maincategory_id' =>'',
-                'category_description' => 'description'
+                'name' => 'vermarkten',
+                'description' => 'description',
+                'slug' => 'vermarkten'
             ],
             [
-                'category_name' => 'juridisch scherpstellen',
-                'maincategory_id' => '',
-                'category_description' => 'description'
+                'name' => 'juridisch scherpstellen',
+                'description' => 'description',
+                'slug' => 'juridisch_scherpstellen'
             ],
             [
-                'category_name' => 'internationaliseren',
-                'maincategory_id' => '',
-                'category_description' => 'description'
+                'name' => 'internationaliseren',
+                'description' => 'description',
+                'slug' => 'internationaliseren'
             ],
             [
-                'category_name' => 'ondernemen',
-                'maincategory_id' => '',
-                'category_description' => 'description'
-            ],
-            [
-                'category_name' => 'subcategory_financieren',
-                'maincategory_id' => '1',
-                'category_description' => 'description'
-            ]  
+                'name' => 'ondernemen',
+                'description' => 'description',
+                'slug' => 'ondernemen'
+            ]
         ];
 
-        DB::table('tbl_category')->insert($category);
+        DB::table('categories')->insert($category);
     }
 }
