@@ -53,8 +53,8 @@ class VideoController extends Controller
 
         // - - get categories - -
         $category = DB::table('tbl_category')
-            ->select('*')
-            ->get();
+            ->where('category_id',$data->video_category_id)
+            ->first();
 
         return view('video/detail',[
             'data' => $data,

@@ -62,11 +62,9 @@
 
         <!--categorieen of tags-->
         <div class="">
-            <ul>
-                @foreach($category as $cat)
-                    <li>{{$cat->category_name}}</li>
-                @endforeach
-            </ul>
+            <h4>Category</h4>
+            <b>ID: {{$category->category_id}}</b>
+            <p>Name: {{$category->category_name}}</p>
         </div>
         <!--/categorieen-->
 
