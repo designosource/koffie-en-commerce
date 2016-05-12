@@ -1,0 +1,33 @@
+.container{
+
+    .bgimage{
+      img{
+      width:100%;
+      max-height:800px;
+      background-size: cover;
+      }
+    h1{
+font-size: 20px;
+font-family: $font-bold;
+text-align:center;
+color:$gray;
+    }}
+    .introduction{
+      .wrapp{
+        width:80%;
+        margin-left: auto;
+        margin-right: auto;
+        line-height:19px;
+    h2{
+      font-size:18px;
+      font-family:$font-bold;
+      color:$gray;
+    }
+    p{
+      font-size:12px;
+      font-family:$font-light;
+      color:$gray;
+    }
+  }
+}
+}
