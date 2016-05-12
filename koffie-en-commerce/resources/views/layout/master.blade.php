@@ -7,9 +7,9 @@
 	<link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
 </head>
 <body>
+    @include('layout.nav')
 	@yield('content')
-	<footer>
-		&#169; Designosource {{date("Y")}}
-	</footer>
+    @include('layout.footer')
 </body>
+@yield('scripts')
 </html>
