@@ -7,7 +7,9 @@
 	<link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
 </head>
 <body>
+    @include('layout.nav')
 	@yield('content')
+    @include('layout.footer')
 </body>
 @yield('scripts')
 </html>
