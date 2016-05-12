@@ -12,18 +12,18 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('tbl_users')->delete();
+        DB::table('users')->delete();
 
         $users = [
             [
-                'user_name' => 'admin',
-                'user_email' => 'info@designosource.be',
-                'user_password' => 'designosource',
-                'user_role' => 'admin',
+                'name' => 'admin',
+                'email' => 'info@designosource.be',
+                'password' => 'designosource',
+                'role' => 'admin',
             ],
         ];
 
-        DB::table('tbl_users')->insert($users);
+        DB::table('users')->insert($users);
     }
 
 }

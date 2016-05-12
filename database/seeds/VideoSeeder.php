@@ -11,17 +11,10 @@ class VideoSeeder extends Seeder
      */
     public function run()
     {
-    	DB::table('tbl_video')->delete();
+    	DB::table('videos')->delete();
 
-    	$videos = [
-    		['video_speaker_id'=>'1','video_category_id'=>'1','video_title' => 'One', 'video_description' => 'Description', 'video_url' => '58010546'],
-    		['video_speaker_id'=>'1','video_category_id'=>'2','video_title' => 'Two', 'video_description' => 'Description', 'video_url' => '58010546'],
-    		['video_speaker_id'=>'2','video_category_id'=>'1','video_title' => 'Three', 'video_description' => 'Description', 'video_url' => '58010546'],
-    		['video_speaker_id'=>'2','video_category_id'=>'2','video_title' => 'Four', 'video_description' => 'Description', 'video_url' => '58010546'],
-    		['video_speaker_id'=>'2','video_category_id'=>'1','video_title' => 'Five', 'video_description' => 'Description', 'video_url' => '58010546'],
-    		['video_speaker_id'=>'1','video_category_id'=>'2','video_title' => 'Six', 'video_description' => 'Description', 'video_url' => '58010546']
-    	];
+        $videos = [];
 
-        DB::table('tbl_video')->insert($videos);
+        DB::table('videos')->insert($videos);
     }
 }
