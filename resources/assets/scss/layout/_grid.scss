@@ -1,0 +1,45 @@
+// Variables to determine which col classes are used, should be kept up to date with the html
+// e.g. if left column has class "col-sm-4" l-bs-col-x should be 4 
+$l-bs-col-x: 5;     // Left Column
+$r-bs-col-x: 7;     // Right Column
+$m-bs-col-x: 12;    // Mobile
+
+// Use #{var-name} to use variables in class name
+.grid{
+    margin: 48px auto;
+    &-row{
+        @extend %clearfix;
+        .col-sm-#{$l-bs-col-x}{
+            padding: 0px;
+            background-color: whitesmoke;
+        }
+        .col-sm-#{$r-bs-col-x}{
+            padding: 0px;
+            background-color: lightgray;
+        }
+        .col-xs-#{$m-bs-col-x}{
+            min-height: 50px; 
+        }
+        .content{
+            width: 100%;
+            height: auto;
+            padding: 86px 34px 86px 106px;
+            background-color: rgba(0,0,0,0.5);
+            h3{
+                line-height: 1;
+            }
+            p{
+                margin: 22px auto;
+            }
+            .button{
+                display: inline-block;
+                padding: 18px 78px;
+                border: 2px solid black;
+                font-family: $font-light; 
+            }
+        }
+        img{
+
+        }
+    }
+}

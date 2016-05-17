@@ -23,11 +23,27 @@
 }
 
 /* No media query since this is the default */
+/* line 8, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_placeholders.scss */
+.grid-row {
+  zoom: 1;
+}
+
+/* line 10, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_placeholders.scss */
+.grid-row:before, .grid-row:after {
+  content: ' ';
+  display: table;
+}
+
+/* line 15, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_placeholders.scss */
+.grid-row:after {
+  clear: both;
+}
+
 /*! normalize.css v1.1.3 | MIT License | git.io/normalize */
 /**
  * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-/* line 8, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 8, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 article,
 aside,
 details,
@@ -46,7 +62,7 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-/* line 27, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 27, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 audio,
 canvas,
 video {
@@ -59,7 +75,7 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 40, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 40, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -69,7 +85,7 @@ audio:not([controls]) {
  * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
  * Known issue: no IE 6 support.
  */
-/* line 50, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 50, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 [hidden] {
   display: none;
 }
@@ -83,7 +99,7 @@ audio:not([controls]) {
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-/* line 65, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 65, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 html {
   font-size: 100%;
   /* 1 */
@@ -97,7 +113,7 @@ html {
  * Address `font-family` inconsistency between `textarea` and other form
  * elements.
  */
-/* line 76, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 76, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 html,
 button,
 input,
@@ -109,7 +125,7 @@ textarea {
 /**
  * Address margins handled incorrectly in IE 6/7.
  */
-/* line 88, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 88, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 body {
   margin: 0;
 }
@@ -120,7 +136,7 @@ body {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
-/* line 100, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 100, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 a:focus {
   outline: thin dotted;
 }
@@ -128,7 +144,7 @@ a:focus {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-/* line 108, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 108, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -137,7 +153,7 @@ a:hover {
 /**
  * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
  */
-/* line 117, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 117, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -145,13 +161,13 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
  */
-/* line 125, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 125, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 b,
 strong {
   font-weight: bold;
 }
 
-/* line 130, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 130, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 blockquote {
   margin: 1em 40px;
 }
@@ -159,7 +175,7 @@ blockquote {
 /**
  * Address styling not present in Safari 5 and Chrome.
  */
-/* line 138, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 138, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 dfn {
   font-style: italic;
 }
@@ -168,7 +184,7 @@ dfn {
  * Address differences between Firefox and other browsers.
  * Known issue: no IE 6/7 normalization.
  */
-/* line 147, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 147, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 hr {
   box-sizing: content-box;
   height: 0;
@@ -177,7 +193,7 @@ hr {
 /**
  * Address styling not present in IE 6/7/8/9.
  */
-/* line 157, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 157, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 mark {
   background: #ff0;
   color: #000;
@@ -186,12 +202,12 @@ mark {
 /**
  * Address margins set differently in IE 6/7.
  */
-/* line 166, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 166, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 pre {
   margin: 0 0 1em 0;
 }
 
-/* line 170, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 170, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 p {
   margin: 0;
 }
@@ -199,7 +215,7 @@ p {
 /**
  * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
  */
-/* line 178, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 178, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 code,
 kbd,
 pre,
@@ -212,7 +228,7 @@ samp {
 /**
  * Improve readability of pre-formatted text in all browsers.
  */
-/* line 191, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 191, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -222,7 +238,7 @@ pre {
 /**
  * Address CSS quotes not supported in IE 6/7.
  */
-/* line 201, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 201, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 q {
   quotes: none;
 }
@@ -230,7 +246,7 @@ q {
 /**
  * Address `quotes` property not supported in Safari 4.
  */
-/* line 209, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 209, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 q:before,
 q:after {
   content: '';
@@ -240,7 +256,7 @@ q:after {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-/* line 219, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 219, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 small {
   font-size: 80%;
 }
@@ -248,7 +264,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 227, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 227, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 sub,
 sup {
   font-size: 75%;
@@ -257,12 +273,12 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 235, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 235, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 239, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 239, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 sub {
   bottom: -0.25em;
 }
@@ -273,7 +289,7 @@ sub {
 /**
  * Address margins set differently in IE 6/7.
  */
-/* line 251, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 251, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 dl,
 menu,
 ol,
@@ -281,7 +297,7 @@ ul {
   margin: 1em 0;
 }
 
-/* line 258, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 258, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 dd {
   margin: 0 0 0 40px;
 }
@@ -289,7 +305,7 @@ dd {
 /**
  * Address paddings set differently in IE 6/7.
  */
-/* line 266, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 266, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 menu,
 ol,
 ul {
@@ -299,7 +315,7 @@ ul {
 /**
  * Correct list images handled incorrectly in IE 7.
  */
-/* line 276, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 276, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 nav ul,
 nav ol {
   list-style: none;
@@ -313,7 +329,7 @@ nav ol {
  * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
  * 2. Improve image quality when scaled in IE 7.
  */
-/* line 291, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 291, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 img {
   border: 0;
   /* 1 */
@@ -324,7 +340,7 @@ img {
 /**
  * Correct overflow displayed oddly in IE 9.
  */
-/* line 300, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 300, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -335,7 +351,7 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
  */
-/* line 312, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 312, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 figure {
   margin: 0;
 }
@@ -346,7 +362,7 @@ figure {
 /**
  * Correct margin displayed oddly in IE 6/7.
  */
-/* line 324, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 324, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 form {
   margin: 0;
 }
@@ -354,7 +370,7 @@ form {
 /**
  * Define consistent border, margin, and padding.
  */
-/* line 332, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 332, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -366,7 +382,7 @@ fieldset {
  * 2. Correct text not wrapping in Firefox 3.
  * 3. Correct alignment displayed oddly in IE 6/7.
  */
-/* line 344, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 344, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 legend {
   border: 0;
   /* 1 */
@@ -383,7 +399,7 @@ legend {
  *    and Chrome.
  * 3. Improve appearance and consistency in all browsers.
  */
-/* line 358, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 358, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 button,
 input,
 select,
@@ -402,7 +418,7 @@ textarea {
  * Address Firefox 3+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 373, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 373, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 button,
 input {
   line-height: normal;
@@ -414,7 +430,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-/* line 385, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 385, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 button,
 select {
   text-transform: none;
@@ -429,7 +445,7 @@ select {
  * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE 6.
  */
-/* line 400, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 400, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 button,
 html input[type='button'],
 input[type='reset'],
@@ -445,7 +461,7 @@ input[type='submit'] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 413, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 413, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -457,7 +473,7 @@ html input[disabled] {
  * 3. Remove excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-/* line 425, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 425, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 input[type='checkbox'],
 input[type='radio'] {
   box-sizing: border-box;
@@ -475,7 +491,7 @@ input[type='radio'] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 439, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 439, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 input[type='search'] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -487,7 +503,7 @@ input[type='search'] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 451, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 451, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 input[type='search']::-webkit-search-cancel-button,
 input[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -496,7 +512,7 @@ input[type='search']::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 3+.
  */
-/* line 460, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 460, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -507,7 +523,7 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 6/7/8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-/* line 471, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 471, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -521,15 +537,78 @@ textarea {
 /**
  * Remove most spacing between table cells.
  */
-/* line 484, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 484, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 489, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
+/* line 489, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_reset.scss */
 tbody {
   border: none;
+}
+
+/* line 1, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_typography.scss */
+p {
+  font-family: "museo_sans100";
+}
+
+/* line 5, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_typography.scss */
+h1, h3, h3, h4, h5, h6 {
+  font-family: "museo_sans300";
+}
+
+/* line 9, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_typography.scss */
+h2 {
+  font-family: "museo_sans500";
+}
+
+/* line 8, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_grid.scss */
+.grid {
+  margin: 48px auto;
+}
+
+/* line 12, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_grid.scss */
+.grid-row .col-sm-5 {
+  padding: 0px;
+  background-color: whitesmoke;
+}
+
+/* line 16, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_grid.scss */
+.grid-row .col-sm-7 {
+  padding: 0px;
+  background-color: lightgray;
+}
+
+/* line 20, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_grid.scss */
+.grid-row .col-xs-12 {
+  min-height: 50px;
+}
+
+/* line 23, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_grid.scss */
+.grid-row .content {
+  width: 100%;
+  height: auto;
+  padding: 86px 34px 86px 106px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* line 28, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_grid.scss */
+.grid-row .content h3 {
+  line-height: 1;
+}
+
+/* line 31, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_grid.scss */
+.grid-row .content p {
+  margin: 22px auto;
+}
+
+/* line 34, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_grid.scss */
+.grid-row .content .button {
+  display: inline-block;
+  padding: 18px 78px;
+  border: 2px solid black;
+  font-family: "museo_sans100";
 }
 
 /**
@@ -543,12 +622,12 @@ tbody {
 /**
     * Whole
     */
-/* line 23, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 23, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .one-whole {
   width: 100%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .one-whole {
   width: 100%;
 }
@@ -556,12 +635,12 @@ tbody {
 /**
     * Halves
     */
-/* line 28, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 28, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .one-half {
   width: 50%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .one-half {
   width: 50%;
 }
@@ -569,22 +648,22 @@ tbody {
 /**
     * Thirds
     */
-/* line 33, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 33, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .one-third {
   width: 33.333%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .one-third {
   width: 33.333%;
 }
 
-/* line 34, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 34, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .two-thirds {
   width: 66.666%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .two-thirds {
   width: 66.666%;
 }
@@ -592,32 +671,32 @@ tbody {
 /**
     * Quarters
     */
-/* line 39, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 39, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .one-quarter {
   width: 25%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .one-quarter {
   width: 25%;
 }
 
-/* line 40, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 40, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .two-quarters {
   width: 50%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .two-quarters {
   width: 50%;
 }
 
-/* line 41, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 41, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .three-quarters {
   width: 75%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .three-quarters {
   width: 75%;
 }
@@ -625,42 +704,42 @@ tbody {
 /**
     * Fifths
     */
-/* line 46, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 46, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .one-fifth {
   width: 20%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .one-fifth {
   width: 20%;
 }
 
-/* line 47, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 47, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .two-fifths {
   width: 40%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .two-fifths {
   width: 40%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .three-fifths {
   width: 60%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .three-fifths {
   width: 60%;
 }
 
-/* line 49, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 49, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .four-fifths {
   width: 80%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .four-fifths {
   width: 80%;
 }
@@ -668,52 +747,52 @@ tbody {
 /**
     * Sixths
     */
-/* line 54, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 54, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .one-sixth {
   width: 16.666%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .one-sixth {
   width: 16.666%;
 }
 
-/* line 55, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 55, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .two-sixths {
   width: 33%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .two-sixths {
   width: 33%;
 }
 
-/* line 56, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 56, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .three-sixths {
   width: 49%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .three-sixths {
   width: 49%;
 }
 
-/* line 57, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 57, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .four-sixths {
   width: 66%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .four-sixths {
   width: 66%;
 }
 
-/* line 58, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 58, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .five-sixths {
   width: 83.333%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .five-sixths {
   width: 83.333%;
 }
@@ -721,72 +800,72 @@ tbody {
 /**
     * Eighths
     */
-/* line 63, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 63, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .one-eighth {
   width: 12.5%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .one-eighth {
   width: 12.5%;
 }
 
-/* line 64, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 64, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .two-eighths {
   width: 25%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .two-eighths {
   width: 25%;
 }
 
-/* line 65, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 65, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .three-eighths {
   width: 37.5%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .three-eighths {
   width: 37.5%;
 }
 
-/* line 66, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 66, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .four-eighths {
   width: 49%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .four-eighths {
   width: 49%;
 }
 
-/* line 67, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 67, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .five-eighths {
   width: 62.5%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .five-eighths {
   width: 62.5%;
 }
 
-/* line 68, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 68, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .six-eighths {
   width: 75%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .six-eighths {
   width: 75%;
 }
 
-/* line 69, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 69, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .seven-eighths {
   width: 87.5%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .seven-eighths {
   width: 87.5%;
 }
@@ -794,92 +873,92 @@ tbody {
 /**
     * Tenths
     */
-/* line 74, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 74, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .one-tenth {
   width: 10%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .one-tenth {
   width: 10%;
 }
 
-/* line 75, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 75, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .two-tenths {
   width: 20%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .two-tenths {
   width: 20%;
 }
 
-/* line 76, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 76, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .three-tenths {
   width: 30%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .three-tenths {
   width: 30%;
 }
 
-/* line 77, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 77, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .four-tenths {
   width: 40%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .four-tenths {
   width: 40%;
 }
 
-/* line 78, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 78, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .five-tenths {
   width: 49%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .five-tenths {
   width: 49%;
 }
 
-/* line 79, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 79, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .six-tenths {
   width: 60%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .six-tenths {
   width: 60%;
 }
 
-/* line 80, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 80, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .seven-tenths {
   width: 70%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .seven-tenths {
   width: 70%;
 }
 
-/* line 81, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 81, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .eight-tenths {
   width: 80%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .eight-tenths {
   width: 80%;
 }
 
-/* line 82, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 82, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .nine-tenths {
   width: 90%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .nine-tenths {
   width: 90%;
 }
@@ -887,112 +966,112 @@ tbody {
 /**
     * Twelfths
     */
-/* line 87, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 87, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .one-twelfth {
   width: 8.333%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .one-twelfth {
   width: 8.333%;
 }
 
-/* line 88, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 88, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .two-twelfths {
   width: 16.666%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .two-twelfths {
   width: 16.666%;
 }
 
-/* line 89, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 89, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .three-twelfths {
   width: 25%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .three-twelfths {
   width: 25%;
 }
 
-/* line 90, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 90, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .four-twelfths {
   width: 33%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .four-twelfths {
   width: 33%;
 }
 
-/* line 91, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 91, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .five-twelfths {
   width: 41%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .five-twelfths {
   width: 41%;
 }
 
-/* line 92, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 92, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .six-twelfths {
   width: 49%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .six-twelfths {
   width: 49%;
 }
 
-/* line 93, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 93, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .seven-twelfths {
   width: 59%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .seven-twelfths {
   width: 59%;
 }
 
-/* line 94, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 94, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .eight-twelfths {
   width: 66%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .eight-twelfths {
   width: 66%;
 }
 
-/* line 95, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 95, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .nine-twelfths {
   width: 75%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .nine-twelfths {
   width: 75%;
 }
 
-/* line 96, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 96, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .ten-twelfths {
   width: 83.333%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .ten-twelfths {
   width: 83.333%;
 }
 
-/* line 97, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 97, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .eleven-twelfths {
   width: 91.666%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .eleven-twelfths {
   width: 91.666%;
 }
@@ -1000,32 +1079,32 @@ tbody {
 /**
     *  Weird numbers
     */
-/* line 102, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
+/* line 102, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/layout/_widths.scss */
 .one-fourth-of-three-fourth {
   width: 18.75%;
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .one-fourth-of-three-fourth {
   width: 18.75%;
 }
 
-/* line 1, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_m-vimeo.scss */
+/* line 1, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/modules/_m-vimeo.scss */
 .sidedock {
   display: none;
 }
 
-/* line 5, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_m-vimeo.scss */
+/* line 5, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/modules/_m-vimeo.scss */
 .test {
   background-color: red;
 }
 
-/* line 9, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_m-vimeo.scss */
+/* line 9, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/modules/_m-vimeo.scss */
 body {
   background-color: hotpink;
 }
 
-/* line 1, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_nav.scss */
+/* line 1, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/modules/_nav.scss */
 .mainnavigation {
   font-size: 20px;
   width: 85%;
@@ -1035,12 +1114,12 @@ body {
   padding-bottom: 20px;
 }
 
-/* line 11, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_nav.scss */
+/* line 11, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/modules/_nav.scss */
 .mainnavigation .home img {
   width: 220px;
 }
 
-/* line 15, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_nav.scss */
+/* line 15, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/modules/_nav.scss */
 .mainnavigation .menu {
   float: right;
   padding-top: 2px;
@@ -1049,12 +1128,12 @@ body {
   font-family: "museo_sans300";
 }
 
-/* line 1, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_main.scss */
+/* line 1, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/modules/_main.scss */
 body {
   background-color: #FFFFFF;
 }
 
-/* line 3, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_main.scss */
+/* line 3, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/modules/_main.scss */
 body .wrapper {
   width: 90%;
   margin-left: auto;
@@ -1062,14 +1141,14 @@ body .wrapper {
   background-color: #FFFFFF;
 }
 
-/* line 4, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+/* line 4, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
 .container .bgimage img {
   width: 100%;
   max-height: 800px;
   background-size: cover;
 }
 
-/* line 9, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+/* line 9, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
 .container .bgimage h1 {
   font-size: 20px;
   font-family: "museo_sans500";
@@ -1077,7 +1156,7 @@ body .wrapper {
   color: #363636;
 }
 
-/* line 16, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+/* line 16, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
 .container .introduction .wrapp {
   width: 80%;
   margin-left: auto;
@@ -1085,14 +1164,14 @@ body .wrapper {
   line-height: 19px;
 }
 
-/* line 21, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+/* line 21, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
 .container .introduction .wrapp h2 {
   font-size: 18px;
   font-family: "museo_sans500";
   color: #363636;
 }
 
-/* line 26, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+/* line 26, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
 .container .introduction .wrapp p {
   font-size: 12px;
   font-family: "museo_sans100";
@@ -1102,34 +1181,34 @@ body .wrapper {
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
-/* line 7, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_helpers.scss */
+/* line 7, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_helpers.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
 @media only screen and (min-width: 0) and (max-width: 40em) {
-  /* line 12, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_helpers.scss */
+  /* line 12, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_helpers.scss */
   .mobile-hidden {
     display: none !important;
   }
 }
 
 @media only screen and (min-width: 40em) and (max-width: 60em) {
-  /* line 18, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_helpers.scss */
+  /* line 18, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_helpers.scss */
   .tablet-hidden {
     display: none !important;
   }
 }
 
 @media only screen and (min-width: 60em) {
-  /* line 24, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_helpers.scss */
+  /* line 24, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_helpers.scss */
   .desktop-hidden {
     display: none !important;
   }
 }
 
-/* line 48, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
+/* line 48, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_mixins.scss */
 .no-mq .desktop-hidden {
   display: none !important;
 }
@@ -1137,7 +1216,7 @@ body .wrapper {
 /*
  * Hide visually and from screenreaders, but maintain layout
  */
-/* line 34, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_helpers.scss */
+/* line 34, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_helpers.scss */
 .invisible {
   visibility: hidden !important;
 }
@@ -1153,7 +1232,7 @@ body .wrapper {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-/* line 50, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_helpers.scss */
+/* line 50, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_helpers.scss */
 .clearfix:before,
 .clearfix:after {
   content: ' ';
@@ -1163,7 +1242,7 @@ body .wrapper {
   /* 2 */
 }
 
-/* line 57, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/base/_helpers.scss */
+/* line 57, D:/Ian/Documents/Github/Designosource/koffie-en-commerce/resources/assets/scss/base/_helpers.scss */
 .clearfix:after {
   clear: both;
 }
