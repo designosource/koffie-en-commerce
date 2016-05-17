@@ -3,11 +3,13 @@
 @section('title', 'Home')
 
 @section('content')
-    <div class="container">
+    <div class="container-fluid banner">
         <div class="bgimage">
             {!! Html::image('image/imageheader.jpg' , 'header image', array('class' => 'header_image'))!!}
-            {!! Html::image('image/logo_nav.png' , 'Logo above the fold', array('class' => 'headerlogo'))!!}
-            <h1>Verhalen over de zakelijke kant van media</h1>
+            <header>
+                {!! Html::image('image/logo_nav.png' , 'Logo above the fold', array('class' => 'headerlogo'))!!}
+                <h1>Verhalen over de zakelijke kant van media</h1>
+            </header>
         </div>
         <section class="introduction">
             <div class="wrapp">

@@ -1,53 +1,32 @@
-.container{
+.banner{
 
-    .bgimage{
-      img{
-      width:100%;
+  .bgimage{
+    position: relative;
+    header{
+      @include centerXY();
+    }
+    img{
       max-height:800px;
       background-size: cover;
-      }
-      .header_image {
-  position: relative;
-}
-.headerlogo {
-  position: absolute;
-  display:inline-block;
-  width:250px;
-  left: 0; right:0;
-  top:160px;
-    margin: auto;
-
- }
-    h1{
-font-size: 14px;
-font-family: $font-bold;
-text-align:center;
-color:$gray;
-border: 0;
-position: absolute;
-top: 25%;
-left: 0; right:0;
-  margin: auto;
-    }}
-
-    .introduction{
-      margin-top:30px;
-      .wrapp{
-        width:80%;
-        margin-left: auto;
-        margin-right: auto;
-        line-height:19px;
-    h2{
-      font-size:18px;
-      font-family:$font-bold;
-      color:$gray;
-    }
-    p{
-      font-size:12px;
-      font-family:$font-light;
-      color:$gray;
-      margin-bottom: 15px;
     }
   }
-}
+
+  .introduction{
+    margin-top:30px;
+    .wrapp{
+      line-height: 1.2;
+      h2{
+        font-size:18px;
+        font-family:$font-bold;
+        color:$gray;
+      }
+      p{
+        font-size:12px;
+        font-family:$font-light;
+        color:$gray;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
 }
