@@ -1,1 +1,1 @@
-{"virtualbox":{"/var/www":{"mount_options":["dmode=777","fmode=666"],"guestpath":"/var/www","hostpath":"/Users/nickvanpuyvelde/Desktop/koffie-en-commerce","disabled":false}}}
+{"virtualbox":{"/var/www":{"mount_options":["dmode=777","fmode=666"],"guestpath":"/var/www","hostpath":"/Applications/MAMP/htdocs/koffie-en-commerce","disabled":false}}}
