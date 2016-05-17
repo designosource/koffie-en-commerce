@@ -11,6 +11,8 @@ Homestead.json
 .vagrant
 /.vagrant
 
+/.sass-cache
+
 .bin
 /public/css
 public/css
