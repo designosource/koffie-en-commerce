@@ -13,41 +13,25 @@ class VideoController extends Controller
     public function index(Request $req){
 
         // Get all video's
-        $data = \App\Entity\Video::all();
+        $videos = \App\Entity\Video::all();
 
         // get all categories
-        // Add where statement to exclude subcategories (if maincategory_id != null)
         $categories = \App\Entity\Category::all();
 
         return view('video/index',[
-            'data' => $data,
+            'videos' => $videos,
             'categories' => $categories
         ]);
     }
 
-    public function detail($id){
-        // get details off the video by id
-        $video = \App\Entity\Video::where('id','=', $id)->first();
+    public function detail($slug){
 
-        $vidspeaker = \App\Entity\Video::where('speaker_id','=', $videos->speaker_id)->get();
-
-        // - - get speaker info and video from speaker - -
-        /*$vidspeaker = DB::table('tbl_video')
-            ->join('tbl_speaker','tbl_video.video_speaker_id','=', 'tbl_speaker.speaker_id')
-            ->where('video_speaker_id', $data->video_speaker_id)
-            ->orderBy('video_id', 'asc')
-            ->get();*/
-
-        $speaker = \App\Entity\Speaker::where('id','=', $videos->speaker_id);
-        /*$speaker = DB::table('tbl_speaker')
-            ->where('speaker_id', $data->video_speaker_id)
-            ->first();*/
-
+        // Get video
+        $video = \App\Entity\Video::where('slug','=', $slug)->first();
 
         return view('video/detail',[
-            'data' => $video,
-            'vidspeaker' => $vidspeaker,
-            'speaker' => $speaker,
+            'video' => $video,
+            'speaker' => $video->speaker
         ]);
     }
 

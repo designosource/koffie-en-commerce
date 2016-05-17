@@ -52,9 +52,9 @@
         <ul>
             @foreach ($categories as $category)
                 <li>
-                    <a href="{{action('CategoryController@category',['id' => $category->id])}}">
+                    {{-- <a href="{{action('CategoryController@category',['id' => $category->id])}}">
                         {{$category->name}} /category/{{$category->id}}
-                    </a>
+                    </a> --}}
                 </li>
             @endforeach
         </ul>
