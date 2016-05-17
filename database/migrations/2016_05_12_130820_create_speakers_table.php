@@ -20,7 +20,8 @@ class CreateSpeakersTable extends Migration
             $table->string('title'); // Jobtitle
             $table->string('email');
             $table->string('avatar');
-            $table->string('description');
+            $table->string('short_description');
+            $table->string('long_description');
             $table->string('quote');
         });
     }
