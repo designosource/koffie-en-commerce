@@ -6,6 +6,7 @@
 @import 'mixins';
 @import 'placeholders';
 @import 'reset';
+@import 'typography';
 
 @import '../layout/grid';
 @import '../layout/widths';
@@ -15,4 +16,4 @@
 @import '../modules/_main.scss';
 @import '../modules/_home.scss';
 
-@import 'helpers';
+@import 'helpers'; 
