@@ -4,8 +4,13 @@
 Homestead.yaml
 Homestead.json
 .env
+
 .vagrant/
 .vagrant/*
+/.vagrant/
+.vagrant
+/.vagrant
+
 .bin
 /public/css
 public/css
