@@ -5,7 +5,7 @@
 @section('content')
 	<div class="container">
 		<h1>User {{$data}}</h1>
-		<a href="{{action('HomeController@index')}}">
+		<a href="{{action('PageController@index')}}">
             <b>Home</b> /
         </a>
 	</div>

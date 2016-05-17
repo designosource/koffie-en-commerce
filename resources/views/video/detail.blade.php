@@ -13,7 +13,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{action('HomeController@index')}}">
+                    <a href="{{action('PageController@index')}}">
                         <b>Home</b> /
                     </a>
                 </li>
