@@ -14,7 +14,9 @@ Homestead.json
 /.sass-cache
 
 .bin
-/public/css
-public/css
+
+/public/css/style.css
+public/css/style.css
+
 node_modules
 .phpintel/
