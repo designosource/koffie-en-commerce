@@ -11,34 +11,47 @@
 |
 */
 
+
+/* STATIC PAGES */
 Route::get('/', [
-    'as' => 'home',
-    'uses' => 'HomeController@index'
+    'as' => 'index',
+    'uses' => 'PageController@index'
 ]);
 
+Route::get('/over-ons', [
+    'as' => 'about',
+    'uses' => 'PageController@about'
+]);
+
+Route::get('/contact', [
+    'as' => 'contact',
+    'uses' => 'PageController@contact'
+]);
+
+
+/* VIDEO'S */
 Route::get('/videos', [
 	'as' => 'videos_index',
 	'uses' => 'VideoController@index'
 ]);
 
-Route::get('/videos/category/{slug}', [
-	'as' => 'videos_category',
-	'uses' => 'VideoController@category'
-]);
-
-Route::get('/video/{id}', [
+Route::get('/videos/{slug}', [
 	'as' => 'video_detail',
 	'uses' => 'VideoController@detail'
 ]);
 
-Route::get('/speaker/{id}', [
-	'as' => 'speaker_detail',
-	'uses' => 'SpeakerController@detail'
+
+/* CATEGORIES */
+Route::get('/categorieen/{slug}', [
+	'as' => 'videos_category',
+	'uses' => 'VideoController@category'
 ]);
 
-Route::get('/category/{id}', [
-	'as' => 'category_detail',
-	'uses' => 'CategoryController@category'
+
+/* SPEAKERS */
+Route::get('/sprekers/{slug}', [
+	'as' => 'speaker_detail',
+	'uses' => 'SpeakerController@detail'
 ]);
 
 
