@@ -32,8 +32,8 @@ Een film- of TV-project financieren? Advertentie inkomsten uit digitale publicat
         <ul>
             @foreach ($categories as $category)
                 <li>
-                    <a href="{{action('CategoryController@category',['id' => $category->category_id])}}">
-                        {{$category->category_name}} /category/{{$category->category_id}}
+                    <a href="{{action('CategoryController@category',['id' => $category->id])}}">
+                        {{$category->name}} /category/{{$category->id}}
                     </a>
                 </li>
             @endforeach
