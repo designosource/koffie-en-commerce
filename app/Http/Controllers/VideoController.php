@@ -12,13 +12,13 @@ class VideoController extends Controller
 {
     public function index(Request $req){
 
-        // Get all video's 
-        $data = DB::table('tbl_video')->get();
+        // Get all video's
+        $data = \App\Entity\Video::all();
 
         // get all categories
         // Add where statement to exclude subcategories (if maincategory_id != null)
-        $categories = DB::table('tbl_category')->get();
-        
+        $categories = \App\Entity\Category::all();
+
         return view('video/index',[
             'data' => $data,
             'categories' => $categories
@@ -27,31 +27,27 @@ class VideoController extends Controller
 
     public function detail($id){
         // get details off the video by id
-        $videos = \App\Entity\Video::where('id','=', $id)->first();
+        $video = \App\Entity\Video::where('id','=', $id)->first();
 
-        $vidspeaker = \App\Entity\Speaker::where('id','=', $videos->speaker_id)->get();
+        $vidspeaker = \App\Entity\Video::where('speaker_id','=', $videos->speaker_id)->get();
 
         // - - get speaker info and video from speaker - -
-        $vidspeaker = DB::table('tbl_video')
+        /*$vidspeaker = DB::table('tbl_video')
             ->join('tbl_speaker','tbl_video.video_speaker_id','=', 'tbl_speaker.speaker_id')
             ->where('video_speaker_id', $data->video_speaker_id)
             ->orderBy('video_id', 'asc')
-            ->get();
+            ->get();*/
 
-        $speaker = DB::table('tbl_speaker')
+        $speaker = \App\Entity\Speaker::where('id','=', $videos->speaker_id);
+        /*$speaker = DB::table('tbl_speaker')
             ->where('speaker_id', $data->video_speaker_id)
-            ->first();
+            ->first();*/
 
-        // - - get categories - -
-        $category = DB::table('tbl_category')
-            ->where('category_id',$data->video_category_id)
-            ->first();
 
         return view('video/detail',[
-            'data' => $videos,
+            'data' => $video,
             'vidspeaker' => $vidspeaker,
             'speaker' => $speaker,
-            'category' => $category,
         ]);
     }
 

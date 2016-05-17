@@ -19,7 +19,8 @@ class CreateVideosTable extends Migration
 
             $table->foreign('speaker_id')->references('id')->on('speakers')->onDelete('cascade');
             $table->string('title');
-            $table->string('description');
+            $table->string('short_description');
+            $table->string('long_description');
             $table->string('vimeo'); // Link to vimeo
             $table->string('slug');
         });
