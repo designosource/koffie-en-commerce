@@ -1027,7 +1027,7 @@ body {
 
 /* line 1, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_nav.scss */
 .mainnavigation {
-  font-size: 20px;
+  font-size: 16px;
   width: 85%;
   margin-left: auto;
   margin-right: auto;
@@ -1037,7 +1037,7 @@ body {
 
 /* line 11, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_nav.scss */
 .mainnavigation .home img {
-  width: 220px;
+  width: 160px;
 }
 
 /* line 15, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_nav.scss */
@@ -1070,14 +1070,41 @@ body .wrapper {
 }
 
 /* line 9, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+.container .bgimage .header_image {
+  position: relative;
+}
+
+/* line 12, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+.container .bgimage .headerlogo {
+  position: absolute;
+  display: inline-block;
+  width: 250px;
+  left: 0;
+  right: 0;
+  top: 160px;
+  margin: auto;
+}
+
+/* line 21, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
 .container .bgimage h1 {
-  font-size: 20px;
+  font-size: 14px;
   font-family: "museo_sans500";
   text-align: center;
   color: #363636;
+  border: 0;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
-/* line 16, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+/* line 33, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+.container .introduction {
+  margin-top: 30px;
+}
+
+/* line 35, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
 .container .introduction .wrapp {
   width: 80%;
   margin-left: auto;
@@ -1085,18 +1112,19 @@ body .wrapper {
   line-height: 19px;
 }
 
-/* line 21, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+/* line 40, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
 .container .introduction .wrapp h2 {
   font-size: 18px;
   font-family: "museo_sans500";
   color: #363636;
 }
 
-/* line 26, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+/* line 45, /Users/nickvanpuyvelde/Desktop/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
 .container .introduction .wrapp p {
   font-size: 12px;
   font-family: "museo_sans100";
   color: #363636;
+  margin-bottom: 15px;
 }
 
 /*
