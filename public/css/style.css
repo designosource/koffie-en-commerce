@@ -1027,16 +1027,23 @@ body {
 
 /* line 1, C:/Users/jaspd/projects/Designo/koffie-en-commerce/resources/assets/scss/modules/_nav.scss */
 .mainnavigation {
-  font-size: 26px;
-  width: 90%;
+  font-size: 20px;
+  width: 85%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-/* line 14, C:/Users/jaspd/projects/Designo/koffie-en-commerce/resources/assets/scss/modules/_nav.scss */
+/* line 11, C:/Users/jaspd/projects/Designo/koffie-en-commerce/resources/assets/scss/modules/_nav.scss */
+.mainnavigation .home img {
+  width: 220px;
+}
+
+/* line 15, C:/Users/jaspd/projects/Designo/koffie-en-commerce/resources/assets/scss/modules/_nav.scss */
 .mainnavigation .menu {
   float: right;
+  padding-top: 2px;
   color: #363636;
   text-decoration: none;
   font-family: "museo_sans300";
@@ -1044,15 +1051,52 @@ body {
 
 /* line 1, C:/Users/jaspd/projects/Designo/koffie-en-commerce/resources/assets/scss/modules/_main.scss */
 body {
-  background-color: #F9F9F6;
+  background-color: #FFFFFF;
 }
 
-/* line 4, C:/Users/jaspd/projects/Designo/koffie-en-commerce/resources/assets/scss/modules/_main.scss */
+/* line 3, C:/Users/jaspd/projects/Designo/koffie-en-commerce/resources/assets/scss/modules/_main.scss */
 body .wrapper {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
   background-color: #FFFFFF;
+}
+
+/* line 4, C:/Users/jaspd/projects/Designo/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+.container .bgimage img {
+  width: 100%;
+  max-height: 800px;
+  background-size: cover;
+}
+
+/* line 9, C:/Users/jaspd/projects/Designo/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+.container .bgimage h1 {
+  font-size: 20px;
+  font-family: "museo_sans500";
+  text-align: center;
+  color: #363636;
+}
+
+/* line 16, C:/Users/jaspd/projects/Designo/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+.container .introduction .wrapp {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 19px;
+}
+
+/* line 21, C:/Users/jaspd/projects/Designo/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+.container .introduction .wrapp h2 {
+  font-size: 18px;
+  font-family: "museo_sans500";
+  color: #363636;
+}
+
+/* line 26, C:/Users/jaspd/projects/Designo/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+.container .introduction .wrapp p {
+  font-size: 12px;
+  font-family: "museo_sans100";
+  color: #363636;
 }
 
 /*
