@@ -5,7 +5,8 @@
 @section('content')
     <div class="container">
         <div class="bgimage">
-            {!! Html::image('image/imageheader.jpg') !!}
+            {!! Html::image('image/imageheader.jpg' , 'header image', array('class' => 'header_image'))!!}
+            {!! Html::image('image/logo_nav.png' , 'Logo above the fold', array('class' => 'headerlogo'))!!}
             <h1>Verhalen over de zakelijke kant van media</h1>
         </div>
         <section class="introduction">

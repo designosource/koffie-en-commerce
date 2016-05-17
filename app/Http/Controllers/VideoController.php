@@ -26,11 +26,10 @@ class VideoController extends Controller
     }
 
     public function detail($id){
+        // get details off the video by id
+        $videos = \App\Entity\Video::where('id','=', $id)->first();
 
-        // - - get video - -
-        $data = DB::table('tbl_video')
-            ->where('video_id', $id)
-            ->first();
+        $vidspeaker = \App\Entity\Speaker::where('id','=', $videos->speaker_id)->get();
 
         // - - get speaker info and video from speaker - -
         $vidspeaker = DB::table('tbl_video')
@@ -49,7 +48,7 @@ class VideoController extends Controller
             ->first();
 
         return view('video/detail',[
-            'data' => $data,
+            'data' => $videos,
             'vidspeaker' => $vidspeaker,
             'speaker' => $speaker,
             'category' => $category,
