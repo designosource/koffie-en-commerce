@@ -13,6 +13,8 @@ Homestead.json
 
 /.sass-cache
 
+/.phpintel
+
 .bin
 
 /public/css/style.css
