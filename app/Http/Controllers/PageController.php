@@ -3,16 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
 
 use App\Http\Requests;
 
-class HomeController extends Controller
+class PageController extends Controller
 {
     public function index(){
 
-    	$categories = DB::table('categories')
-    		->get();
+    	$categories = \App\Entity\Category::all();
 
     	return view('index',[
     		'categories' => $categories

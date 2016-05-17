@@ -9,23 +9,23 @@ use Illuminate\Support\Facades\DB;
 
 class CategoryController extends Controller
 {
-    public function category($id){
+    public function showAll($slug){
 
-        $category = DB::table('tbl_category')
-            ->where('category_id', $id)
-            ->first();
+        // $category = DB::table('tbl_category')
+        //     ->where('category_id', $id)
+        //     ->first();
 
-        $videos = DB::table('tbl_video')
-            ->select('*')
-            ->join('tbl_category', 'tbl_video.video_category_id' ,'=', 'tbl_category.category_id')
-            ->where('category_id','=', $id)
-            ->get();
+        // $videos = DB::table('tbl_video')
+        //     ->select('*')
+        //     ->join('tbl_category', 'tbl_video.video_category_id' ,'=', 'tbl_category.category_id')
+        //     ->where('category_id','=', $id)
+        //     ->get();
 
 
-        return view('category/index',[
-            'category' => $category,
-            'videos' => $videos
-        ]);
+        // return view('category/index',[
+        //     'category' => $category,
+        //     'videos' => $videos
+        // ]);
     }
 
     public function subcategory($id){

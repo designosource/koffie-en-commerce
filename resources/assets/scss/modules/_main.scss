@@ -1,12 +1,8 @@
 body{
-  background-color:$white;
-.wrapper{
-  width:90%;
-  margin-left:auto;
-  margin-right: auto;
-  background-color:$white;
-  
+    border-left: 25px solid white;
+    border-right: 25px solid white;
 }
 
-
+.container-fluid, .container{
+    padding: 0px;
 }
