@@ -29,6 +29,6 @@ class PivotCategoriesVideos extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('category_video');
     }
 }
