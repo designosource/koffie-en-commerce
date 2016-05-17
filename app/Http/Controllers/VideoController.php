@@ -13,7 +13,7 @@ class VideoController extends Controller
     public function index(Request $req){
 
         // Get all video's 
-        $data = DB::table('tbl_video')->get();
+        $data = \App\Entity\Video::All();
 
         // get all categories
         // Add where statement to exclude subcategories (if maincategory_id != null)
