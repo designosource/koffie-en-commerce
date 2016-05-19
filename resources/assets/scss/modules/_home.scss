@@ -4,6 +4,7 @@
     position: relative;
     .header_image{
       width:100%;
+
     }
     header{
       @include centerY();
@@ -12,6 +13,7 @@
       .headerlogo{
         margin: 0 auto;
         width:70%;
+        max-width:571px;
       }
       h1{
         font-size:16px;
@@ -47,4 +49,41 @@
     }
   }
 
+}
+
+@media screen and (min-width: 780px) {
+  .banner{
+
+    .bgimage{
+      header{
+        .headerlogo{
+          margin-bottom:10px;
+        }
+        h1{
+          font-size:22px;
+
+        }
+      }
+
+    }
+  }
+}
+
+@media screen and (min-width: 1020px) {
+
+  .banner{
+
+    .bgimage{
+      header{
+        .headerlogo{
+
+          width:571px;
+        }
+        h1{
+          font-size:26px;
+        }
+      }
+
+    }
+  }
 }
