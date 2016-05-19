@@ -6,3 +6,18 @@ body{
 .container-fluid, .container{
     padding: 0px;
 }
+
+
+@media screen and (min-width: 780px) {
+  body{
+      border-left: 40px solid white;
+      border-right: 40px solid white;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  body{
+      border-left: 55px solid white;
+      border-right: 55px solid white;
+  }
+}

@@ -1113,7 +1113,7 @@ h2 {
   width: 160px;
 }
 
-/* line 14, /Applications/MAMP/htdocs/koffie-en-commerce/resources/assets/scss/modules/_nav.scss */
+/* line 15, /Applications/MAMP/htdocs/koffie-en-commerce/resources/assets/scss/modules/_nav.scss */
 .mainnavigation .menu {
   float: right;
   padding-top: 4px;
@@ -1133,6 +1133,22 @@ body {
   padding: 0px;
 }
 
+@media screen and (min-width: 780px) {
+  /* line 12, /Applications/MAMP/htdocs/koffie-en-commerce/resources/assets/scss/modules/_main.scss */
+  body {
+    border-left: 40px solid white;
+    border-right: 40px solid white;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  /* line 19, /Applications/MAMP/htdocs/koffie-en-commerce/resources/assets/scss/modules/_main.scss */
+  body {
+    border-left: 55px solid white;
+    border-right: 55px solid white;
+  }
+}
+
 /* line 3, /Applications/MAMP/htdocs/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
 .banner .bgimage {
   position: relative;
@@ -1143,7 +1159,7 @@ body {
   width: 100%;
 }
 
-/* line 8, /Applications/MAMP/htdocs/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+/* line 9, /Applications/MAMP/htdocs/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
 .banner .bgimage header {
   position: absolute;
   top: 50%;
@@ -1154,13 +1170,14 @@ body {
   text-align: center;
 }
 
-/* line 12, /Applications/MAMP/htdocs/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+/* line 13, /Applications/MAMP/htdocs/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
 .banner .bgimage header .headerlogo {
   margin: 0 auto;
   width: 70%;
+  max-width: 571px;
 }
 
-/* line 16, /Applications/MAMP/htdocs/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+/* line 18, /Applications/MAMP/htdocs/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
 .banner .bgimage header h1 {
   font-size: 16px;
   font-weight: "museo_sans500";
@@ -1169,36 +1186,58 @@ body {
   margin-right: 50px;
 }
 
-/* line 24, /Applications/MAMP/htdocs/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+/* line 26, /Applications/MAMP/htdocs/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
 .banner .bgimage img {
   background-size: cover;
 }
 
-/* line 30, /Applications/MAMP/htdocs/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+/* line 32, /Applications/MAMP/htdocs/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
 .banner .introduction {
   margin-top: 30px;
 }
 
-/* line 32, /Applications/MAMP/htdocs/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+/* line 34, /Applications/MAMP/htdocs/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
 .banner .introduction .wrapp {
   line-height: 1.2;
   margin-left: 20px;
   margin-right: 20px;
 }
 
-/* line 36, /Applications/MAMP/htdocs/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+/* line 38, /Applications/MAMP/htdocs/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
 .banner .introduction .wrapp h2 {
   font-size: 18px;
   font-family: "museo_sans500";
   color: #363636;
 }
 
-/* line 41, /Applications/MAMP/htdocs/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+/* line 43, /Applications/MAMP/htdocs/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
 .banner .introduction .wrapp p {
   font-size: 12px;
   font-family: "museo_sans100";
   color: #363636;
   margin-bottom: 15px;
+}
+
+@media screen and (min-width: 780px) {
+  /* line 59, /Applications/MAMP/htdocs/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+  .banner .bgimage header .headerlogo {
+    margin-bottom: 10px;
+  }
+  /* line 62, /Applications/MAMP/htdocs/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+  .banner .bgimage header h1 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  /* line 78, /Applications/MAMP/htdocs/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+  .banner .bgimage header .headerlogo {
+    width: 571px;
+  }
+  /* line 82, /Applications/MAMP/htdocs/koffie-en-commerce/resources/assets/scss/modules/_home.scss */
+  .banner .bgimage header h1 {
+    font-size: 26px;
+  }
 }
 
 /*
