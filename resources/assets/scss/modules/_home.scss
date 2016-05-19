@@ -2,8 +2,10 @@
 
   .bgimage{
     position: relative;
+  
     .header_image{
       width:100%;
+      max-height: 750px;
 
     }
     header{
@@ -16,7 +18,7 @@
         max-width:571px;
       }
       h1{
-        font-size:16px;
+        font-size:20px;
         font-weight:$font-bold;
         margin-top:12px;
         margin-left: 50px;
@@ -60,7 +62,7 @@
           margin-bottom:10px;
         }
         h1{
-          font-size:22px;
+          font-size:26px;
 
         }
       }
@@ -80,7 +82,7 @@
           width:571px;
         }
         h1{
-          font-size:26px;
+          font-size:34px;
         }
       }
 

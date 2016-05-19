@@ -20,3 +20,28 @@
     font-family:$font-regular;
   }
 }
+
+@media screen and (min-width: 780px) {
+  .mainnavigation{
+    font-size:22px;
+    margin-left:15px;
+    margin-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+
+    .home{
+      img{
+    width:287px;
+
+      }
+    }
+    .menu{
+      float:right;
+      padding-top: 4px;
+      color:$gray;
+      text-decoration: none;
+      font-family:$font-regular;
+    }
+  }
+}
