@@ -19,6 +19,7 @@ Homestead.json
 
 /public/css/style.css
 public/css/style.css
+/public/css
 
 node_modules
 .phpintel/
