@@ -36,6 +36,8 @@
                 </div>
             </div>
         </section>
+
+        @include('layout.quote')
         <hr>
         <hr>
         <h1>DEBUG</h1>
