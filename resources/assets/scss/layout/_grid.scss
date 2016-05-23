@@ -32,6 +32,7 @@ $m-bs-col-x: 12;    // Mobile
                 margin: 22px auto;
             }
             .button{
+                margin: 0 auto; 
                 display: inline-block;
                 padding: 18px 78px;
                 border: 2px solid red;
@@ -129,7 +130,7 @@ $m-bs-col-x: 12;    // Mobile
     .grid{
         &-row{
             .content{
-                padding: 86px 34px 86px 106px;
+                padding: 86px 106px;
             }
             &:nth-of-type(odd){
                 .col-sm-#{$l-bs-col-x}{
