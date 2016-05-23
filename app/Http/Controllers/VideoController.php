@@ -37,7 +37,7 @@ class VideoController extends Controller
 
     public function category($slug) {
 
-        $category = \App\Entity\Category::where('name' , '=', $slug)->first();
+        $category = \App\Entity\Category::where('slug' , '=', $slug)->first();
 
         // Categorie bestaat niet --> opvangen in front-end
         if(!$category) {

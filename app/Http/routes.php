@@ -11,7 +11,6 @@
 |
 */
 
-
 /* STATIC PAGES */
 Route::get('/', [
     'as' => 'index',
@@ -67,5 +66,23 @@ Route::get('/sprekers/{slug}', [
 */
 
 Route::group(['middleware' => ['web']], function () {
-    //
+    
+    /* AUTH */
+	Route::get('admin/login', 'Auth\AuthController@getLogin');
+	Route::post('admin/login', 'Auth\AuthController@postLogin');
+	Route::get('admin/logout', 'Auth\AuthController@getLogout');	
+});
+
+Route::group([/*'middleware' => 'auth', */'namespace' => 'Admin'], function () {
+
+    Route::get('admin/videos', [
+		'as' => 'admin_videos_index',
+		'uses' => 'VideoController@index'
+	]);
+
+	Route::get('admin/videos/{id}/edit', [
+		'as' => 'admin_videos_edit',
+		'uses' => 'VideoController@edit'
+	]);
+
 });
