@@ -8,25 +8,28 @@ $m-bs-col-x: 12;    // Mobile
 .grid{
     margin: 48px auto;
     &-row{
+        position: relative;
         @extend %clearfix;
         .col-sm-#{$l-bs-col-x}{
             padding: 0px;
             background-color: whitesmoke;
+            background-image: url('http://placehold.it/956x694');
+            background-size: cover;
+            background-position: center;
         }
         .col-sm-#{$r-bs-col-x}{
             padding: 0px;
-            background-color: lightgray;
         }
         .col-xs-#{$m-bs-col-x}{
-            min-height: 50px; 
+            min-height: 350px;
         }
         .content{
             width: 100%;
             height: auto;
             padding: 86px 34px 86px 106px;
-            background-color: rgba(0,0,0,0.5);
             h3{
                 line-height: 1;
+                text-transform: capitalize;
             }
             p{
                 margin: 22px auto;
@@ -38,8 +41,62 @@ $m-bs-col-x: 12;    // Mobile
                 font-family: $font-light; 
             }
         }
-        img{
+        &:nth-of-type(4n+1){
+            background-color: white;
+            .content{
+                .button{
+                    border-color: $brand-color;
+                }
+            }
+        }
+        &:nth-of-type(4n+2){
+            background-color: $brand-secondary-color;
+            .content{
+                color: white;
+                .button{
+                    border-color: white;
+                }
+            }
+        }
+        &:nth-of-type(4n+3){
+            background-color: white;
+            .content{
+                .button{
+                    border-color: $brand-secondary-color;
+                }
+            }
+        }
+        &:nth-of-type(4n+4){
+            background-color: $brand-color;
+            .content{
+                .button{
+                    border-color: white;
+                }
+            }
+        }
+    }
+}
 
+@media only screen and (min-width: 768px){
+    .grid{
+        &-row{
+            .col-sm-#{$l-bs-col-x}{
+                position: absolute;
+                height: 100%;
+            }
+            &:nth-of-type(odd){
+                .col-sm-#{$l-bs-col-x}{
+                    left: 0;
+                }
+                .col-sm-#{$r-bs-col-x}{
+                    float: right;
+                }
+            }
+            &:nth-of-type(even){
+                .col-sm-#{$l-bs-col-x}{
+                    right: 0;
+                }
+            }
         }
     }
 }
