@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="container-fluid banner">
-        <div class="bgimage"><br>
+        <div class="bgimage">
             {!! Html::image('image/imageheader.jpg' , 'header image', array('class' => 'header_image img-responsive'))!!}
             <header>
                 {!! Html::image('image/headerlogo.png' , 'Logo above the fold', array('class' => 'headerlogo'))!!}
