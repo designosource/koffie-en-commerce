@@ -11,14 +11,9 @@ $m-bs-col-x: 12;    // Mobile
     &-row{
         position: relative;
         @extend %clearfix;
-        .col-sm-#{$l-bs-col-x}{
-            padding: 0px;
-        }
-        .col-sm-#{$r-bs-col-x}{
-            padding: 0px;
-        }
         .col-xs-#{$m-bs-col-x}{
             min-height: 350px;
+            padding: 0px;
         }
         .content{
             width: 100%;
@@ -147,9 +142,6 @@ $m-bs-col-x: 12;    // Mobile
                     right: 0;
                     position: absolute;
                     height: 100%;
-                }
-                .col-sm-#{$l-bs-col-x}{
-                    float: left;
                 }
             }
         }
