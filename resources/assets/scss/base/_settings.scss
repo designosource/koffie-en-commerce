@@ -27,3 +27,5 @@ $break-very-large:          80em!default; // 1280 @ 16px
 $break-mobile:              0!default; /* No media query since this is the default */
 $break-tablet:              $break-small-medium!default; //  640 @ 16px
 $break-desktop:             $break-medium-large!default; // 960 @ 16px
+
+$anim:                      0.2s ease-in-out;

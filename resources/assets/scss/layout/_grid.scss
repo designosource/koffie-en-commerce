@@ -37,8 +37,15 @@ $m-bs-col-x: 12;    // Mobile
             .button{
                 display: inline-block;
                 padding: 18px 78px;
-                border: 2px solid black;
-                font-family: $font-light; 
+                border: 2px solid red;
+                font-family: $font-light;
+                cursor: pointer; 
+                color: red;
+                transition: background-color $anim, color $anim;
+                &:hover{
+                    background-color: red;
+                    color: white;
+                }
             }
         }
         &:nth-of-type(4n+1){
@@ -46,6 +53,11 @@ $m-bs-col-x: 12;    // Mobile
             .content{
                 .button{
                     border-color: $brand-color;
+                    color: $brand-secondary-color;
+                    &:hover{
+                        background-color: $brand-color;
+                        color: white;
+                    }
                 }
             }
         }
@@ -55,6 +67,12 @@ $m-bs-col-x: 12;    // Mobile
                 color: white;
                 .button{
                     border-color: white;
+                    color: white;
+                    &:hover{
+                        background-color: white;
+                        color: $brand-secondary-color;
+                    }
+
                 }
             }
         }
@@ -63,6 +81,12 @@ $m-bs-col-x: 12;    // Mobile
             .content{
                 .button{
                     border-color: $brand-secondary-color;
+                    color: $brand-secondary-color;
+                    &:hover{
+                        background-color: $brand-secondary-color;
+                        color: white;
+                    }
+
                 }
             }
         }
@@ -72,6 +96,12 @@ $m-bs-col-x: 12;    // Mobile
                 color: white;
                 .button{
                     border-color: white;
+                    color: white;
+                    &:hover{
+                        background-color: white;
+                        color: $brand-color;
+                    }
+
                 }
             }
         }

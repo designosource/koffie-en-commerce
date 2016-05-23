@@ -20,9 +20,28 @@
                 </p>
             </div>
         </section>
-        @include('layout.quote')
+        
         <section class="grid categories">
-            @foreach ($categories as $category)
+            @foreach ($categories_start as $category)
+                <div class="grid-row">
+                    <div class="col-xs-12 col-sm-5">
+
+                    </div>
+                    <div class="col-xs-12 col-sm-7">
+                        <div class="content">
+                            <h3>{{$category->name}}</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <a href="categorieen/{{$category->slug}}">
+                                <div class="button">
+                                    Button
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+            @include('layout.quote')
+            @foreach ($categories_end as $category)
                 <div class="grid-row">
                     <div class="col-xs-12 col-sm-5">
 
