@@ -69,6 +69,7 @@ $m-bs-col-x: 12;    // Mobile
         &:nth-of-type(4n+4){
             background-color: $brand-color;
             .content{
+                color: white;
                 .button{
                     border-color: white;
                 }
