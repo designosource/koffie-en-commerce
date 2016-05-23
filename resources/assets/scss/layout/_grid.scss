@@ -6,16 +6,13 @@ $m-bs-col-x: 12;    // Mobile
 
 // Use #{var-name} to use variables in class name
 .grid{
+    max-width: 1200px;
     margin: 48px auto;
     &-row{
         position: relative;
         @extend %clearfix;
         .col-sm-#{$l-bs-col-x}{
             padding: 0px;
-            background-color: whitesmoke;
-            background-image: url('http://placehold.it/956x694');
-            background-size: cover;
-            background-position: center;
         }
         .col-sm-#{$r-bs-col-x}{
             padding: 0px;
@@ -26,7 +23,7 @@ $m-bs-col-x: 12;    // Mobile
         .content{
             width: 100%;
             height: auto;
-            padding: 86px 34px 86px 106px;
+            padding: 48px;
             h3{
                 line-height: 1;
                 text-transform: capitalize;
@@ -105,27 +102,53 @@ $m-bs-col-x: 12;    // Mobile
                 }
             }
         }
+        &:nth-of-type(odd){
+            .col-sm-#{$l-bs-col-x}{
+                background-color: whitesmoke;
+                background-image: url('http://placehold.it/956x694');
+                background-size: cover;
+                background-position: center; 
+            }
+        }
+        &:nth-of-type(even){
+            transform: scaleY(-1);          // Black Magic
+            .col-xs-#{$m-bs-col-x}{
+                transform: scaleY(-1);      // Black Magic
+            }
+            .col-sm-#{$r-bs-col-x}{
+                background-color: whitesmoke;
+                background-image: url('http://placehold.it/956x694');
+                background-size: cover;
+                background-position: center; 
+            }
+        }
     }
 }
 
 @media only screen and (min-width: 768px){
     .grid{
         &-row{
-            .col-sm-#{$l-bs-col-x}{
-                position: absolute;
-                height: 100%;
+            .content{
+                padding: 86px 34px 86px 106px;
             }
             &:nth-of-type(odd){
                 .col-sm-#{$l-bs-col-x}{
                     left: 0;
+                    position: absolute;
+                    height: 100%;
                 }
                 .col-sm-#{$r-bs-col-x}{
                     float: right;
                 }
             }
             &:nth-of-type(even){
-                .col-sm-#{$l-bs-col-x}{
+                .col-sm-#{$r-bs-col-x}{
                     right: 0;
+                    position: absolute;
+                    height: 100%;
+                }
+                .col-sm-#{$l-bs-col-x}{
+                    float: left;
                 }
             }
         }
