@@ -20,50 +20,24 @@
                 </p>
             </div>
         </section>
+        @include('layout.quote')
         <section class="grid categories">
-            <div class="grid-row">
-                <div class="col-xs-12 col-sm-5">
+            @foreach ($categories as $category)
+                <div class="grid-row">
+                    <div class="col-xs-12 col-sm-5">
 
-                </div>
-                <div class="col-xs-12 col-sm-7">
-                    <div class="content">
-                        <h3>Title</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                        <div class="button">
-                            Button
+                    </div>
+                    <div class="col-xs-12 col-sm-7">
+                        <div class="content">
+                            <h3>{{$category->name}}</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <div class="button">
+                                Button
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        @include('layout.quote')
-        <hr>
-        <hr>
-        <h1>DEBUG</h1>
-        <ul>
-            <li>
-                <a href="{{action('VideoController@index')}}">
-                    <b>Video Index</b> /videos
-                </a>
-            </li>
-            <li>
-                <a href="{{action('SpeakerController@detail',['id' => 1])}}">
-                    <b>Speaker Detail</b> /speaker/1
-                </a>
-            </li>
-        </ul>
-        <h1>Categories</h1>
-        <ul>
-            @foreach ($categories as $category)
-                <li>
-                    {{-- <a href="{{action('CategoryController@category',['id' => $category->id])}}">
-                        {{$category->name}} /category/{{$category->id}}
-                    </a> --}}
-                </li>
             @endforeach
-        </ul>
-        <hr>
-        <hr>
+        </section>
     </div>
 @endsection
