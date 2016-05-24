@@ -5,47 +5,22 @@
   padding-top: 20px;
   padding-bottom: 20px;
 
-
   .home{
-    img{
-  width:160px;
 
+    img{
+      width:160px;
     }
   }
+
   .menu{
     float:right;
     padding-top: 4px;
     color:$gray;
     text-decoration: none;
     font-family:$font-regular;
+    cursor: pointer;
   }
 }
-
-// @media screen and (min-width: 780px) {
-//   .mainnavigation{
-//     font-size:22px;
-//     margin-left:15px;
-//     margin-right: 15px;
-//     padding-top: 20px;
-//     padding-bottom: 20px;
-
-
-//     .home{
-//       img{
-//     width:287px;
-
-//       }
-//     }
-//     .menu{
-//       float:right;
-//       padding-top: 4px;
-//       color:$gray;
-//       text-decoration: none;
-//       font-family:$font-regular;
-//     }
-//   }
-// }
-
 
 .overlay {
     height: 0%;
@@ -62,7 +37,7 @@
 
 .overlay-content {
     position: relative;
-    top: 8%;
+    top: 10%;
     width: 690px;
     height: 50px;
     display: block;
@@ -101,12 +76,38 @@
 
 .closebtn {
     position: absolute;
-    top: 20px;
+    top: 10px;
     right: 45px;
-    font-size: 50px !important;
+    font-size: 40px !important;
 }
 
 a.closebtn:hover {
     border-bottom: none;
     color: #4eccb4;
 }
+
+
+// @media screen and (min-width: 780px) {
+//   .mainnavigation{
+//     font-size:22px;
+//     margin-left:15px;
+//     margin-right: 15px;
+//     padding-top: 20px;
+//     padding-bottom: 20px;
+
+
+//     .home{
+//       img{
+//     width:287px;
+
+//       }
+//     }
+//     .menu{
+//       float:right;
+//       padding-top: 4px;
+//       color:$gray;
+//       text-decoration: none;
+//       font-family:$font-regular;
+//     }
+//   }
+// }
