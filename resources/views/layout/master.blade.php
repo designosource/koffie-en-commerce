@@ -13,6 +13,16 @@
 	@yield('content')
     @include('layout.footer')
 	</div>
+
+<script>
+function openNav() {
+    document.getElementById("myNav").style.height = "100vh";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.height = "0vh";
+}
+</script>
 </body>
 @yield('scripts')
 </html>
