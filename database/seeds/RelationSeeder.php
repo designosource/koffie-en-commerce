@@ -11,23 +11,23 @@ class RelationSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('category_video')->delete();
+      DB::table('category_video')->delete();
 
-        $cat_vid = [
-            [
-                'category_id' => 1,
-                'video_id' => 1
-            ],
-            [
-                'category_id' => 2,
-                'video_id' => 1
-            ],
-            [
-                'category_id' => 2,
-                'video_id' => 2
-            ]
-        ];
+      $cat_vid = [
+          [
+              'category_id' => 1,
+              'video_id' => 1
+          ],
+          [
+              'category_id' => 2,
+              'video_id' => 1
+          ],
+          [
+              'category_id' => 2,
+              'video_id' => 2
+          ]
+      ];
 
-        DB::table('category_video')->insert($cat_vid);
+      DB::table('category_video')->insert($cat_vid);
     }
 }
