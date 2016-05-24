@@ -1,7 +1,10 @@
-.headerimage1{
+.headerlarge{
   position: relative;
+
+  .header_large{
   width:100%;
   max-height:607px;
+  }
   header{
     @include centerXY();
     width:100%;
@@ -32,9 +35,10 @@
   color:$gray;
   font-weight:500;
   float:left;
-    width:100%;
+  width:100%;
   margin-left:auto;
   margin-right:auto;
+  text-transform: capitalize;
 }
 }
 
@@ -52,7 +56,7 @@
 
 @media screen and (min-width: 780px) {
 
-    .headerimage1{
+    .headerlarge{
       header{
         h1{
           font-size:26px;
@@ -79,7 +83,8 @@
 
 @media screen and (min-width: 1020px) {
 
-      .headerimage1{
+      .headerlarge{
+
       header{
         .headerlogo{
 
