@@ -1,9 +1,28 @@
 {{ Form::model($video, array('route' => array('admin_videos_post_edit', $video->id)), 'Selecteer een category') }}
-    {{ Form::label('title', 'Titel:', array('class' => 'address')) }}
-    {{ Form::text('title') }}
+    <div>
+	    {{ Form::label('title', 'Titel:', array('class' => 'address')) }}
+	    {{ Form::text('title') }}
+	</div>
 
-    {{ Form::label('slug', 'slug:', array('class' => 'address')) }}
-    {{ Form::text('slug') }}
+	<div>
+    	{{ Form::label('slug', 'slug:', array('class' => 'address')) }}
+    	{{ Form::text('slug') }}
+	</div>
+
+	<div>
+    	{{ Form::label('short_description', 'Korte beschrijving:', array('class' => 'address')) }}
+    	{{ Form::textarea('short_description') }}
+	</div>
+	
+	<div>
+    	{{ Form::label('long_description', 'Lange beschrijving:', array('class' => 'address')) }}
+    	{{ Form::textarea('long_description') }}
+	</div>
+
+	<div>
+    	{{ Form::label('vimeo', 'Video URL:', array('class' => 'address')) }}
+    	{{ Form::textarea('vimeo') }}
+	</div>
 
 	@foreach ($categories as $category)
 		<div>
@@ -12,6 +31,10 @@
 		</div>
 	@endforeach
 
-    {{ Form::submit('Send this form!') }}
+	
+	
+	<div>
+    	{{ Form::submit('Send this form!') }}
+    </div>
 {{ Form::close() }}
 

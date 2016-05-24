@@ -22,6 +22,7 @@ class CreateVideosTable extends Migration
             $table->string('short_description');
             $table->string('long_description');
             $table->string('vimeo'); // Link to vimeo
+            $table->string('vimeo_thumb'); // Link to vimeo thumbnail
             $table->string('slug');
         });
     }

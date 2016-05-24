@@ -8,12 +8,14 @@
 	<link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
 </head>
 <body>
+	<script src="{{ URL::asset('js/jquery-1.12.4.min.js') }}"></script>
+	<script src="{{ URL::asset('js/vimeo-thumb.js') }}"></script>
+	
 	@include('layout.nav')
 	<div class="wrapper">
 	@yield('content')
     @include('layout.footer')
 	</div>
-
 <script>
 function openNav() {
     document.getElementById("myNav").style.height = "100vh";

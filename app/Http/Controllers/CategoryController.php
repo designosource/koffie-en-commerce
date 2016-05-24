@@ -19,15 +19,12 @@ class CategoryController extends Controller
         }
 
         // Get all categories
-        // IMPROV : use this object to fetch the specific category from it
-        // PRO : -1 query to db
         $categories = \App\Entity\Category::All();
-        $videos = \App\Entity\Video::All();
 
         return view('category/index',[
             'categories' => $categories,
             'category' => $category,
-            'videos' => $videos
+            'videos' => $category->videos
         ]);
     }
 

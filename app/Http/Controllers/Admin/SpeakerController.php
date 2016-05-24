@@ -13,15 +13,9 @@ use Illuminate\Support\Facades\Redirect;
 
 use App\Http\Requests;
 
-class VideoController extends Controller
+class SpeakerController extends Controller
 {
-    // HELPER
-    private function getVimeoThumb($id) {
-        $hash = unserialize(file_get_contents("http://vimeo.com/api/v2/video/" . $id . ".php"));
-        return $hash[0]['thumbnail_large']; 
-    }
-
-    public function index(Request $req){
+    public function showAll(Request $req){
 
         // Get all video's
         $videos = \App\Entity\Video::all();
@@ -32,7 +26,7 @@ class VideoController extends Controller
         ]);
     }
 
-    public function getEditVideo($id){
+    public function showEdit($id){
 
         // Get video
         $video = \App\Entity\Video::find($id);
@@ -51,7 +45,7 @@ class VideoController extends Controller
         ]);
     }
 
-    public function postEditVideo($id){
+    public function postEdit($id){
 
         // validate
         // read more on validation at http://laravel.com/docs/validation
@@ -77,8 +71,6 @@ class VideoController extends Controller
             // Update
             $video->title = Input::get('title');
             $video->slug = Input::get('slug');
-            $video->vimeo = Input::get('vimeo');
-            $video->vimeo_thumb = $this->getVimeoThumb($video->vimeo);
             $video->save();
 
             $categories = [];
