@@ -8,6 +8,7 @@
             <header>
                 {!! Html::image('image/headerlogo.png' , 'Logo above the fold', array('class' => 'headerlogo'))!!}
                 <h1 class="img-responsive" >Verhalen over de zakelijke kant van media</h1>
+                <a id="tm_logo" href="http://thomasmore.be"></a>
             </header>
         </div>
         <section class="introduction">

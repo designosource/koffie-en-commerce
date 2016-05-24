@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="container">
-        <h1>Category {{$category->name}}</h1>
+        <h1>{{$category->name}}</h1>
         <br>
         @foreach ($videos as $video)
             <p>This is video <a href="{{action('VideoController@detail',['id' => $video->slug])}}"><b>{{$video->title}}</b></a></p>

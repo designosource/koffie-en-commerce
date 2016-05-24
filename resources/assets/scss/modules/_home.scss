@@ -16,6 +16,7 @@
       @include centerY();
       width:100%;
       text-align: center;
+
       .headerlogo{
         margin: 0 auto;
         width:70%;
@@ -28,10 +29,9 @@
         margin-left: 50px;
         margin-right: 50px;
       }
+
     }
-    img{
-      background-size: cover;
-    }
+
 
   }
 
@@ -63,6 +63,17 @@
     .bgimage{
        height:650px;
       header{
+        #tm_logo{
+          width: 120px;
+  height: 47px;
+  position: absolute;
+  display: block;
+  top: 320px;
+  right: 30px;
+  background-image: url(../image/tm.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
         .headerlogo{
           margin-bottom:10px;
         }
@@ -100,6 +111,9 @@
     .bgimage{
       height:750px;
       header{
+        #tm_logo{
+  top: 360px;
+  }
         .headerlogo{
 
           width:571px;
