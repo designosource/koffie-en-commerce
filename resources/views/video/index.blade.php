@@ -23,10 +23,13 @@ Ontdek de verschillende navigeermogelijkheden om de onderwerpen, verhalen en med
 		<div class="videos">
 			<h2>VIDEO'S</h2>
 			@foreach ($videos as $video)
+				<h3>{{$video->title}}</h3>
 				{{dump($video)}}
-				@foreach ($video->categories()->get() as $category)
-					{{dump($category)}}	
-				@endforeach
+				<ul>
+					@foreach ($video->categories()->get() as $category)
+						<li>{{$category->name}}</li>
+					@endforeach
+				</ul>
 				<hr>
 				<hr>
 			@endforeach
