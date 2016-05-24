@@ -5,7 +5,6 @@
 @section('content')
     <div class="container-fluid banner">
         <div class="bgimage">
-            {!! Html::image('image/imageheader.jpg' , 'header image', array('class' => 'header_image img-responsive'))!!}
             <header>
                 {!! Html::image('image/headerlogo.png' , 'Logo above the fold', array('class' => 'headerlogo'))!!}
                 <h1 class="img-responsive" >Verhalen over de zakelijke kant van media</h1>
@@ -20,7 +19,7 @@
                 </p>
             </div>
         </section>
-        
+
         <section class="grid categories">
             @foreach ($categories_start as $category)
                 <div class="grid-row">
@@ -52,7 +51,7 @@
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-7">
-                        
+
                     </div>
                     @endif
                 </div>
@@ -88,7 +87,7 @@
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-7">
-                        
+
                     </div>
                     @endif
                 </div>
