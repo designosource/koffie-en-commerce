@@ -21,4 +21,12 @@ class PageController extends Controller
             'categories_end' => $categories_end
     	]);
     }
+
+    public function about() {
+        return view('page.about');
+    }
+
+    public function contact() {
+        return view('page.contact');
+    }
 }
