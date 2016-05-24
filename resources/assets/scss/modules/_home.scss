@@ -1,11 +1,17 @@
 .banner{
 
   .bgimage{
+      position: relative;
        background-image: url(../image/imageheader.jpg);
        background-size: cover;
        width: 100%;
-       max-height: 700px;
+       height:500px;
 
+    .header_image{
+      width:100%;
+      max-height: 750px;
+
+    }
     header{
       @include centerY();
       width:100%;
@@ -55,6 +61,7 @@
   .banner{
 
     .bgimage{
+       height:650px;
       header{
         .headerlogo{
           margin-bottom:10px;
@@ -91,6 +98,7 @@
   .banner{
 
     .bgimage{
+      height:750px;
       header{
         .headerlogo{
 
