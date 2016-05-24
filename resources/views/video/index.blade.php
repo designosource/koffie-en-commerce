@@ -18,7 +18,7 @@ Ontdek de verschillende navigeermogelijkheden om de onderwerpen, verhalen en med
 
 <div class="category">
 			@foreach ($categories as $category)
-				<a href="{{action('VideoController@category',['slug' => $category->slug])}}"><span class="namecat">{{$category->name}}</span></a>
+				<a href="{{action('CategoryController@category',['slug' => $category->slug])}}"><span class="namecat">{{$category->name}}</span></a>
 			@endforeach
 		</div>
 
