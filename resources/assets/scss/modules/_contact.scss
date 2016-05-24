@@ -4,19 +4,54 @@
     background-image: url(../image/contact.png);
     background-size: cover;
     width: 100%;
-    height: 500px;
+    height:300px;
 }
   }
   .introform{
     margin-left: 15px;
     margin-right:15px;
-    margin-bottom: 15px;
+    margin-bottom: 55px;
     h2{
       font-size:18px;
       margin-bottom: 15px;
     }
     p{
       margin-bottom:15px;
+    }
+
+    form{
+      .form-group{
+        .form-control{
+          border-radius:0px;
+          border: solid $green 3px;
+          height:55px;
+          font-family: $font-regular;
+          font-size:16px;
+        }
+      }
+      textarea{
+        border-radius:0px;
+        border: solid $green 3px;
+        margin-top:35px;
+        margin-bottom:35px;
+        font-family: $font-regular;
+        font-size:16px;
+      }
+      .btn{
+        border-radius:0px;
+        border: solid $green 3px;
+        padding:18px 78px;
+        transition: $anim;
+        -webkit-transition: $anim;
+        -moz-transition: $anim;
+        -o-transition: $anim;
+        font-family: $font-regular;
+        font-size:16px;
+      }
+      .btn:hover{
+        background-color:$green;
+        color:white;
+      }
     }
   }
 }
@@ -27,14 +62,57 @@
   }
 
 @media screen and (min-width: 780px) {
+  .banner{
+    .headerlarge{
+      .contact{
+        height:400px;
+      }
+    }
+
   .introform{
     width:70%;
+    margin-left: 25px;
+    margin-right: 25px;
+    h2{
+      font-size:22px;
+      margin-bottom: 15px;
+    }
+    p{
+      font-size:14px;
+      margin-bottom:15px;
+    }
+    form{
+    width:95%;
+    }
   }
 
   }
+}
 
 
 @media screen and (min-width: 1020px) {
-
+  .banner{
+    .headerlarge{
+      .contact{
+        height:500px;
+      }
+    }
+    .introform{
+      margin-top: 40px;
+      margin-left: 55px;
+      margin-right: 55px;
+      h2{
+        font-size:25px;
+        margin-bottom: 15px;
+      }
+      p{
+        font-size:16px;
+        margin-bottom:15px;
+      }
+      form{
+        width:90%;
+      }
+    }
+  }
 
   }
