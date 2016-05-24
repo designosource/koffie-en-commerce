@@ -4,15 +4,14 @@
 
 @section('content')
     <div class="container">
-        <h1>Category {{$category->category_name}}</h1>
-        <a href="{{action('PageController@index')}}">
-            <b>Home</b> /
-        </a>
+        <h1>Category {{$category->name}}</h1>
         <br>
+        {{dump($videos)}}
         @foreach ($videos as $video)
-            <p>This is video <a href="{{action('VideoController@detail',['id' => $video->video_id])}}"><b>{{$video->video_title}}</b></a></p>
-            <p>Their description is <b>{{$video->video_description}}</b></p>
-            <p>category {{$video->category_name}}</p>
+            {{dump($video)}}
+            <p>This is video <a href="{{action('VideoController@detail',['id' => $video->video_id])}}"><b>{{$video->title}}</b></a></p>
+            <p>Their description is <b>{{$video->description}}</b></p>
+            <p>category {{$video->name}}</p>
             <hr>
         @endforeach
     </div>

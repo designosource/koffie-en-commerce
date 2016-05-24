@@ -4,8 +4,8 @@
 
 @section('content')
 	<div class="container-fluid">
-		<div class="headerimage1">
-				{!! Html::image('image/videoimage.png' , 'header image', array('class' => 'header_image1 img-responsive'))!!}
+		<div class="headerlarge">
+				{!! Html::image('image/videoimage.png' , 'header image', array('class' => 'header_large img-responsive'))!!}
 				<header>
 						<h1 class="img-responsive" >Videos</h1>
 				</header>

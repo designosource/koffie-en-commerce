@@ -34,23 +34,4 @@ class VideoController extends Controller
             'speaker' => $video->speaker
         ]);
     }
-
-    public function category($slug) {
-
-        $category = \App\Entity\Category::where('slug' , '=', $slug)->first();
-
-        // Categorie bestaat niet --> opvangen in front-end
-        if(!$category) {
-            throw new \Exception('Category does not exist.');
-        }
-
-
-        // Get all categories
-        $categories = \App\Entity\Category::All();
-
-        return view('video/index',[
-            'categories' => $categories,
-            'videos' => $category->videos
-        ]);
-    }
 }

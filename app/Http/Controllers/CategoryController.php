@@ -9,23 +9,25 @@ use Illuminate\Support\Facades\DB;
 
 class CategoryController extends Controller
 {
-    public function showAll($slug){
+    public function category($slug) {
 
-        // $category = DB::table('tbl_category')
-        //     ->where('category_id', $id)
-        //     ->first();
+        $category = \App\Entity\Category::where('slug' , '=', $slug)->first();
 
-        // $videos = DB::table('tbl_video')
-        //     ->select('*')
-        //     ->join('tbl_category', 'tbl_video.video_category_id' ,'=', 'tbl_category.category_id')
-        //     ->where('category_id','=', $id)
-        //     ->get();
+        // Categorie bestaat niet --> opvangen in front-end
+        if(!$category) {
+            throw new \Exception('Category does not exist.');
+        }
 
+        // Get all categories
+        // IMPROV : use this object to fetch the specific category from it
+        // PRO : -1 query to db
+        $categories = \App\Entity\Category::All();
 
-        // return view('category/index',[
-        //     'category' => $category,
-        //     'videos' => $videos
-        // ]);
+        return view('category/index',[
+            'categories' => $categories,
+            'category' => $category,
+            'videos' => $category->videos
+        ]);
     }
 
     public function subcategory($id){

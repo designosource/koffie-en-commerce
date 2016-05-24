@@ -43,7 +43,7 @@ Route::get('/videos/{slug}', [
 /* CATEGORIES */
 Route::get('/categorieen/{slug}', [
 	'as' => 'videos_category',
-	'uses' => 'VideoController@category'
+	'uses' => 'CategoryController@category'
 ]);
 
 
