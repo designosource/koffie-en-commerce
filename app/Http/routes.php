@@ -70,10 +70,15 @@ Route::group(['middleware' => ['web']], function () {
 	/* AUTH */
 	Route::get('admin/login', 'Auth\AuthController@getLogin');
 	Route::post('admin/login', 'Auth\AuthController@postLogin');
-	Route::get('admin/logout', 'Auth\AuthController@getLogout');	
 });
 
-Route::group(['middleware' => 'auth', 'namespace' => 'Admin'], function () {
+/* BASIC AUTHENTICATION */
+Route::group(['middleware' => ['web', 'auth']], function () {
+	Route::get('admin/logout', 'Auth\AuthController@getLogout');
+});
+
+/* ADMIN */
+Route::group(['middleware' => ['web', 'auth'], 'namespace' => 'Admin'], function () {
 
 	Route::get('admin/videos', [
 		'as' => 'admin_videos_index',

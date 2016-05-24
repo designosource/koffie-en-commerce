@@ -4,11 +4,7 @@
 
 @section('content')
 	<div class="container">
-		<h1>Videos</h1>
-		<a href="{{action('PageController@index')}}">
-			<b>Home</b> /
-		</a>
-		<br>
+		{{dump($user)}}
 	
 		<div>
 			<h2>VIDEO'S</h2>

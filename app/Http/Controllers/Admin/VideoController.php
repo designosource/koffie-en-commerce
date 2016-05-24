@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Html;
+use Auth;
 
 use App\Http\Requests;
 
@@ -16,7 +17,8 @@ class VideoController extends Controller
         $videos = \App\Entity\Video::all();
 
         return view('admin/video/index',[
-            'videos' => $videos
+            'videos' => $videos,
+            'user' => Auth::user()
         ]);
     }
 
