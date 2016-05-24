@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
             [
                 'name' => 'admin',
                 'email' => 'info@designosource.be',
-                'password' => 'designosource',
+                'password' => bcrypt('designosource'),
                 'role' => 'admin',
             ],
         ];
