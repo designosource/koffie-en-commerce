@@ -14,8 +14,8 @@ class PivotCategoriesVideos extends Migration
     {
         Schema::create('category_video', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('category_id')->unsigned();
-            $table->integer('video_id')->unsigned();
+            $table->integer('category_id')->unsigned()->index();
+            $table->integer('video_id')->unsigned()->index();
 
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->foreign('video_id')->references('id')->on('videos')->onDelete('cascade');

@@ -86,8 +86,13 @@ Route::group(['middleware' => ['web', 'auth'], 'namespace' => 'Admin'], function
 	]);
 
 	Route::get('admin/videos/{id}/edit', [
-		'as' => 'admin_videos_edit',
-		'uses' => 'VideoController@edit'
+		'as' => 'admin_videos_get_edit',
+		'uses' => 'VideoController@getEditVideo'
+	]);
+
+	Route::post('admin/videos/{id}/edit', [
+		'as' => 'admin_videos_post_edit',
+		'uses' => 'VideoController@postEditVideo'
 	]);
 
 });
