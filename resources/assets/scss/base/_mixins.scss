@@ -27,58 +27,6 @@
   // only-shortcut sizes
   @if $condition == 'mobile-only' { @media only screen and ( min-width: $break-mobile ) and ( max-width: $break-tablet ) { @content; } }
   @if $condition == 'tablet-only' { @media only screen and ( min-width: $break-tablet ) and ( max-width: $break-desktop ) { @content; } }
-
-  //
-  // make it happen if the browser doesn't understand mediaqueries:
-  // ... unless using an -only respond-to:
-  //
-  @if $condition !=  'very-small-only' and
-    $condition != 'small-only' and
-    $condition != 'small-medium-only' and
-    $condition != 'medium-only' and
-    $condition != 'medium-large-only' and
-    $condition != 'large-only' and
-    $condition != 'very-large-only' and
-    $condition != 'mobile-only' and
-    $condition != 'smallest-mobile' and
-    $condition != 'tablet-only' and
-    $condition != 'ie9' and
-    $condition != 'lt-ie9'
-  {
-    .no-mq & {
-      @content;
-    }
-  }
-
-  //
-  // IE
-  //
-  @if $condition ==  'ie9'{
-    .ie9 &  {
-      @content;
-    }
-  }
-
-  @if $condition ==  'lt-ie7'{
-    .lt-ie7 &  {
-      @content;
-    }
-  }
-  @if $condition ==  'lt-ie8'{
-    .lt-ie8 &  {
-      @content;
-    }
-  }
-  @if $condition ==  'lt-ie9'{
-    .lt-ie9 &  {
-      @content;
-    }
-  }
-  @if $condition ==  'no-svg'{
-    .no-svg &  {
-      @content;
-    }
-  }
 }
 
 //

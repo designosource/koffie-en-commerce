@@ -1,0 +1,45 @@
+.admin-login{
+    margin-top: 96px;
+    padding: 0 15px;
+    .panel{
+        .panel-body{
+            img{
+                display: block;
+                margin: 24px auto;
+                width: 60px;
+            }
+            h1{
+                display: none;
+                text-align: center;
+                line-height: 1;
+                margin: 24px auto;
+                small{
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    form{
+        div{
+            margin-top: 24px;
+            &:last-of-type{
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
+
+@include respond-to(tablet){
+    .admin-login{
+        margin-top: 0px;
+        @include centerXY();
+        .panel{
+            .panel-body{
+                h1{
+                    display: block;
+                }
+            }
+        }
+    }
+}
