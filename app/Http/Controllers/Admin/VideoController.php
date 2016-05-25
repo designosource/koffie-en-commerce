@@ -84,6 +84,7 @@ class VideoController extends Controller
             $video->slug = Input::get('slug');
             $video->vimeo = Input::get('vimeo');
             $video->vimeo_thumb = $this->getVimeoThumb($video->vimeo);
+            $video->speaker_id = Input::get('speaker');
             $video->save();
 
             $categories = [];

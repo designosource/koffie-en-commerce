@@ -26,7 +26,7 @@
 
 	<div>
 		{{ Form::label('speaker', 'Speaker:', array('class' => 'address')) }}
-		{{ Form::select('speaker', $speakerList) }}
+		{{ Form::select('speaker', $speakerList, $video->speaker_id) }}
 	</div>
 
 	@foreach ($categories as $category)
