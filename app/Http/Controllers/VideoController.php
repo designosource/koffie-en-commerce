@@ -27,11 +27,13 @@ class VideoController extends Controller
     public function detail($slug){
 
         // Get video
-        $video = \App\Entity\Video::where('slug','=', $slug)->first();
+        $video = \App\Entity\Video::where('slug','=', $slug)->get();
+        $videosSpeaker = \App\Entity\Video::where('speaker_id','=', $video[0]->speaker_id)->where("id","<>", $video[0]->id)->limit(3)->get();
 
         return view('video/detail',[
-            'video' => $video,
-            'speaker' => $video->speaker
+            'video' => $video[0],
+            'videosSpeaker' => $videosSpeaker,
+            'speaker' => $video[0]->speaker,
         ]);
     }
 }
