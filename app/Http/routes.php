@@ -85,14 +85,24 @@ Route::group(['middleware' => ['web', 'auth'], 'namespace' => 'Admin'], function
 		'uses' => 'VideoController@index'
 	]);
 
+	Route::get('admin/videos/create', [
+		'as' => 'admin_videos_create',
+		'uses' => 'VideoController@create'
+	]);
+
+	Route::post('admin/videos', [
+		'as' => 'admin_videos_store',
+		'uses' => 'VideoController@store'
+	]);
+
 	Route::get('admin/videos/{id}/edit', [
-		'as' => 'admin_videos_get_edit',
-		'uses' => 'VideoController@getEditVideo'
+		'as' => 'admin_videos_edit',
+		'uses' => 'VideoController@edit'
 	]);
 
 	Route::post('admin/videos/{id}/edit', [
-		'as' => 'admin_videos_post_edit',
-		'uses' => 'VideoController@postEditVideo'
+		'as' => 'admin_videos_update',
+		'uses' => 'VideoController@update'
 	]);
 
 });
