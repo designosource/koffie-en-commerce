@@ -154,7 +154,11 @@ class VideoController extends Controller
         }
     }
 
-    public function destroy() {
+    public function destroy($id) {
+        // store
+        $video = \App\Entity\Video::find($id);
+        $video->delete();
 
+        return Redirect::to('admin/videos');
     }
 }

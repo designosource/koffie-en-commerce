@@ -105,4 +105,9 @@ Route::group(['middleware' => ['web', 'auth'], 'namespace' => 'Admin'], function
 		'uses' => 'VideoController@update'
 	]);
 
+	Route::get('admin/videos/{id}/delete', [
+		'as' => 'admin_videos_delete',
+		'uses' => 'VideoController@destroy
+	]);
+
 });
