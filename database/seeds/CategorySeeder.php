@@ -18,7 +18,15 @@ class CategorySeeder extends Seeder
         $category = [
             [
                 'name' => 'financieren',
-                'description' => 'description',
+                'description' => 'Je moet altijd eerst iets maken voor je het kan terugverdienen.
+                Bij mediaprojecten is de opstartkost één van de grootste struikelblokken die duurzaam succes in de weg staan.
+                Hoe kan je de soms grote kloof dichten tussen het maken van inhoud maken en het kunnen afleveren en centen
+                verdienen met het resultaat?
+Laat je inspireren door de clips en informatie onder het thema ‘financieren’ over onderwerpen als:
+	•	Publieke financieringsbronnen
+	•	Private financieringsbronnen
+	•	Crowdfunding
+	•	Etc.',
                 'slug' => 'financieren'
             ],
             [

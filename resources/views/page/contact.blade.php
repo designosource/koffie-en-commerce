@@ -1,5 +1,7 @@
 @extends('layout.master')
 
+@section('title', 'Contact')
+
 @section('content')
 <div class="container-fluid banner">
   <div class="headerlarge">
