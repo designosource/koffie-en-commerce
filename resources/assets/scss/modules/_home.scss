@@ -31,30 +31,25 @@
       }
 
     }
-
-
   }
+}
 
-  .introduction{
-    margin-top:30px;
-    .wrapp{
-      line-height: 1.2;
-      margin-left: 20px;
-      margin-right: 20px;
-      h2{
-        font-size:18px;
-        font-family:$font-bold;
-        color:$gray;
-      }
-      p{
-        font-size:12px;
-        font-family:$font-light;
-        color:$gray;
-        margin-bottom: 15px;
-      }
+.introduction{
+  margin-top:30px;
+  .wrapp{
+    line-height: 1.2;
+    margin-left: 20px;
+    margin-right: 20px;
+    h2{
+      font-family:$font-bold;
+      color:$gray;
+    }
+    p{
+      font-family:$font-light;
+      color:$gray;
+      margin-bottom: 15px;
     }
   }
-
 }
 
 @media screen and (min-width: 780px) {
@@ -84,63 +79,38 @@
       }
 
     }
-    .introduction{
-      .wrapp{
-        line-height: 1.2;
-        margin-left: 80px;
-        margin-right: 80px;
-        margin-top:40px;
-        margin-bottom:40px;
-        h2{
-          font-size:22px;
-          margin-bottom:10px;
-        }
-        p{
-          font-size:14px;
-
-        }
-      }
+  }
+  .introduction{
+    .wrapp{
+      line-height: 1.2;
+      margin: 40px 80px;
     }
   }
 }
 
+
 @media screen and (min-width: 1220px) {
-
   .banner{
-
     .bgimage{
       height:750px;
       header{
         #tm_logo{
-  top: 360px;
-  }
+          top: 360px;
+        }
         .headerlogo{
-
           width:571px;
         }
         h1{
           font-size:34px;
         }
       }
-
-    }
-    .introduction{
-      .wrapp{
-        line-height: 1.2;
-        margin-left: 175px;
-        margin-right: 175px;
-        margin-top:60px;
-        margin-bottom:60px;
-        h2{
-          font-size:30px;
-          margin-bottom:20px;
-        }
-        p{
-          font-size:16px;
-
-        }
-      }
     }
   }
 
+  .introduction{
+    .wrapp{
+      line-height: 1.2;
+      margin: 60px 175px;
+    }
+  }
 }

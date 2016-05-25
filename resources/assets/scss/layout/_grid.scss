@@ -11,7 +11,6 @@ $m-bs-col-x: 12;    // Mobile
         position: relative;
         @extend %clearfix;
         .col-xs-#{$m-bs-col-x}{
-            min-height: 350px;
             padding: 0px;
         }
         .content{
@@ -25,31 +24,15 @@ $m-bs-col-x: 12;    // Mobile
             p{
                 margin: 22px auto;
             }
-            .button{
-                margin: 0 auto;
-                display: inline-block;
-                padding: 18px 78px;
-                border: 2px solid red;
-                font-family: $font-light;
-                cursor: pointer;
-                color: red;
-                transition: background-color $anim, color $anim;
-                &:hover{
-                    background-color: red;
-                    color: white;
-                }
-            }
         }
         &:nth-of-type(4n+1){
             background-color: white;
-            .content{
-                .button{
-                    border-color: $brand-color;
-                    color: $brand-secondary-color;
-                    &:hover{
-                        background-color: $brand-color;
-                        color: white;
-                    }
+            .button{
+                border-color: $brand-color;
+                color: $brand-secondary-color;
+                &:hover{
+                    background-color: $brand-color;
+                    color: white;
                 }
             }
         }
@@ -70,16 +53,14 @@ $m-bs-col-x: 12;    // Mobile
         }
         &:nth-of-type(4n+3){
             background-color: white;
-            .content{
-                .button{
-                    border-color: $brand-secondary-color;
-                    color: $brand-secondary-color;
-                    &:hover{
-                        background-color: $brand-secondary-color;
-                        color: white;
-                    }
-
+            .button{
+                border-color: $brand-secondary-color;
+                color: $brand-secondary-color;
+                &:hover{
+                    background-color: $brand-secondary-color;
+                    color: white;
                 }
+
             }
         }
         &:nth-of-type(4n+4){
@@ -123,9 +104,6 @@ $m-bs-col-x: 12;    // Mobile
 @media only screen and (min-width: 768px){
     .grid{
         &-row{
-            .content{
-                padding: 86px 106px;
-            }
             &:nth-of-type(odd){
                 .col-sm-#{$l-bs-col-x}{
                     left: 0;
@@ -147,10 +125,12 @@ $m-bs-col-x: 12;    // Mobile
     }
 }
 
-@media screen and (min-width: 1220px) {
-
-  .grid{
-    margin-left:175px;
-    margin-right:175px;
-  }
+@media screen and (min-width: 1200px) {
+    .grid{
+        &-row{
+            .content{
+                padding: 86px 106px;
+            }
+        }
+    }
 }

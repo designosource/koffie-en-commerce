@@ -1,0 +1,21 @@
+.button{
+    margin: 0 auto;
+    display: inline-block;
+    padding: 18px 78px;
+    border: 2px solid red;
+    font-family: $font-light;
+    cursor: pointer;
+    color: red;
+    white-space: nowrap;
+    transition: background-color $anim, color $anim;
+    &:hover{
+        background-color: red;
+        color: white;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px){
+    .button{
+        padding: 18px 39px;
+    }
+}
