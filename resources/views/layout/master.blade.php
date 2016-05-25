@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>K&C - @yield('title')</title>
-	@yield('seo')
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
-</head>
-<body>
-	<script src="{{ URL::asset('js/jquery-1.12.4.min.js') }}"></script>
-	<script src="{{ URL::asset('js/vimeo-thumb.js') }}"></script>
-	
-	@include('layout.nav')
-	<div class="wrapper">
-	@yield('content')
-    @include('layout.footer')
-	</div>
-<script>
-function openNav() {
-    document.getElementById("myNav").style.height = "100vh";
-}
 
-function closeNav() {
-    document.getElementById("myNav").style.height = "0vh";
-}
+<head>
+    <meta charset="UTF-8">
+    <title>K&C - @yield('title')</title>
+    @yield('seo')
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+<script src="{{ URL::asset('js/jquery-1.12.4.min.js') }}"></script>
+<script src="{{ URL::asset('js/vimeo-thumb.js') }}"></script>
+
+@include('layout.nav')
+<div class="wrapper">
+    @yield('content')
+    @include('layout.footer')
+</div>
+<script>
+    function openNav() {
+        document.getElementById("myNav").style.height = "100vh";
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.height = "0vh";
+    }
 </script>
+
 </body>
+
 @yield('scripts')
 </html>
