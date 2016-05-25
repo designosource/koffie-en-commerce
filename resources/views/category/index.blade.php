@@ -12,20 +12,13 @@
   <div class="headersmall">
       <div class="categorien">
         <header>
-          <h1>{{$category->name}}</h1>
+          <h1 class="categorieen__title">{{$category->name}}</h1>
   			</header>
       </div>
   </div>
+<div class="catego-info">
+<p class="catego-info__description">{{$category->description}}</p>
 </div>
-<p>Their long description is <b>{{$category->description}}</b></p>
-      <!--<div class="container-fluid banner">
-      <div class="headersmall">
-          <div class="category">
-            <header>
-              <h1>{{$category->name}}</h1>
-      			</header>
-          </div>
-      </div>
 
         @foreach ($videos as $video)
             <p>This is video <a href="{{action('VideoController@detail',['id' => $video->slug])}}"><b>{{$video->title}}</b></a></p>
@@ -34,6 +27,6 @@
             <p>category</p>
             {{dump($video->categories())}}
             <hr>
-        @endforeach-->
+        @endforeach
     </div>
 @endsection
