@@ -32,7 +32,7 @@ class VideoController extends Controller
         ]);
     }
 
-    public function getEditVideo($id){
+    public function edit($id){
 
         // Get video
         $video = \App\Entity\Video::find($id);
@@ -44,14 +44,19 @@ class VideoController extends Controller
         // Get categories for dropdown
         $categories = \App\Entity\Category::all();
 
-        return view('admin/video/edit',[
+        // Get speakers vor dropdown box
+        $speakerList = \App\Entity\Speaker::pluck('name', 'id');
+
+        return view('admin/video/createOrUpdate',[
             'video' => $video,
             'speaker' => $video->speaker,
-            'categories' => $categories
+            'categories' => $categories,
+            'speakerList' => $speakerList,
+            'action' => array('admin_videos_edit', $video->id)
         ]);
     }
 
-    public function postEditVideo($id){
+    public function update($id){
 
         // validate
         // read more on validation at http://laravel.com/docs/validation
@@ -91,5 +96,65 @@ class VideoController extends Controller
             Session::flash('message', 'Successfully updated video!');
             return Redirect::to('admin/videos/' . $id . '/edit');
         }
+    }
+
+    public function create() {
+        // Get video
+        $video = new \App\Entity\Video();
+
+        // Get categories for checbkox
+        $categories = \App\Entity\Category::all();
+
+        // Get speakers vor dropdown box
+        $speakerList = \App\Entity\Speaker::pluck('name', 'id');
+
+        return view('admin/video/createOrUpdate',[
+            'video' => $video,
+            'categories' => $categories,
+            'speakerList' => $speakerList,
+            'action' => array('admin_videos_store')
+        ]);
+    }
+
+    public function store() {
+        // validate
+        // read more on validation at http://laravel.com/docs/validation
+        $rules = array(
+            'title'       => 'required',
+            'slug'      => 'required'
+        );
+        $validator = Validator::make(Input::all(), $rules);
+
+        // process the login
+        if ($validator->fails()) {
+            return Redirect::to('admin/videos/create')
+                ->withErrors($validator)
+                ->withInput(Input::all());
+        } else {
+            // store
+            $video = new \App\Entity\Video();
+
+            // Store
+            $video->title = Input::get('title');
+            $video->slug = Input::get('slug');
+            $video->vimeo = Input::get('vimeo');
+            $video->vimeo_thumb = $this->getVimeoThumb($video->vimeo);
+            $video->speaker_id = Input::get('speaker');
+            $video->save();
+
+            $categories = [];
+            if(Input::get('categories')) {
+                $categories = Input::get('categories');
+            }
+            $video->categories()->sync($categories);
+
+            // redirect
+            Session::flash('message', 'Successfully updated video!');
+            return Redirect::to('admin/videos/' . $video->id . '/edit');
+        }
+    }
+
+    public function destroy() {
+
     }
 }
