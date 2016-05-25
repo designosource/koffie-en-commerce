@@ -1,18 +1,14 @@
 @extends('layout.master')
 
-@section('title', 'Video Overview')
-
 @section('content')
-
 <div class="container-fluid banner">
   <div class="headerlarge">
       <div class="contact">
-      <header>
-          <h1 class="img-responsive">Contacteer ons</h1>
-      </header>
-    </div>
-</div>
-
+        <header>
+          <h1>Contacteer Ons</h1>
+  			</header>
+      </div>
+  </div>
 <section class="introform">
   <h2>Heb je vragen?</h2>
   <p>Voel je je geïnspireerd door de getuigenissen en onderwerpen van Koffie &amp; Commerce? </p>
