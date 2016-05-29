@@ -19,7 +19,12 @@
 <div class="catego-info">
 <p class="catego-info__description">{{$category->description}}</p>
 </div>
-
+<div class="filter">
+      <a href="#"><span class="filter--name">subfilter1</span></a>
+      <a href="#"><span class="filter--name">subfilter2</span></a>
+      <a href="#"><span class="filter--name">subfilter3</span></a>
+      <a href="#"><span class="filter--name">subfilter4</span></a>
+</div>
         @foreach ($videos as $video)
             <p>This is video <a href="{{action('VideoController@detail',['id' => $video->slug])}}"><b>{{$video->title}}</b></a></p>
             <p>Their short description is <b>{{$video->short_description}}</b></p>
