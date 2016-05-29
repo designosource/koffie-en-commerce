@@ -1,4 +1,5 @@
 <nav class="mainnavigation">
+  <div class="wrapper">
     <a href="{{action('PageController@index')}}" class="home">{!! Html::image('/image/headerlogo.png') !!}</a>
 
 	<div id="myNav" class="overlay">
@@ -13,4 +14,5 @@
 	</div>
 
 	<span class="menu" onclick="openNav()">MENU</span>
+    </div>
 </nav>
