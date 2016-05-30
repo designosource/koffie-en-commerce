@@ -5,14 +5,14 @@
   padding-top: 20px;
   padding-bottom: 20px;
 
-  .home{
+  &-home{
 
     img{
       width:160px;
     }
   }
 
-  .menu{
+  &-menu{
     float:right;
     padding-top: 4px;
     color:$gray;
@@ -20,9 +20,8 @@
     font-family:$font-regular;
     cursor: pointer;
   }
-}
 
-.overlay {
+  &-overlay {
     height: 0%;
     width: 100%;
     position: fixed;
@@ -32,62 +31,61 @@
     background-color: white;
     background-color: white;
     overflow: hidden;
-    transition: 0.5s;
-}
+    transition: 0.5s; 
 
-.overlay-content {
-    position: relative;
-    top: 10%;
-    width: 690px;
-    height: 50px;
-    display: block;
-    position: relative;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-}
+    &-logocup {
+      width: 100px;
+      display: block;
+      position: relative;
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+      padding-top: 100px;
+    } 
 
-.logo_cup {
-    width: 120px;
-    display: block;
-    position: relative;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-    padding-top: 150px;
-}
+    &-content {
+      position: relative;
+      margin-right: auto;
+      margin-left: auto;      
+      top: 10%;
+      text-align: center;
+      width: 390px;
 
-.overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 32px;
-    color: black;
-    display: block;
-    transition: 0.3s;
-    float: left;
-    margin-right: 8px;
-    margin-left: 8px;
-    font-family: $font-regular;
-}
+      a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 32px;
+        color: black;
+        display: block;
+        transition: 0.3s;
+        margin-right: auto;
+        margin-left: auto;
+        font-family: $font-regular;
+        width: 45%;
+      }
 
-.overlay a:hover, .overlay a:focus {
-    border-bottom: 5px solid #4eccb4;
-}
+      a:hover, .overlay a:focus {
+          border-bottom: 5px solid #4eccb4;
+      }
+    }
 
-.closebtn {
+    &-closebtn {
     position: absolute;
-    top: 10px;
-    right: 45px;
-    font-size: 40px !important;
+    right: 40px;
+    font-size: 40px !important;  
+    text-decoration: none;    
+    }
+
+    &-closebtn:hover {
+        text-decoration: none;
+        color: #4eccb4;
+    }
+  } 
 }
 
-a.closebtn:hover {
-    border-bottom: none;
-    color: #4eccb4;
-}
 
 
- @media screen and (min-width: 780px) {
+@media screen and (min-width: 768px) {
    .mainnavigation{
      font-size:22px;
      margin-left:15px;
@@ -96,18 +94,41 @@ a.closebtn:hover {
      padding-bottom: 20px;
 
 
-     .home{
-       img{
-     width:287px;
+    &-home{
+      img{
+          width:287px;
+      }
+    }
 
-       }
-     }
-     .menu{
+    &-menu{
        float:right;
        padding-top: 4px;
        color:$gray;
        text-decoration: none;
        font-family:$font-regular;
-     }
+    }
+
    }
+}
+
+@media screen and (min-width: 1220px) {
+  .mainnavigation {
+    &-overlay {
+      &-logocup {
+        width: 120px;
+        padding-top: 170px;
+      }
+      
+      &-content {
+        width: 900px;
+        a {
+          float:left;
+          margin-right: 8px;
+          margin-left: 8px; 
+          width: 23%;         
+        }
+      }
+
+    }
   }
+}
