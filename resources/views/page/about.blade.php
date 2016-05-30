@@ -11,8 +11,7 @@
 </div>
 
 <section class="copy">
-  <p>Voel je je geïnspireerd door de getuigenissen en onderwerpen van Koffie &amp; Commerce?<br>
-    Wil je meer weten of misschien samen een probleem onder de loep nemen in verband met de zakelijke kant van media? <br>Vul dan onderstaand formulier in en je komt rechtstreeks in contact met de Thomas More experts More achter dit initiatief.
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu orci a enim vestibulum viverra quis ut tellus. Aliquam eleifend venenatis tempor. Vivamus id semper odio, non pretium turpis. Fusce a elit sit amet ex malesuada porttitor in non massa. Aliquam eget metus odio. Nam consectetur cursus eros vel ullamcorper. Nunc eleifend eu nunc vel vulputate. Integer ac neque condimentum, condimentum erat eget, egestas nisi.
   </p>
 </section>
 
