@@ -108,6 +108,14 @@
        font-family:$font-regular;
     }
 
+    &-overlay {
+
+      &-closebtn {
+      right: 60px;
+      top: 5px;
+      }  
+    }  
+
    }
 }
 
@@ -127,6 +135,10 @@
           margin-left: 8px; 
           width: 23%;         
         }
+      }
+
+      &-closebtn {
+      right: 70px;
       }
 
     }
