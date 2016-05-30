@@ -1,0 +1,47 @@
+.about {
+    background-image: url(../image/contact.png);
+    background-size: cover;
+    width: 100%;
+    height:300px;
+
+    h1 {
+      color: white;
+      width: 210px;
+      text-align: center;
+      display: block;
+      position: relative;
+      margin-right: auto;
+      margin-left: auto;
+      padding-top: 20%;
+      font-size: 42px;
+    }
+}
+
+.copy {
+  p {
+    width: 90%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 2% 0 2% 0;
+  }
+}
+
+
+@media screen and (min-width: 780px) {
+  
+    .about{
+        height:400px;
+    }
+  
+}
+
+
+@media screen and (min-width: 1020px) {
+  
+    .about{
+      height:500px;
+    }
+  
+}
