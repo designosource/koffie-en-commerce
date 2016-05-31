@@ -20,6 +20,8 @@ $m-bs-col-x: 12;    // Mobile
             h3{
                 line-height: 1;
                 text-transform: capitalize;
+                overflow: hidden;
+                text-overflow: hidden;
             }
             p{
                 margin: 22px auto;

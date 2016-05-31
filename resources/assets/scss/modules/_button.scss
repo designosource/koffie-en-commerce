@@ -9,6 +9,8 @@
     white-space: nowrap;
     transition: background-color $anim, color $anim;
     max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
     &:hover{
         background-color: red;
         color: white;

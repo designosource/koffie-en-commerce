@@ -1,21 +1,21 @@
 footer{
   margin-bottom: 55px;
+  text-align:center;
   p{
     font-size: 14px;
   }
-  .copyright{
-    float:left;
-  }
-  .designed{
-    float:right;
-  }
 }
 
-@media screen and (min-width: 780px) {
-
+@media screen and (min-width: 768px) {
   footer{
     p{
       font-size:20px;
+    }
+    .copyright{
+      float:left;
+    }
+    .designed{
+      float:right;
     }
   }
 }
