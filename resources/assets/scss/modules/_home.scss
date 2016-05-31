@@ -52,15 +52,15 @@
   margin-top:30px;
   .wrapp{
     line-height: 1.2;
-    margin-left: 20px;
-    margin-right: 20px;
+    max-width: 1170px;
+    margin: 20px auto;
+    padding: 0px 20px;
     h2{
       font-family:$font-bold;
       color:$gray;
     }
     p{
-      font-family:$font-light;
-      color:$gray;
+      @include font-body();
       margin-bottom: 15px;
     }
   }
@@ -84,7 +84,8 @@
   .introduction{
     .wrapp{
       line-height: 1.2;
-      margin: 40px 80px;
+      margin: 40px auto;
+      padding: 0px 40px;
     }
   }
 }
@@ -110,7 +111,8 @@
   .introduction{
     .wrapp{
       line-height: 1.2;
-      margin: 60px 175px;
+      margin: 60px auto;
+      padding: 0px 60px;
     }
   }
 }

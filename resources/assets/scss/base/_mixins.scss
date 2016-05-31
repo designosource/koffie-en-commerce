@@ -108,3 +108,10 @@
     bottom: 0;
   }
 }
+
+// Font
+@mixin font-body(){
+  font-size: 16px;
+  line-height: 1.3;
+  color: $gray;
+}

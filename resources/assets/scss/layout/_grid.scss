@@ -24,6 +24,7 @@ $m-bs-col-x: 12;    // Mobile
                 text-overflow: hidden;
             }
             p{
+                @include font-body();
                 margin: 22px auto;
             }
         }
@@ -42,6 +43,9 @@ $m-bs-col-x: 12;    // Mobile
             background-color: $brand-secondary-color;
             .content{
                 color: white;
+                p{
+                    color: white;
+                }
                 .button{
                     border-color: white;
                     color: white;
@@ -69,6 +73,9 @@ $m-bs-col-x: 12;    // Mobile
             background-color: $brand-color;
             .content{
                 color: white;
+                p{
+                    color: white;
+                }
                 .button{
                     border-color: white;
                     color: white;
