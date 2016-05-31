@@ -16,7 +16,7 @@ $m-bs-col-x: 12;    // Mobile
         .content{
             width: 100%;
             height: auto;
-            padding: 48px;
+            padding: 24px;
             h3{
                 line-height: 1;
                 text-transform: capitalize;
@@ -84,6 +84,7 @@ $m-bs-col-x: 12;    // Mobile
                 background-image: url('http://placehold.it/956x694');
                 background-size: cover;
                 background-position: center;
+                min-height: 350px;
             }
         }
         &:nth-of-type(even){
@@ -96,6 +97,17 @@ $m-bs-col-x: 12;    // Mobile
                 background-image: url('http://placehold.it/956x694');
                 background-size: cover;
                 background-position: center;
+                min-height: 350px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 480px){
+    .grid{
+        &-row{
+            .content{
+                padding: 48px;
             }
         }
     }

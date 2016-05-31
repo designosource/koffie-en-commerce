@@ -1,5 +1,5 @@
 <nav class="mainnavigation">
-  <div class="wrapper">
+  <div class="wrapper clearfix">
     <a href="{{action('PageController@index')}}" class="home">{!! Html::image('/image/headerlogo.png') !!}</a>
 
 	<div id="myNav" class="overlay">

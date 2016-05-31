@@ -2,15 +2,16 @@ html, body, .wrapper{
   height: 100%;
 }
 
-body{
-    border-left: 25px solid white;
-    border-right: 25px solid white;
-}
-
 .container-fluid, .container{
     padding: 0px;
 }
 
+@media screen and (min-width: 480px) {
+  body{
+    border-left: 25px solid white;
+    border-right: 25px solid white;
+  }
+}
 
 @media screen and (min-width: 780px) {
   body{
@@ -27,8 +28,6 @@ body{
 }
 
 .wrapper{
-  //width: 1270px;
-  width: 1170px;
   max-width: 100%;
   display: block;
   margin: 0 auto;
