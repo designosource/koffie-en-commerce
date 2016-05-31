@@ -10,6 +10,7 @@
     #tm_logo{
       @include aspect-ratio(100,39);
       width: 20%;
+      max-width: 100px;
       position: absolute;
       display: block;
       bottom: 5%;
