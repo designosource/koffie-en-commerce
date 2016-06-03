@@ -110,4 +110,34 @@ Route::group(['middleware' => ['web', 'auth'], 'namespace' => 'Admin'], function
 		'uses' => 'VideoController@destroy'
 	]);
 
+	/* Categories */
+	Route::get('admin/categorieen', [
+		'as' => 'admin_categories_index',
+		'uses' => 'CategoryController@index'
+	]);
+
+	Route::get('admin/categorieen/create', [
+		'as' => 'admin_categories_create',
+		'uses' => 'CategoryController@create'
+	]);
+
+	Route::post('admin/categorieen', [
+		'as' => 'admin_categories_store',
+		'uses' => 'CategoryController@store'
+	]);
+
+	Route::get('admin/categorieen/{id}/edit', [
+		'as' => 'admin_categories_edit',
+		'uses' => 'CategoryController@edit'
+	]);
+
+	Route::post('admin/categorieen/{id}/edit', [
+		'as' => 'admin_categories_update',
+		'uses' => 'CategoryController@update'
+	]);
+
+	Route::get('admin/categorieen/{id}/delete', [
+		'as' => 'admin_categories_delete',
+		'uses' => 'CategoryController@destroy'
+	]);
 });
