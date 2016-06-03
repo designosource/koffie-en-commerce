@@ -17,7 +17,8 @@ margin-bottom:55px;
 }
 
 
-.spreker .col-sm-5{
+.spreker{
+  .col-sm-5{
     background-color: $gray;
     padding-top:30px;
     padding-bottom:50px;
@@ -34,6 +35,9 @@ margin-bottom:55px;
     }
 
 }
+}
+
+.spreker {
 
 .col-sm-7{
   background-color:red;
@@ -41,6 +45,8 @@ margin-bottom:55px;
   height: 350px;
   background-repeat: no-repeat;
   background-size:cover;
+}
+
 }
 
 .social{
@@ -74,6 +80,7 @@ margin-bottom:55px;
 
 
 @media screen and (min-width: 480px) {
+  .spreker{
   .col-sm-5{
     min-height: 450px;
     .content{
@@ -84,6 +91,7 @@ margin-bottom:55px;
   .col-sm-7{
     min-height: 450px;
   }
+}
 }
   @media screen and (min-width: 1120px) {
     .spreker .content{

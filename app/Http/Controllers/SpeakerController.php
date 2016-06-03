@@ -10,9 +10,9 @@ use Illuminate\Support\Facades\DB;
 class SpeakerController extends Controller
 {
     public function detail($id){
-        $data = $id;
+        $speaker= \App\Entity\Speaker::find($id);
         return view('speaker/detail',[
-            'data' => $data
+            'speaker' => $speaker
         ]);
     }
 
