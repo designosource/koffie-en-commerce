@@ -1,4 +1,4 @@
-html, body, .wrapper{
+html, .user-body, .wrapper{
   height: 100%;
 }
 
@@ -7,21 +7,21 @@ html, body, .wrapper{
 }
 
 @media screen and (min-width: 480px) {
-  body{
+  .user-body{
     border-left: 25px solid white;
     border-right: 25px solid white;
   }
 }
 
 @media screen and (min-width: 780px) {
-  body{
+  .user-body{
       border-left: 40px solid white;
       border-right: 40px solid white;
   }
 }
 
 @media screen and (min-width: 1020px) {
-  body{
+  .user-body{
       border-left: 55px solid white;
       border-right: 55px solid white;
   }
