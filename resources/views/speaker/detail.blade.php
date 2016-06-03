@@ -19,6 +19,15 @@
   <div class="infospreker introduction">
 		<div class="wrapp">
 			<h2 class="infospreker__title">{{$speaker->name}}</h2>
+      <p class="infospreker__description">
+    {{$speaker->title}}
+      </p>
+      <p class="infospreker__description">
+    {{$speaker->email}}
+      </p>
+  		<p class="infospreker__description">
+  	{{$speaker->short_description}}
+  		</p>
   		<p class="infospreker__description">
   	{{$speaker->long_description}}
   		</p>
