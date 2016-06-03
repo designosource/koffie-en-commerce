@@ -17,8 +17,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'), // development & production
     autoprefixer = require('gulp-autoprefixer'), // development & production
     notify = require('gulp-notify'), // development & production
-    jshint = require('gulp-jshint'), // dev
-    livereload = require('gulp-livereload');
+    jshint = require('gulp-jshint'); // dev
 
 /**
  * SASS COMPILING: development
@@ -54,7 +53,6 @@ gulp.task('lint', function () {
 gulp.task('watch', function () {
 
     // Watch for sass changes
-    livereload.listen('start');
     gulp.watch('resources/assets/scss/**/*.scss', ['sass']);
 
     // Watch for js changes
