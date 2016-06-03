@@ -15,7 +15,10 @@
 	</div>
 
 	<div>
-		{{ Html::image('uploads/' . $category->image) }}
+		@if($category->image)
+			{{ Html::image('uploads/' . $category->image) }}
+		@endif
+		
 		{!! Form::file('image') !!}
 	</div>
 	

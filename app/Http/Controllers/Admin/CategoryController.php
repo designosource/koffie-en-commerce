@@ -115,6 +115,15 @@ class CategoryController extends Controller
                 ->withErrors($validator)
                 ->withInput(Input::all());
         } else {
+
+            $fileName = null;
+            if(Input::file('image')) {
+                $destinationPath = 'uploads'; // upload path
+                $extension = Input::file('image')->getClientOriginalExtension(); // getting image2wbmp(image) extension
+                $fileName = rand(11111,99999).'.'.$extension; // renameing image
+                Input::file('image')->move($destinationPath, $fileName); // uploading file to given path
+            }
+
             // store
             $category = new \App\Entity\Category();
 
@@ -122,11 +131,14 @@ class CategoryController extends Controller
             $category->name = Input::get('name');
             $category->slug = Input::get('slug');
             $category->description = Input::get('description');
+            if($fileName) {
+                $category->image = $fileName;
+            }
             $category->save();
 
             // redirect
             Session::flash('message', 'Successfully updated video!');
-            return Redirect::to('admin/categorieen/' . $video->id . '/edit');
+            return Redirect::to('admin/categorieen/' . $category->id . '/edit');
         }
     }
 
