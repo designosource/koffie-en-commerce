@@ -23,9 +23,6 @@ margin-bottom:55px;
     padding-top:30px;
     padding-bottom:50px;
     height: 350px;
-    .content{
-
-    }
     h3{
       margin-top: 25px;
     color:$white;
@@ -73,9 +70,15 @@ margin-bottom:55px;
   color:$white;
   text-decoration:none;
 }
-.social__facebook{height:20px;padding-right: 24px;}
+.social__facebook {
+  height:20px;
+  padding-right: 24px;
+}
 
-.social__twitter{height:20px; padding-right: 10px;}
+.social__twitter {
+  height:20px;
+  padding-right: 10px;
+}
 
 
 @media screen and (min-width: 480px) {

@@ -1,5 +1,5 @@
 .about {
-    background-image: url(../image/contact.png);
+    background-image: url(../image/overons.png);
     background-size: cover;
     width: 100%;
     height:300px;
@@ -19,29 +19,94 @@
 
 .copy {
   p {
-    width: 90%;
-    position: relative;
+    width:90%;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
     display: block;
-    padding: 2% 0 2% 0;
+    margin-top:80px;
+    margin-bottom:80px;
+    font-size: 16px;
+  }
+}
+
+.grid-about{
+
+  font-size:16px;
+  .grid-about__row {
+      height: 800px;
+      margin-bottom: 50px;
+  }
+  .col-sm-7, .col-sm-5{
+    height:400px;
+  }
+  .color{
+    background-image: url();
+    background-color:$gray;
+    color:$white;
+
+  }
+  .content-left{
+    @include centerY;
+    padding-left: 55px;
+     padding-right:55px;
+     #tm{
+       @include aspect-ratio(100,39);
+       max-width: 100px;
+       display: block;
+       background-image: url(../image/tm.svg);
+       background-repeat: no-repeat;
+       background-size: cover;
+       margin-top:20px;
+     }
+     p{
+       margin-top:10px;
+     }
+  }
+
+  .content-right{
+    @include centerY;
+    padding-left: 55px;
+     padding-right:55px;
+
+     p{
+       margin-top:10px;
+     }
+  }
+  .image-right{
+    background-image:url(../image/about.png);
+    background-size: cover;
+
+  }
+  .image-left{
+    background-image:url(../image/about2.png);
+    background-size: cover;
+
   }
 }
 
 
 @media screen and (min-width: 780px) {
-  
+
     .about{
         height:400px;
     }
-  
+
 }
 
 
 @media screen and (min-width: 1020px) {
-  
+
     .about{
       height:500px;
     }
-  
+
+    .copy {
+      p {
+        font-size: 20px;
+      }
+    }
+
+p{font-size:18px;}
+
 }
