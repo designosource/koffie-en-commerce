@@ -18,18 +18,18 @@
   </div>
   <div class="infospreker introduction">
 		    <div class="wrapp">
-			       <h2 class="infospreker__title">{{$speaker->name}}</h2>
+			       <h2 class="infospreker__title"></h2>
              <p class="infospreker__description">
-               {{$speaker->title}}
+
              </p>
              <p class="infospreker__description">
-               {{$speaker->email}}
+
              </p>
   		         <p class="infospreker__description">
-  	              {{$speaker->short_description}}
+
   		            </p>
   		              <p class="infospreker__description">
-  	                   {{$speaker->long_description}}
+
   		                 </p>
 		    </div>
   </div>
@@ -58,5 +58,13 @@ Share on facebook</a></li>
 									</div>
 								</div>
 							</section>
+
+              <section class="back">
+                <a href="/videos">
+                    <div class="btn">
+                        Ga naar overzicht
+                    </div>
+                </a>
+              </section>
 </div>
 @endsection
