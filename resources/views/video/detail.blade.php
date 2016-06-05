@@ -15,7 +15,14 @@
 
             <div class="m-video-header__item m-video-header__description-block l-video__equal-height__item">
                 <h2 class="m-video-header__title">{{$video->title}}</h2>
-                <p class="m-video-header__description">{{$video->short_description}}</p>
+                <p class="m-video-header__description">{{$video->short_description}} lorem</p>
+
+                <div class="m-video-header__social-media">
+                    <ul>
+                        <li><a href="#">{!! Html::image('image/twitter.png' , 'Logo above the fold')!!} Share on twitter</a></li>
+                        <li><a href="#">{!! Html::image('image/Facebook.png' , 'Logo above the fold')!!} Share on fb</a></li>
+                    </ul>
+                </div>
             </div>
 
         </div>
@@ -40,33 +47,56 @@
                 </div>
             </div>
 
-
         </div>
 
         <div class="m-video-related">
 
             <div class="m-video-related__title">
-                <h2>Meer videos van {{$video->name}}</h2>
+                <h2>Gerelateerde video's</h2>
             </div>
 
-            <div class="m-video-related_videos">
-                <ul>
-                    @if(!empty($video->id))
-                        <li>{{$video->title}}</li>
-                    @endif
+            <div class="m-video-related__videos">
+
+                <ul class="m-video-related__videos-list">
+                    @foreach($video->speaker->videos as $v)
+                        <li> <span>{{$v->title}}</span> </li>
+                    @endforeach
                 </ul>
+
+                <div class="m-video-related__button">
+                    <div class="button">
+                        Bekijk video's
+                    </div>
+                </div>
+
             </div>
 
         </div>
 
-        <!--categorieen of tags-->
-        <div class=""><h4>Category</h4>
-            <ul>
-                @foreach($video->speaker->videos as $v)
-                    <li>{{$v->title}}</li>
-                @endforeach
-            </ul>
-        </div>
-        <!--/categorieen-->
+        {{--<!--categorieen of tags-->--}}
+        {{--<div class="">--}}
+            {{--<h4>Category</h4>--}}
+            {{--<ul>--}}
+                {{--@foreach($video->speaker->videos as $v)--}}
+                    {{--<li>{{$v->title}}</li>--}}
+                {{--@endforeach--}}
+            {{--</ul>--}}
+        {{--</div>--}}
+
+        {{--<div class="">--}}
+            {{--<h4>Category</h4>--}}
+            {{--<ul>--}}
+                {{--@foreach($video->speaker->videos as $v)--}}
+                    {{--<li>{{$v->title}}</li>--}}
+                {{--@endforeach--}}
+            {{--</ul>--}}
+        {{--</div>--}}
+
+        {{--<ul>--}}
+            {{--@if(!empty($video->id))--}}
+                {{--<li>{{$video->title}}</li>--}}
+            {{--@endif--}}
+        {{--</ul>--}}
+        {{--<!--/categorieen-->--}}
     </div>
 @endsection
