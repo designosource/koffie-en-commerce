@@ -6,40 +6,57 @@
 
     <div class="container-fluid" style="margin-top: 20px "> {{-- styling weghalen als nav gefixt is --}}
 
-        <div class="m-spreker__header">
+        <div class="l-video__equal-height-container m-video-header">
 
-            <div class="m-spreker__header-video">
+            <div class="m-video-header__item m-video-header__video l-video__equal-height__item">
                 <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
                 <div class='embed-container'><iframe src='{{"https://player.vimeo.com/video/".$video->vimeo}}' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
             </div>
 
-            <div class="m-spreker__header-description">
-                <h2>{{$video->title}}</h2>
+            <div class="m-video-header__item m-video-header__description-block l-video__equal-height__item">
+                <h2 class="m-video-header__title">{{$video->title}}</h2>
+                <p class="m-video-header__description">{{$video->short_description}}</p>
+            </div>
 
-                {{$video->short_description}}
+        </div>
+
+        <div class="m-video-info">
+
+            <div class="m-video-info__avatar m-video-info__item">
+                <img src="" alt="">   {{-- width:224px; height: 215px; --}}
+            </div>
+
+            <div class="m-video-info__description-block m-video-info__item">
+                <div class=" m-video-info__name">
+                    <h2>{{$video->speaker->name}}</h2>
+                </div>
+
+                <div class="m-video-info__description">
+                    <p>{{$video->speaker->short_description}}</p>
+                </div>
+
+                <div class="button m-video-info__button">
+                    Bekijk meer video's
+                </div>
             </div>
 
 
-
         </div>
 
+        <div class="m-video-related">
 
-        <div class=""><h3>speaker info</h3>
-            <ul>
-                <li>{{$video->speaker->name}}</li>
+            <div class="m-video-related__title">
+                <h2>Meer videos van {{$video->name}}</h2>
+            </div>
 
-                <li>{{$video->speaker->short_description}}</li>
+            <div class="m-video-related_videos">
+                <ul>
+                    @if(!empty($video->id))
+                        <li>{{$video->title}}</li>
+                    @endif
+                </ul>
+            </div>
 
-            </ul>
-
-        </div>
-
-        <div class=""><h4>Meer videos van {{$video->name}}</h4>
-            <ul>
-                @if(!empty($video->id))
-                    <li>{{$video->title}}</li>
-                @endif
-            </ul>
         </div>
 
         <!--categorieen of tags-->
