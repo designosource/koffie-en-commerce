@@ -12,8 +12,10 @@
 			</div>
 		</div>
 		<div class="tekst">
+			<div class="wrapp">
 			<p>Dè bron van inspirerende verhalen en informatie over de zakelijke kant van media. Inhoud creëeren is uitdagend op zich, maar er centen mee verdienen is vaak nog het lastigste van al.
 Ontdek de verschillende navigeermogelijkheden om de onderwerpen, verhalen en media-experten waar jouw interesse naar uitgaat te exploreren.</p>
+		</div>
 		</div>
 		<div class="category">
 			@foreach ($categories as $category)

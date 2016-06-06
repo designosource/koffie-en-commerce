@@ -12,6 +12,7 @@
       </div>
   </div>
 <section class="introform">
+  <div class="wrapp">
   <h2>Heb je vragen?</h2>
   <p>Voel je je geïnspireerd door de getuigenissen en onderwerpen van Koffie &amp; Commerce? </p>
   <p>
@@ -36,6 +37,7 @@
 </div>
   <button type="submit" class="btn btn-default">Verzenden</button>
 </form>
+</div>
 </section>
 </div>
 

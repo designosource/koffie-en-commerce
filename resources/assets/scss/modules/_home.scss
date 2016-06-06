@@ -47,13 +47,14 @@
     }
   }
 }
-
+.wrapp{
+  max-width: 1050px;
+  margin: 20px auto;
+}
 .introduction{
   margin-top:30px;
   .wrapp{
     line-height: 1.2;
-    max-width: 1170px;
-    margin: 20px auto;
     padding: 0px 20px;
     h2{
       font-family:$font-bold;
