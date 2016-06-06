@@ -1,0 +1,57 @@
+.gallery{
+    background-color: whitesmoke;
+}
+
+.gallery-item{
+    @include aspect-ratio(1,1);
+    display: block;
+    background-size: cover;
+    background-image: url('http://www.placehold.it/350x350'); //fallback
+    color: white;
+    overflow: hidden;
+    &-description{
+        position: absolute;
+        display: block;
+        top: 100%;
+        margin-top: -60px; //change this to total height of h2
+        transition: top $anim, margin $anim;
+        padding: 0px 24px;
+        max-height: 100%;
+        margin-bottom: 0px;
+        bottom: 0;
+        overflow: hidden;
+    }
+    .content{
+        transition: background-color $anim;
+    }
+    &:hover{
+        .content{
+            background-color: rgba(0,0,0,0.6);
+        }
+        .gallery-item-description{
+            top: 0;
+            margin-top: 4px; //+20px default h2 styling = 48px/2 for mobile
+            margin-bottom: 24px;
+        }
+    }
+}
+
+@include respond-to('small'){
+    .gallery-item{
+        &-description{
+            padding: 0px 48px;
+        }
+        &:hover{
+            .gallery-item-description{
+                margin-top: 28px; //+20px default h2 styling = 48px
+                margin-bottom: 48px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 360px){
+    .gallery-item{
+        width: 100%;
+    }
+}
