@@ -90,7 +90,6 @@ $m-bs-col-x: 12;    // Mobile
         &:nth-of-type(odd){
             .col-sm-#{$l-bs-col-x}{
                 background-color: whitesmoke;
-                background-image: url('http://placehold.it/956x694');
                 background-size: cover;
                 background-position: center;
                 min-height: 350px;
@@ -103,7 +102,6 @@ $m-bs-col-x: 12;    // Mobile
             }
             .col-sm-#{$r-bs-col-x}{
                 background-color: whitesmoke;
-                background-image: url('http://placehold.it/956x694');
                 background-size: cover;
                 background-position: center;
                 min-height: 350px;

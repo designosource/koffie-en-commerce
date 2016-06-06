@@ -20,14 +20,21 @@ Ontdek de verschillende navigeermogelijkheden om de onderwerpen, verhalen en med
 				<a href="#"><span class="namecat">{{$category->name}}</span></a>
 			@endforeach
 		</div>
-		<div class="videos">
-			<h2>VIDEO'S</h2>
-			@foreach ($videos as $video)
-				<h3>{{$video->title}}</h3>
-				{{dump($video)}}
-				<hr>
-				<hr>
-			@endforeach
-		</div>
+		<section class="gallery clearfix">
+		@foreach ($videos as $video)
+		<a href="/videos/{{$video->slug}}">
+		  <div
+		    class="gallery-item col-xs-6 col-sm-4 col-lg-3"
+		    style=" background-image: url('{{ empty($video->vimeo_thumb) ? 'http://www.placehold.it/350x350' : $video->vimeo_thumb }}')">
+		    <div class="content">
+		      <div class="gallery-item-description">
+		        <h2>{{$video->title}}</h2>
+		        <p>{{$video->short_description}}</p>
+		      </div>
+		    </div>
+		  </div>
+		</a>
+		@endforeach
+		</section>
 	</div>
 @endsection

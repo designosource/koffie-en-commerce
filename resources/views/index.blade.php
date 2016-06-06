@@ -32,8 +32,8 @@
             @foreach ($categories_start as $category)
                 <div class="grid-row">
                     @if($category->id % 2 != 0)
-                        <div class="col-xs-12 col-sm-5">
-
+                        <div class="col-xs-12 col-sm-5"
+                            style=" background-image: url('{{ empty($category->image) ? 'http://www.placehold.it/999x666' : '/uploads/'.$category->image }}')">
                         </div>
                         <div class="col-xs-12 col-sm-7">
                             <div class="content">
@@ -64,8 +64,8 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-7">
-
+                        <div class="col-xs-12 col-sm-7"
+                            style=" background-image: url('{{ empty($category->image) ? 'http://www.placehold.it/999x666' : '/uploads/'.$category->image }}')">
                         </div>
                     @endif
                 </div>
@@ -74,8 +74,8 @@
             @foreach ($categories_end as $category)
                 <div class="grid-row">
                     @if($category->id % 2 != 0)
-                        <div class="col-xs-12 col-sm-5">
-
+                        <div class="col-xs-12 col-sm-5"
+                            style=" background-image: url('{{ empty($category->image) ? 'http://www.placehold.it/999x666' : '/uploads/'.$category->image }}')">
                         </div>
                         <div class="col-xs-12 col-sm-7">
                             <div class="content">
@@ -106,8 +106,8 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-7">
-
+                        <div class="col-xs-12 col-sm-7"
+                            style=" background-image: url('{{ empty($category->image) ? 'http://www.placehold.it/999x666' : '/uploads/'.$category->image }}')">
                         </div>
                     @endif
                 </div>
