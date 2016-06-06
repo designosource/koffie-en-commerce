@@ -140,4 +140,35 @@ Route::group(['middleware' => ['web', 'auth'], 'namespace' => 'Admin'], function
 		'as' => 'admin_categories_delete',
 		'uses' => 'CategoryController@destroy'
 	]);
+
+	/* Speakers */
+	Route::get('admin/speakers', [
+		'as' => 'admin_speakers_index',
+		'uses' => 'SpeakerController@index'
+	]);
+
+	Route::get('admin/speakers/create', [
+		'as' => 'admin_speakers_create',
+		'uses' => 'SpeakerController@create'
+	]);
+
+	Route::post('admin/speakers', [
+		'as' => 'admin_speakers_store',
+		'uses' => 'SpeakerController@store'
+	]);
+
+	Route::get('admin/speakers/{id}/edit', [
+		'as' => 'admin_speakers_edit',
+		'uses' => 'SpeakerController@edit'
+	]);
+
+	Route::post('admin/speakers/{id}/edit', [
+		'as' => 'admin_speakers_update',
+		'uses' => 'SpeakerController@update'
+	]);
+
+	Route::get('admin/speakers/{id}/delete', [
+		'as' => 'admin_speakers_delete',
+		'uses' => 'SpeakerController@destroy'
+	]);
 });
