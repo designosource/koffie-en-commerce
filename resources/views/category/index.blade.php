@@ -26,7 +26,9 @@
   <section class="gallery clearfix">
     @foreach ($videos as $video)
     <a href="/videos/{{$video->slug}}">
-      <div class="gallery-item col-xs-6 col-sm-4 col-lg-3" style=" background-image: url('{{$video->vimeo_thumb}}')" >
+      <div
+        class="gallery-item col-xs-6 col-sm-4 col-lg-3"
+        style=" background-image: url('{{ empty($video->vimeo_thumb) ? 'http://www.placehold.it/350x350' : $video->vimeo_thumb }}')">
         <div class="content">
           <div class="gallery-item-description">
             <h2>{{$video->title}}</h2>
