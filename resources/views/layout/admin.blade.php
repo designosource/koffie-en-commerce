@@ -26,6 +26,8 @@
                     <li><a href="/admin/categorieen/create">Nieuwe categorie</a></li>
                     <li><a href="/admin/sprekers">Sprekers overzicht</a></li>
                     <li><a href="/admin/sprekers/create">Nieuwe spreker</a></li>
+                    <li><a href="/admin/quotes">Quotes overzicht</a></li>
+                    <li><a href="/admin/quotes/create">Nieuwe quote</a></li>
                 </ul>
             </div>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">

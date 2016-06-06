@@ -171,4 +171,35 @@ Route::group(['middleware' => ['web', 'auth'], 'namespace' => 'Admin'], function
 		'as' => 'admin_speakers_delete',
 		'uses' => 'SpeakerController@destroy'
 	]);
+
+	/* Quotes */
+	Route::get('admin/quotes', [
+		'as' => 'admin_quotes_index',
+		'uses' => 'QuoteController@index'
+	]);
+
+	Route::get('admin/quotes/create', [
+		'as' => 'admin_quotes_create',
+		'uses' => 'QuoteController@create'
+	]);
+
+	Route::post('admin/quotes', [
+		'as' => 'admin_quotes_store',
+		'uses' => 'QuoteController@store'
+	]);
+
+	Route::get('admin/quotes/{id}/edit', [
+		'as' => 'admin_quotes_edit',
+		'uses' => 'QuoteController@edit'
+	]);
+
+	Route::post('admin/quotes/{id}/edit', [
+		'as' => 'admin_quotes_update',
+		'uses' => 'QuoteController@update'
+	]);
+
+	Route::get('admin/quotes/{id}/delete', [
+		'as' => 'admin_quotes_delete',
+		'uses' => 'QuoteController@destroy'
+	]);
 });
