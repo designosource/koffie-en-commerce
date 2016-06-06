@@ -8,7 +8,15 @@ margin-bottom:55px;
 .infospreker__title{
   font-size:25px;
   color:$gray;
+  margin-bottom:5px;
 }
+
+.infospreker__function{
+  font-size:25px;
+  color:$gray;
+  margin-bottom:5px;
+}
+
 
 .infospreker__description{
   font-size:16px;
@@ -51,6 +59,9 @@ margin-bottom:55px;
   li{
     margin-top:25px;
   }
+  a{
+    font-size:16px;
+  }
 }
 
 .social__left{
@@ -73,7 +84,7 @@ margin-bottom:55px;
 }
 .social__facebook {
   height:20px;
-  padding-right: 24px;
+  padding-right: 10px;
 }
 
 .social__twitter {
