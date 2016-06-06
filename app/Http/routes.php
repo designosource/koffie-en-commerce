@@ -110,4 +110,96 @@ Route::group(['middleware' => ['web', 'auth'], 'namespace' => 'Admin'], function
 		'uses' => 'VideoController@destroy'
 	]);
 
+	/* Categories */
+	Route::get('admin/categorieen', [
+		'as' => 'admin_categories_index',
+		'uses' => 'CategoryController@index'
+	]);
+
+	Route::get('admin/categorieen/create', [
+		'as' => 'admin_categories_create',
+		'uses' => 'CategoryController@create'
+	]);
+
+	Route::post('admin/categorieen', [
+		'as' => 'admin_categories_store',
+		'uses' => 'CategoryController@store'
+	]);
+
+	Route::get('admin/categorieen/{id}/edit', [
+		'as' => 'admin_categories_edit',
+		'uses' => 'CategoryController@edit'
+	]);
+
+	Route::post('admin/categorieen/{id}/edit', [
+		'as' => 'admin_categories_update',
+		'uses' => 'CategoryController@update'
+	]);
+
+	Route::get('admin/categorieen/{id}/delete', [
+		'as' => 'admin_categories_delete',
+		'uses' => 'CategoryController@destroy'
+	]);
+
+	/* Speakers */
+	Route::get('admin/sprekers', [
+		'as' => 'admin_speakers_index',
+		'uses' => 'SpeakerController@index'
+	]);
+
+	Route::get('admin/sprekers/create', [
+		'as' => 'admin_speakers_create',
+		'uses' => 'SpeakerController@create'
+	]);
+
+	Route::post('admin/sprekers', [
+		'as' => 'admin_speakers_store',
+		'uses' => 'SpeakerController@store'
+	]);
+
+	Route::get('admin/sprekers/{id}/edit', [
+		'as' => 'admin_speakers_edit',
+		'uses' => 'SpeakerController@edit'
+	]);
+
+	Route::post('admin/sprekers/{id}/edit', [
+		'as' => 'admin_speakers_update',
+		'uses' => 'SpeakerController@update'
+	]);
+
+	Route::get('admin/sprekers/{id}/delete', [
+		'as' => 'admin_speakers_delete',
+		'uses' => 'SpeakerController@destroy'
+	]);
+
+	/* Quotes */
+	Route::get('admin/quotes', [
+		'as' => 'admin_quotes_index',
+		'uses' => 'QuoteController@index'
+	]);
+
+	Route::get('admin/quotes/create', [
+		'as' => 'admin_quotes_create',
+		'uses' => 'QuoteController@create'
+	]);
+
+	Route::post('admin/quotes', [
+		'as' => 'admin_quotes_store',
+		'uses' => 'QuoteController@store'
+	]);
+
+	Route::get('admin/quotes/{id}/edit', [
+		'as' => 'admin_quotes_edit',
+		'uses' => 'QuoteController@edit'
+	]);
+
+	Route::post('admin/quotes/{id}/edit', [
+		'as' => 'admin_quotes_update',
+		'uses' => 'QuoteController@update'
+	]);
+
+	Route::get('admin/quotes/{id}/delete', [
+		'as' => 'admin_quotes_delete',
+		'uses' => 'QuoteController@destroy'
+	]);
 });

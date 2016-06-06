@@ -8,7 +8,15 @@ margin-bottom:55px;
 .infospreker__title{
   font-size:25px;
   color:$gray;
+  margin-bottom:5px;
 }
+
+.infospreker__function{
+  font-size:25px;
+  color:$gray;
+  margin-bottom:5px;
+}
+
 
 .infospreker__description{
   font-size:16px;
@@ -18,14 +26,12 @@ margin-bottom:55px;
 
 
 .spreker{
+  height:700px;
   .col-sm-5{
     background-color: $gray;
     padding-top:30px;
     padding-bottom:50px;
     height: 350px;
-    .content{
-
-    }
     h3{
       margin-top: 25px;
     color:$white;
@@ -53,6 +59,9 @@ margin-bottom:55px;
   li{
     margin-top:25px;
   }
+  a{
+    font-size:16px;
+  }
 }
 
 .social__left{
@@ -73,13 +82,44 @@ margin-bottom:55px;
   color:$white;
   text-decoration:none;
 }
-.social__facebook{height:20px;padding-right: 24px;}
+.social__facebook {
+  height:20px;
+  padding-right: 10px;
+}
 
-.social__twitter{height:20px; padding-right: 10px;}
+.social__twitter {
+  height:20px;
+  padding-right: 10px;
+}
 
+.back{
+  background-color:$green;
+  text-align: center;
+  font-family:$font-light;
+  margin-bottom:20px;
+
+
+  .btn{
+    text-align: center;
+    color:$white;
+    border: 1px solid $white;
+    border-radius:0px;
+    margin-top:50px;
+    margin-bottom:50px;
+    font-size:16px;
+    padding: 18px 39px;
+    transition:$anim;
+  }
+
+  .btn:hover{
+    background-color:$white;
+    color:$green;
+  }
+}
 
 @media screen and (min-width: 480px) {
   .spreker{
+    height:450px;
   .col-sm-5{
     min-height: 450px;
     .content{
@@ -91,8 +131,20 @@ margin-bottom:55px;
     min-height: 450px;
   }
 }
+
+.back{
+  padding-top: 32px;
+padding-bottom: 32px;
+  .btn{
+    padding: 18px 78px;
+  }
+}
 }
   @media screen and (min-width: 1120px) {
+    .spreker{
+      height:450px;
+    }
+
     .spreker .content{
       margin-top:40px;
     }

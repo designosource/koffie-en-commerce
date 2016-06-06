@@ -17,24 +17,24 @@
       </div>
   </div>
   <div class="infospreker introduction">
-		<div class="wrapp">
-			<h2 class="infospreker__title">{{$speaker->name}}</h2>
-      <p class="infospreker__description">
-    {{$speaker->title}}
-      </p>
-      <p class="infospreker__description">
-    {{$speaker->email}}
-      </p>
-  		<p class="infospreker__description">
-  	{{$speaker->short_description}}
-  		</p>
-  		<p class="infospreker__description">
-  	{{$speaker->long_description}}
-  		</p>
-		</div>
+		    <div class="wrapp">
+			       <h2 class="infospreker__title">Monika Meysmans</h2>
+             <p class="infospreker__function">
+                CEO
+             </p>
+             <p class="infospreker__mail">
+              Monikameysmans@thomasmore.be
+             </p>
+  		         <p class="infospreker__description">
+Lucas ipsum dolor sit amet neimoidia tchuukthai gotal hutt boltrunians derlin ismaren y bith skywalker ackbar. Evazan zannah organa conan. Tapani shaak hapan roonan ongree. Kal rishi beru aayla terrik selkath boba. Muunilinst obi-wan mantell solo. Solo drovian shaak kendal balosar chagrian secura moff darth.
+Lucas ipsum dolor sit amet neimoidia tchuukthai gotal hutt boltrunians derlin ismaren y bith skywalker ackbar. Evazan zannah organa conan. Tapani shaak hapan roonan ongree. Kal rishi beru aayla terrik selkath boba. Muunilinst obi-wan mantell solo. Solo drovian shaak kendal balosar chagrian secura moff darth.
+Lucas ipsum dolor sit amet neimoidia tchuukthai gotal hutt boltrunians derlin ismaren y bith skywalker ackbar. Evazan zannah organa conan. Tapani shaak hapan roonan ongree. Kal rishi beru aayla terrik selkath boba. Muunilinst obi-wan mantell solo. Solo drovian shaak kendal balosar chagrian secura moff darth.
+  		            </p>
+  		          
+		    </div>
   </div>
 	<section class="spreker">
-					<div class="">
+					<div>
 									<div class="col-xs-12 col-sm-7">
 
 									</div>
@@ -58,5 +58,13 @@ Share on facebook</a></li>
 									</div>
 								</div>
 							</section>
+
+              <section class="back">
+                <a href="/videos">
+                    <div class="btn">
+                        Ga naar overzicht
+                    </div>
+                </a>
+              </section>
 </div>
 @endsection

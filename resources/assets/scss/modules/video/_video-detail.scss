@@ -1,0 +1,226 @@
+.m-video-header__item {
+  @include respond-to('desktop') {
+    float: left;
+  }
+}
+
+.m-video-header__video {
+  @include respond-to('desktop') {
+    width: 60%;
+  }
+}
+
+.m-video-header__description-block {
+  background-color: #363636;
+  color: #FFFFFF;
+  padding: 2rem 1rem;
+
+  @include respond-to('desktop') {
+    padding: 2rem 2rem;
+    width: 40%;
+    float: left;
+  }
+}
+
+.m-video-header__title {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.m-video-header__social-media {
+  ul {
+    list-style-type: none;
+    li {
+      width: 50%;
+      float: left;
+
+      img {
+        width: 20px;
+        margin-top: -4px;
+      }
+
+      a {
+        color: white;
+        font-family: $font-light;
+        font-weight: normal;
+        font-style: normal;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+//video Informatie
+.m-video-info {
+  width: 100%;
+  margin: 2rem 0rem;
+
+  @include respond-to('tablet') {
+    position: relative;
+    margin: 3rem 0rem;
+    zoom: 1;
+    &:before,
+    &:after {
+      content: ' ';
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+  }
+
+  @include respond-to('desktop') {
+    width: 80%;
+    margin: 0 auto;
+    margin: 6rem auto;
+  }
+}
+
+.m-video-info__item {
+  align-self: center;
+}
+
+.m-video-info__avatar {
+  display: none;
+
+  @include respond-to('tablet') {
+    float: left;
+    margin-right: 1rem;
+    width: 224px;
+    height: 215px;
+    background-color: #30D0B1;
+    display: block;
+  }
+}
+
+.m-video-info__description-block {
+  @include respond-to('tablet') {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 249px;
+  }
+}
+
+.m-video-info__name {
+  h2 {
+    margin: 0;
+  }
+}
+
+.m-video-info__description {
+  padding: 0.5rem 0rem 1rem 0rem;
+}
+
+.m-video-info__button {
+  color: $black;
+  border: 2px solid $green;
+  text-align: center;
+  width: 100%;
+
+  &:hover {
+    background-color: $green;
+    color: white;
+  }
+
+  @include respond-to('tablet') {
+    width: 250px;
+    padding: 18px 0px;
+  }
+}
+
+.m-video-related__videos {
+}
+
+.m-video-related__videos-list {
+  margin: 0;
+
+  @include respond-to('desktop') {
+    zoom: 1;
+    &:before,
+    &:after {
+      content: ' ';
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+  }
+
+  li {
+    width: 100%;
+    height: 200px;
+    background-color: $gray;
+    list-style-type: none;
+    position: relative;
+
+    @include respond-to('desktop') {
+      width: 33%;
+      float: left;
+      height: 350px;
+    }
+
+    span {
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      bottom: 0;
+      font-size: 1.5rem;
+      color: $white;
+      font-family: $font-regular;
+    }
+  }
+}
+
+.m-video-related__button {
+  width: 100%;
+  height: 150px;
+  background-color: $green;
+  text-align: center;
+
+  .button {
+    color: $white;
+    border: 2px solid $white;
+    text-align: center;
+    margin-top: 2.75rem;
+
+    &:hover {
+      background-color: $white;
+      color: $green;
+    }
+  }
+}
+
+.l-video__equal-height-container {
+  @extend %clearfix;
+  width: 100%;
+
+  @include respond-to('desktop') {
+    display: flex;
+    align-self: center;
+    background-color: $gray;
+  }
+}
+
+.l-video__equal-height__item {
+  @extend %clearfix;
+
+  @include respond-to('desktop') {
+    float: left;
+    align-self: center;
+    @supports ( display: flex ) {
+      float: none;
+    }
+    min-width: 0; // needed for firefox
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+    align-self: baseline;
+  }
+
+}

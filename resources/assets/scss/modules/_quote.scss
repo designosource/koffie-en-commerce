@@ -11,7 +11,7 @@
   }
   p{
     text-align:center;
-      font-size:14px;
+      font-size:1.3em;
   }
   .citaat{
     margin-top:25px;
@@ -28,7 +28,7 @@
     margin-left:auto;
     margin-right:auto;
     text-align:center;
-    font-size:16px;
+      font-size:1.3em;
     font-family:$font-bold;
     position: relative;
     &:before{
@@ -61,10 +61,10 @@
       width:56px;
     }
     p{
-      font-size:16px;
+
     }
     .name{
-      font-size:20px;
+      
     }
   }
 }
