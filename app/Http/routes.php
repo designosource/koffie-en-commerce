@@ -142,32 +142,32 @@ Route::group(['middleware' => ['web', 'auth'], 'namespace' => 'Admin'], function
 	]);
 
 	/* Speakers */
-	Route::get('admin/speakers', [
+	Route::get('admin/sprekers', [
 		'as' => 'admin_speakers_index',
 		'uses' => 'SpeakerController@index'
 	]);
 
-	Route::get('admin/speakers/create', [
+	Route::get('admin/sprekers/create', [
 		'as' => 'admin_speakers_create',
 		'uses' => 'SpeakerController@create'
 	]);
 
-	Route::post('admin/speakers', [
+	Route::post('admin/sprekers', [
 		'as' => 'admin_speakers_store',
 		'uses' => 'SpeakerController@store'
 	]);
 
-	Route::get('admin/speakers/{id}/edit', [
+	Route::get('admin/sprekers/{id}/edit', [
 		'as' => 'admin_speakers_edit',
 		'uses' => 'SpeakerController@edit'
 	]);
 
-	Route::post('admin/speakers/{id}/edit', [
+	Route::post('admin/sprekers/{id}/edit', [
 		'as' => 'admin_speakers_update',
 		'uses' => 'SpeakerController@update'
 	]);
 
-	Route::get('admin/speakers/{id}/delete', [
+	Route::get('admin/sprekers/{id}/delete', [
 		'as' => 'admin_speakers_delete',
 		'uses' => 'SpeakerController@destroy'
 	]);
