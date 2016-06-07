@@ -3,7 +3,7 @@
 
 	<div id="myNav" class="mainnavigation-overlay">
 		<a href="javascript:void(0)" class="mainnavigation-overlay-closebtn" onclick="closeNav()">×</a>
-		<img class="mainnavigation-overlay-logocup" src="image/kopje.png">
+		<img class="mainnavigation-overlay-logocup" src="/image/kopje.png">
 		<div class="mainnavigation-overlay-content">
 		    <a href="/">HOME</a>
 		    <a href="/over-ons">ABOUT US</a>
