@@ -64,15 +64,17 @@ class CategoryController extends Controller
                 throw new \Exception('Category does not exist.');
             }
 
-            $destinationPath = 'uploads'; // upload path
-            $extension = Input::file('image')->getClientOriginalExtension(); // getting image2wbmp(image) extension
-            $fileName = rand(11111,99999).'.'.$extension; // renameing image
-            Input::file('image')->move($destinationPath, $fileName); // uploading file to given path
+            if (Input::file('image')) {
+                $destinationPath = 'uploads'; // upload path
+                $extension = Input::file('image')->getClientOriginalExtension(); // getting image2wbmp(image) extension
+                $fileName = rand(11111,99999).'.'.$extension; // renameing image
+                Input::file('image')->move($destinationPath, $fileName); // uploading file to given path
+                $category->image = $fileName;
+            }
 
             // Store
             $category->name = Input::get('name');
             $category->slug = Input::get('slug');
-            $category->image = $fileName;
             $category->description = Input::get('description');
             $category->save();
 

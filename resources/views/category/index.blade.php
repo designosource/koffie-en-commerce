@@ -6,7 +6,9 @@
 
   <div class="container-fluid banner">
     <div class="headersmall">
-      <div class="categorien" style=" background-image: url('http://www.placehold.it/350x350')">
+      <div
+        class="categorien"
+        style=" background-image: url('{{ empty($category->image) ? 'http://www.placehold.it/999x666' : '/uploads/'.$category->image }}')">
         <header>
           <h1 class="categorieen__title">{{$category->name}}</h1>
         </header>
