@@ -6,7 +6,9 @@
 
 <div class="container-fluid banner">
     <div class="about">
-        <h1>Over ons</h1>
+    	<header>
+        	<h1>Over ons</h1>
+        </header>
     </div>
 
 <section class="copy">
