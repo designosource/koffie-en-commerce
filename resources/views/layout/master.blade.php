@@ -35,7 +35,7 @@
     }
 
     function closeNav() {
-        document.getElementById("myNav").style.height = "0vh";
+        $("#myNav").css( "height", "0vh" );
                 $('body').on({
                 'mousewheel': function(e) {
                     if (e.target.id == 'el') return;
