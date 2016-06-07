@@ -24,7 +24,8 @@ Ontdek de verschillende navigeermogelijkheden om de onderwerpen, verhalen en med
 		</div>
 		<section class="gallery clearfix">
 		@foreach ($videos as $video)
-		<a href="/videos/{{$video->slug}}">
+		<a href="/videos/{{$video->slug}}"
+			class="@foreach ($video->categories as $category)tag-{{$category->slug}} @endforeach">
 		  <div
 		    class="gallery-item col-xs-6 col-sm-4 col-lg-3"
 		    style=" background-image: url('{{ empty($video->vimeo_thumb) ? 'http://www.placehold.it/350x350' : $video->vimeo_thumb }}')">
