@@ -13,3 +13,15 @@
 	</div>
 	<span class="mainnavigation-menu" onclick="openNav()">MENU</span>
 </nav>
+<script>
+	var nav = $("#myNav");
+    function openNav() {
+    	nav.toggleClass("open");
+        $("body").css("overflow","hidden");
+    }
+
+    function closeNav() {
+    	nav.toggleClass("open");
+    	$("body").css("overflow","scroll");
+    }
+</script>

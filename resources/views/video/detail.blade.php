@@ -30,7 +30,7 @@
         <div class="m-video-info">
 
             <div class="m-video-info__avatar m-video-info__item">
-                <img src="" alt="">   {{-- width:224px; height: 215px; --}}
+                <img src="/uploads/{{$video->speaker->avatar}}" alt="">   {{-- width:224px; height: 215px; --}}
             </div>
 
             <div class="m-video-info__description-block m-video-info__item">
@@ -42,36 +42,48 @@
                     <p>{{$video->speaker->short_description}}</p>
                 </div>
 
-                <div class="button m-video-info__button">
-                    Bekijk meer video's
-                </div>
-            </div>
-
-        </div>
-
-        <div class="m-video-related">
-
-            <div class="m-video-related__title">
-                <h2>Gerelateerde video's</h2>
-            </div>
-
-            <div class="m-video-related__videos">
-
-                <ul class="m-video-related__videos-list">
-                    @foreach($video->speaker->videos as $v)
-                        <li> <span>{{$v->title}}</span> </li>
-                    @endforeach
-                </ul>
-
-                <div class="m-video-related__button">
-                    <div class="button">
-                        Bekijk video's
+                <a href="/sprekers/{{$video->speaker->id}}">
+                    <div class="button m-video-info__button">
+                        Bekijk meer van {{$video->speaker->name}}
                     </div>
-                </div>
-
+                </a>
+                
             </div>
 
         </div>
+
+        @if(!empty($video->categories[0]))
+        <div class="gallery clearfix">
+            @foreach ($video->categories->first()->videos as $rel_video)
+                @if($video->id != $rel_video->id)
+                <a href="/videos/{{$rel_video->slug}}">
+                  <div
+                    class="gallery-item col-xs-6 col-sm-4 col-lg-3"
+                    style=" background-image: url('{{ empty($rel_video->vimeo_thumb) ? 'http://www.placehold.it/350x350' : $rel_video->vimeo_thumb }}')">
+                    <div class="content">
+                      <div class="gallery-item-description">
+                        <h2>{{$rel_video->title}}</h2>
+                        <p>{{$rel_video->short_description}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                @else
+                <p class="emptystate">
+                    Deze categorie heeft geen andere videos.
+                </p>
+                @endif
+            @endforeach
+        </div>
+        @endif
+
+        <section class="back">
+            <a href="/videos">
+                <div class="btn">
+                    Ga naar overzicht
+                </div>
+            </a>
+        </section>
 
         {{--<!--categorieen of tags-->--}}
         {{--<div class="">--}}

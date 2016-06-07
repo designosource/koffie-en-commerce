@@ -85,6 +85,11 @@
 
 .m-video-info__avatar {
   display: none;
+  overflow: hidden;
+
+  img{
+    max-height: 100%;
+  }
 
   @include respond-to('tablet') {
     float: left;

@@ -1,5 +1,7 @@
 .gallery{
     background-color: whitesmoke;
+    display:block;
+    width: 100%;
 }
 
 .gallery-item{
@@ -33,6 +35,15 @@
             margin-top: 4px; //+20px default h2 styling = 48px/2 for mobile
             margin-bottom: 24px;
         }
+    }
+}
+
+.emptystate{
+    text-align:center;
+    padding: 24px;
+    color: gray;
+    &:not(:only-child){
+        display: none;
     }
 }
 

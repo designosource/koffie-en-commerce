@@ -7,6 +7,9 @@ $m-bs-col-x: 12;    // Mobile
 // Use #{var-name} to use variables in class name
 .grid{
     margin: 48px auto;
+    &:last-of-type{
+        margin-bottom: 0px;
+    }
     &-row{
         position: relative;
         @extend %clearfix;
