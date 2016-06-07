@@ -7,6 +7,7 @@
     @yield('seo')
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @include('layout.favicon')
 </head>
@@ -23,11 +24,25 @@
 </div>
 <script>
     function openNav() {
-        document.getElementById("myNav").style.height = "100vh";
+        $("#myNav").css( "height", "100vh" );
+        $('body').on({
+            'mousewheel': function(e) {
+                if (e.target.id == 'el') return;
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        });
     }
 
     function closeNav() {
-        document.getElementById("myNav").style.height = "0vh";
+        $("#myNav").css( "height", "0vh" );
+                $('body').on({
+                'mousewheel': function(e) {
+                    if (e.target.id == 'el') return;
+                    // e.preventDefault();
+                    e.startPropagation();
+                }
+        });
     }
 </script>
 
