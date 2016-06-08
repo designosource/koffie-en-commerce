@@ -1,0 +1,28 @@
+.tag-list{
+    .tag{
+        input{
+            display: none;
+            &:checked{
+                & + *{
+                    background-color: $brand-color;
+                    color: white;
+                    &:hover{
+                        background-color: lighten($brand-color,25);
+                        color: white;
+                    }
+                }
+            }
+        }
+        display: inline-block;
+        label{
+            cursor: pointer;
+            color: lightgray;
+            background-color: whitesmoke;
+            padding: 5px 10px;
+            transition: color $anim, background-color $anim;;
+            &:hover{
+                color: $brand-color;
+            }
+        }
+    }
+}

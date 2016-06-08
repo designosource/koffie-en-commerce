@@ -2,22 +2,21 @@
     list-style-type: none;
     margin-left: -15px;
     margin-right: -15px;
+    margin-top: 0;
+    margin-bottom: 0;
     .admin-list-row{
         padding: 0px;
         &:nth-of-type(even){
             background-color: whitesmoke;
         }
-        .video-thumb{
+        .list-thumb{
             display:block;
             float:left;
             position: relative;
             overflow: hidden;
             @include aspect-ratio(1,1);
-            img{
-                @include centerX();
-                top: 0px;
-                max-height: 100%;
-            }
+            background-size: cover;
+            background-position: center;
         }
         div{
             display:block;
@@ -28,12 +27,15 @@
             color: $gray;
             text-transform: capitalize;
             a{
-                color: inherit;
+                color: $brand-color;
             }
             small{
                 margin-top: 0.25em;
                 display: block;
             }
         }
+    }
+    .label{
+        background-color: $brand-color;
     }
 }
