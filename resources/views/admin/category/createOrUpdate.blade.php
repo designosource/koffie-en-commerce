@@ -19,6 +19,13 @@
 			{{ Form::textarea('description') }}
 		</div>
 
+		<div class="input-group">
+			{{ Form::label('parent', 'Parent:', array('class' => 'address')) }}
+			{{dump($categories)}}
+			{{ Form::select('parent', array_merge([null=>'Geen parent'], $categories->toArray()), $category->parent_id, array('class' => 'form-control')) }}
+			<small class="text-muted">De parent van deze category.</small>
+		</div>
+
 		<div>
 			@if($category->image)
 				{{ Html::image('uploads/' . $category->image) }}
