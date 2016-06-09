@@ -1,34 +1,70 @@
 @extends('layout.admin')
 
-@section('title', 'New Video')
+@section('title', $title.' '.$category->name)
 
 @section('content')	
-	{{ Form::model($category, array('route' =>	$action , 'files'=>true), 'Selecteer een category') }}
-		<div>
-			{{ Form::label('name', 'Naam:', array('class' => 'address')) }}
-			{{ Form::text('name') }}
-		</div>
+	{{ Form::model($category, array('route' =>	$action , 'files'=>true, 'class' => 'col-xs-12'), 'Selecteer een category') }}
+		<div class="col-xs-12 col-md-6 col-md-offset-3">
 
-		<div>
-			{{ Form::label('slug', 'slug:', array('class' => 'address')) }}
-			{{ Form::text('slug') }}
-		</div>
-
-		<div>
-			{{ Form::label('description', 'Beschrijving:', array('class' => 'address')) }}
-			{{ Form::textarea('description') }}
-		</div>
-
-		<div>
-			@if($category->image)
-				{{ Html::image('uploads/' . $category->image) }}
+			@if ($errors->has())
+			    <div class="alert alert-danger">
+			        @foreach ($errors->all() as $error)
+			            {{ $error }}<br>        
+			        @endforeach
+			    </div>
 			@endif
-			
-			{!! Form::file('image') !!}
+
+			@if(Session::has('message'))
+			    <div class="alert alert-info">
+			    	{!! session('message') !!}
+			    </div>
+			@endif
+
 		</div>
+
+		<div class="col-xs-12 col-md-6">
+
+			<div class="input-group">
+				{{ Form::label('name', 'Naam:', array('class' => 'required')) }}
+				{{ Form::text('name', $category->name, array('class' => 'form-control')) }}
+				<small class="text-muted">Naam van de categorie.</small>
+			</div>
+
+			<div class="input-group">
+				{{ Form::label('slug', 'Slug:', array('class' => 'required')) }}
+				{{ Form::text('slug', $category->slug, array('class' => 'form-control')) }}
+				<small class="text-muted">De leesbare hyperlink van de video. <br/>bv .../categorieen/<b>example-slug</b></small>
+			</div>
+
+			<div class="input-group">
+				{{ Form::label('description', 'Beschrijving:', array('class' => 'address')) }}
+				{{ Form::textarea('description', $category->description, array('class' => 'form-control')) }}
+				<small class="text-muted">Een beschrijving van de categorie.</small>
+			</div>
+
+		</div>
+
+		<div class="col-xs-12 col-md-6">
+
+			<div class="input-group">
+				@if($category->image)
+					{{ Html::image('uploads/' . $category->image) }}
+				@endif
+				
+				{!! Form::file('image') !!}
+				<small class="text-muted">Een typerende afbeelding voor deze categorie.<br>Deze afbeeldingen hebben een minimumresolutie van <b>1800x400</b></small>
+			</div>
+
+		</div>
+
+		<div class="col-xs-12">
+
+			<div class="input-group">
+				{{ Form::submit('Opslaan', array('class'=>'button')) }}
+			</div>
+
+		</div>
+
 		
-		<div>
-			{{ Form::submit('Send this form!') }}
-		</div>
 	{{ Form::close() }}
 @endsection

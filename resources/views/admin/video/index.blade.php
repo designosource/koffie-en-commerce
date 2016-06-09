@@ -1,6 +1,6 @@
 @extends('layout.admin')
 
-@section('title', 'Video Overview')
+@section('title', 'Videos')
 
 @section('content')
 	<ul class="admin-list clearfix">
@@ -10,10 +10,10 @@
 					<div class="col-xs-2 list-thumb"
 						style="background-image:url('{{ $video->vimeo_thumb != "" ? $video->vimeo_thumb : 'https://placehold.it/640x360' }}')">
 					</div>
-					<div class="col-xs-10">
+					<div class="col-xs-10 info">
 						<h3 class="title"><a href="{{route('admin_videos_edit', $video->id)}}">{{$video->title}}</a><small>by&nbsp;{{$video->speaker->name}}</small></h3>
 						<div class="description">
-							{{$video->long_description}}
+							{{$video->short_description}}
 						</div>
 						<div class="categories">
 							@foreach ($video->categories as $category)

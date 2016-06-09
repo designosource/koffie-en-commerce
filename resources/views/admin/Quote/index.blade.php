@@ -1,14 +1,16 @@
 @extends('layout.admin')
 
-@section('title', 'Video Overview')
+@section('title', 'Citaten')
 
 @section('content')
-	<h2>Quotes</h2>
-	<div class="row">
-		@foreach ($quotes as $quote)
-			<blockquote>
-				<a href="{{route('admin_quotes_edit', $quote->id)}}">{{$quote->quote}}</a>
-			</blockquote>
-		@endforeach
-	</div>
+<div class="admin-list">
+    @foreach ($quotes as $quote)
+        <a href="{{route('admin_quotes_edit', $quote->id)}}" class="quote">
+            <blockquote>
+                {{$quote->quote}}
+                <footer>{{$quote->author}}</footer>
+            </blockquote>
+        </a>
+    @endforeach
+</div>
 @endsection

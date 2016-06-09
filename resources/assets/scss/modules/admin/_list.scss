@@ -26,6 +26,7 @@
         h3{
             color: $gray;
             text-transform: capitalize;
+            margin-top: 0px;
             a{
                 color: $brand-color;
             }
@@ -34,8 +35,51 @@
                 display: block;
             }
         }
+        .description{
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            max-height: 40px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .info{
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
     }
     .label{
+        padding: .4em;
         background-color: $brand-color;
+        margin-bottom: 5px;
+        margin-right: 5px;
+    }
+    footer{
+        text-align: left;
+        margin: 0px;
+    }
+    .quote{
+        margin: 0px;
+        color: $brand-color;
+        text-decoration: none;
+        &:hover{
+            color: $brand-color;
+        }
+        blockquote{
+            margin: 15px;
+        }
+        blockquote:hover{
+            border-color: $brand-color;
+        }
+    }
+}
+
+.category-list{
+    .admin-list-row{
+        h3{
+            small{
+                text-transform: lowercase;
+            }
+        }
     }
 }

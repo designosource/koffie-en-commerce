@@ -32,3 +32,10 @@ html, .user-body, .wrapper{
   display: block;
   margin: 0 auto;
 }
+
+.disable-scroll{
+  position: fixed;
+  overflow: scroll;
+  overflow-x: hidden;
+  width: 100%;
+}

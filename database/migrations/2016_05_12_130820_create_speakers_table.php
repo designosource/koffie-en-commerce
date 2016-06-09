@@ -22,7 +22,7 @@ class CreateSpeakersTable extends Migration
             $table->string('avatar');
             $table->string('short_description');
             $table->string('long_description');
-            $table->string('quote');
+            $table->string('quote'); // Obsolete
         });
     }
 

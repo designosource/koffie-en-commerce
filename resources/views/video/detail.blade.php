@@ -15,7 +15,13 @@
 
             <div class="m-video-header__item m-video-header__description-block l-video__equal-height__item">
                 <h2 class="m-video-header__title">{{$video->title}}</h2>
-                <p class="m-video-header__description">{{$video->short_description}} lorem</p>
+                <p class="m-video-header__description">
+                <?php
+                    $url = '@(http)?(s)?(://)?(([a-zA-Z])([-\w]+\.)+([^\s\.]+[^\s]*)+[^,.\s])@';
+                    $parsed = preg_replace($url, '<a href="http$2://$4" target="_blank" title="$0">$0</a>', $video->long_description);
+                    echo $parsed;
+                ?>
+                </p>
 
                 <div class="m-video-header__social-media">
                     <ul>

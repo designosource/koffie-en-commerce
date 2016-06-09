@@ -1,19 +1,30 @@
 @extends('layout.admin')
 
-@section('title', 'Speaker Overview')
+@section('title', 'Sprekers')
 
 @section('content')
-	<h2>Speaker's</h2>
-	<div class="row">
+	<ul class="admin-list clearfix">
 		@foreach ($speakers as $speaker)
-			<div class="col-md-4 admin-video">
-				<a href="{{route('admin_speakers_edit', $speaker->id)}}" class="speaker-thumb">
-					<img src="{{ $speaker->avatar != "" ? '/uploads/'.$speaker->avatar : 'https://placeholdit.imgix.net/~text?txtsize=60&txt=640%C3%97360&w=640&h=360' }}" alt="" id="thumb-{{$speaker->id}}">
-				</a>
-				<div>
-					<h3 class="title"><a href="{{route('admin_speakers_edit', $speaker->id)}}">{{$speaker->name}}</a></h3>
-				</div>						
-			</div>
+			<li class="col-xs-12 admin-list-row">
+				<a href="{{route('admin_speakers_edit', $speaker->id)}}">
+					<div class="col-xs-2 list-thumb"
+						style="background-image:url('{{ $speaker->avatar != "" ? '/uploads/'.$speaker->avatar : 'https://placehold.it/640x360' }}')">
+					</div>
+					<div class="col-xs-10 info">
+						<h3 class="title"><a href="{{route('admin_speakers_edit', $speaker->id)}}">{{$speaker->name}}</a><small>{{$speaker->title}}</small></h3>
+						<div class="description">
+							{{$speaker->short_description}}
+						</div>
+						<div class="categories">
+							@foreach ($speaker->videos as $video)
+								<a href="{{route('admin_videos_edit', $video->id)}}" class="label label-primary">
+									{{$video->title}}
+								</a>
+							@endforeach
+						</div>
+					</div>
+				</a>					
+			</li>
 		@endforeach
-	</div>
+	</ul>
 @endsection

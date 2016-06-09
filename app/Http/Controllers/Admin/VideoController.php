@@ -52,7 +52,8 @@ class VideoController extends Controller
             'speaker' => $video->speaker,
             'categories' => $categories,
             'speakerList' => $speakerList,
-            'action' => array('admin_videos_edit', $video->id)
+            'action' => array('admin_videos_edit', $video->id),
+            'title' => 'Edit -'
         ]);
     }
 
@@ -83,6 +84,8 @@ class VideoController extends Controller
             $video->title = Input::get('title');
             $video->slug = Input::get('slug');
             $video->vimeo = Input::get('vimeo');
+            $video->short_description = Input::get('short_description');
+            $video->long_description = Input::get('long_description');
             $video->vimeo_thumb = $this->getVimeoThumb($video->vimeo);
             $video->speaker_id = Input::get('speaker');
             $video->save();
@@ -94,7 +97,7 @@ class VideoController extends Controller
             $video->categories()->sync($categories);
 
             // redirect
-            Session::flash('message', 'Successfully updated video!');
+            Session::flash('message', 'Successfully updated video');
             return Redirect::to('admin/videos/' . $id . '/edit');
         }
     }
@@ -113,7 +116,8 @@ class VideoController extends Controller
             'video' => $video,
             'categories' => $categories,
             'speakerList' => $speakerList,
-            'action' => array('admin_videos_store')
+            'action' => array('admin_videos_store'),
+            'title' => 'Nieuwe Video'
         ]);
     }
 
@@ -139,6 +143,8 @@ class VideoController extends Controller
             $video->title = Input::get('title');
             $video->slug = Input::get('slug');
             $video->vimeo = Input::get('vimeo');
+            $video->short_description = Input::get('short_description');
+            $video->long_description = Input::get('long_description');
             $video->vimeo_thumb = $this->getVimeoThumb($video->vimeo);
             $video->speaker_id = Input::get('speaker');
             $video->save();

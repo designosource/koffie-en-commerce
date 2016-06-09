@@ -17,7 +17,13 @@
       <h2 class="infospreker__title"> {{$speaker->name}} </h2>
       <p class="infospreker__function"> {{$speaker->title}} </p>
       <p class="infospreker__mail"> {{$speaker->email}} </p>
-      <p class="infospreker__description"> {{$speaker->long_description}} </p>
+      <p class="infospreker__description">
+        <?php
+            $url = '@(http)?(s)?(://)?(([a-zA-Z])([-\w]+\.)+([^\s\.]+[^\s]*)+[^,.\s])@';
+            $parsed = preg_replace($url, '<a href="http$2://$4" target="_blank" title="$0">$0</a>', $speaker->long_description);
+            echo $parsed;
+        ?>
+      </p>
     </div>
   </div>
   @if($top_video)

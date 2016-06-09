@@ -15,13 +15,15 @@
 </nav>
 <script>
 	var nav = $("#myNav");
+    var html = $("html");
+    
     function openNav() {
     	nav.toggleClass("open");
-        $("body").css("overflow","hidden");
+        html.toggleClass("disable-scroll");
     }
 
     function closeNav() {
     	nav.toggleClass("open");
-    	$("body").css("overflow","scroll");
+        html.toggleClass("disable-scroll");
     }
 </script>

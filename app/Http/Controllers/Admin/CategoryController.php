@@ -37,7 +37,8 @@ class CategoryController extends Controller
 
         return view('admin/category/createOrUpdate',[
             'category' => $category,
-            'action' => array('admin_categories_edit', $category->id)
+            'action' => array('admin_categories_edit', $category->id),
+            'title' => 'Edit -'
         ]);
     }
 
@@ -98,7 +99,8 @@ class CategoryController extends Controller
             'category' => $category,
             'categories' => $categories,
             'speakerList' => $speakerList,
-            'action' => array('admin_categories_store')
+            'action' => array('admin_categories_store'),
+            'title' => 'Nieuwe Categorie'
         ]);
     }
 

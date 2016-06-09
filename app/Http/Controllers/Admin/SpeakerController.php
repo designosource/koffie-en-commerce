@@ -43,7 +43,8 @@ class SpeakerController extends Controller
 
         return view('admin/speaker/createOrUpdate',[
             'speaker' => $speaker,
-            'action' => array('admin_speakers_edit', $speaker->id)
+            'action' => array('admin_speakers_edit', $speaker->id),
+            'title' => 'Edit -'
         ]);
     }
 
@@ -99,7 +100,8 @@ class SpeakerController extends Controller
 
         return view('admin/speaker/createOrUpdate',[
             'speaker' => $speaker,
-            'action' => array('admin_speakers_store')
+            'action' => array('admin_speakers_store'),
+            'title' => 'Nieuwe Spreker'
         ]);
     }
 

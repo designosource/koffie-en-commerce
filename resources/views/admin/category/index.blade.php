@@ -1,19 +1,30 @@
 @extends('layout.admin')
 
-@section('title', 'Video Overview')
+@section('title', 'Categorieën')
 
 @section('content')
-	<h2>Categorieën</h2>
-	<div class="row">
+	<ul class="admin-list clearfix category-list">
 		@foreach ($categories as $category)
-			<div class="col-md-4 admin-video">
-				<a href="{{route('admin_categories_edit', $category->id)}}" class="category-thumb">
-					<img src="{{ $category->image != "" ? '/uploads/'.$category->image : 'https://placeholdit.imgix.net/~text?txtsize=60&txt=640%C3%97360&w=640&h=360' }}" alt="" id="thumb-{{$category->vimeo}}">
-				</a>
-				<div>
-					<h3 class="title"><a href="{{route('admin_categories_edit', $category->id)}}">{{$category->name}}</a></h3>
-				</div>						
-			</div>
+			<li class="col-xs-12 admin-list-row">
+				<a href="{{route('admin_categories_edit', $category->id)}}">
+					<div class="col-xs-2 list-thumb"
+						style="background-image:url('{{ $category->image != "" ? '/uploads/'.$category->image : 'https://placehold.it/640x360' }}')">
+					</div>
+					<div class="col-xs-10 info">
+						<h3 class="title"><a href="{{route('admin_categories_edit', $category->id)}}">{{$category->name}}</a><small>{{$category->slug}}</small></h3>
+						<div class="description">
+							{{$category->description}}
+						</div>
+						<div class="videos">
+							@foreach ($category->videos as $video)
+								<a href="{{route('admin_videos_edit', $video->id)}}" class="label label-primary">
+									{{$video->title}}
+								</a>
+							@endforeach
+						</div>
+					</div>
+				</a>					
+			</li>
 		@endforeach
-	</div>
+	</ul>
 @endsection

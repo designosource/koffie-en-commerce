@@ -37,7 +37,8 @@ class QuoteController extends Controller
 
         return view('admin/quote/createOrUpdate',[
             'quote' => $quote,
-            'action' => array('admin_quotes_edit', $quote->id)
+            'action' => array('admin_quotes_edit', $quote->id),
+            'title' => 'Edit -'
         ]);
     }
 
@@ -80,7 +81,8 @@ class QuoteController extends Controller
 
         return view('admin/quote/createOrUpdate',[
             'quote' => $quote,
-            'action' => array('admin_quotes_store')
+            'action' => array('admin_quotes_store'),
+            'title' => 'Nieuw Citaat'
         ]);
     }
 
