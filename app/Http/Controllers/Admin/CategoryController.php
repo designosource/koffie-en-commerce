@@ -35,8 +35,11 @@ class CategoryController extends Controller
             throw new \Exception('Category does not exist.');
         }
 
+        $categories = \App\Entity\Category::pluck('name', 'id');
+
         return view('admin/category/createOrUpdate',[
             'category' => $category,
+            'categories' => $categories,
             'action' => array('admin_categories_edit', $category->id),
             'title' => 'Edit -'
         ]);
@@ -75,6 +78,13 @@ class CategoryController extends Controller
 
             // Store
             $category->name = Input::get('name');
+            if(Input::get('parent') === '') {
+                $category->parent_id = NULL;
+            }
+            else {
+                $category->parent_id = Input::get('parent');
+            }
+            
             $category->slug = Input::get('slug');
             $category->description = Input::get('description');
             $category->save();
@@ -90,15 +100,11 @@ class CategoryController extends Controller
         $category = new \App\Entity\Category();
 
         // Get categories for checbkox
-        $categories = \App\Entity\Category::all();
-
-        // Get speakers vor dropdown box
-        $speakerList = \App\Entity\Speaker::pluck('name', 'id');
+        $categories = \App\Entity\Category::pluck('name', 'id');
 
         return view('admin/category/createOrUpdate',[
             'category' => $category,
             'categories' => $categories,
-            'speakerList' => $speakerList,
             'action' => array('admin_categories_store'),
             'title' => 'Nieuwe Categorie'
         ]);
@@ -135,6 +141,12 @@ class CategoryController extends Controller
             $category->name = Input::get('name');
             $category->slug = Input::get('slug');
             $category->description = Input::get('description');
+            if(Input::get('parent') === '') {
+                $category->parent_id = NULL;
+            }
+            else {
+                $category->parent_id = Input::get('parent');
+            }
             if($fileName) {
                 $category->image = $fileName;
             }
