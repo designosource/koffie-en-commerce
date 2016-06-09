@@ -5,10 +5,12 @@
 @section('content')
 
 <div class="container-fluid banner">
+  <div class="headerlarge">
     <div class="about">
     	<header>
         	<h1>Over ons</h1>
         </header>
+    </div>
     </div>
 
 <section class="copy">
