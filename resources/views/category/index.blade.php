@@ -20,10 +20,9 @@
         </div>
     </div>
     <div class="filter">
-      <a href="#"><span class="filter--name">subfilter1</span></a>
-      <a href="#"><span class="filter--name">subfilter2</span></a>
-      <a href="#"><span class="filter--name">subfilter3</span></a>
-      <a href="#"><span class="filter--name">subfilter4</span></a>
+      @foreach($category->children as $subCategory)
+        <a href="#"><span class="filter--name">{{$subCategory->name}}</span></a>
+      @endforeach
     </div>
   </div>
 

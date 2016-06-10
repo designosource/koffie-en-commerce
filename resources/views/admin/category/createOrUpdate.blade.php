@@ -44,7 +44,7 @@
 
 			<div class="input-group">
 				{{ Form::label('parent', 'Parent:', array('class' => 'address')) }}
-				{{ Form::select('parent', array_merge([null=>'Geen Parent'], $categories->toArray()), $category->parent_id, array('class' => 'form-control')) }}
+				{{ Form::select('parent', array_merge([0=>'Geen Parent'], $categories->toArray()), $category->parent_id, array('class' => 'form-control')) }}
 				<small class="text-muted">De parent van deze category. Zonder parent wordt dit veld als een hoofdcategorie beschouwd.</small>
 			</div>
 

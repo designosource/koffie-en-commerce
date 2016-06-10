@@ -35,7 +35,7 @@ class CategoryController extends Controller
             throw new \Exception('Category does not exist.');
         }
 
-        $categories = \App\Entity\Category::pluck('name', 'id');
+        $categories = \App\Entity\Category::where('parent_id', '=', null)->get()->pluck('name', 'id');
 
         return view('admin/category/createOrUpdate',[
             'category' => $category,
@@ -78,7 +78,7 @@ class CategoryController extends Controller
 
             // Store
             $category->name = Input::get('name');
-            if(Input::get('parent') === '') {
+            if(Input::get('parent') == 0) {
                 $category->parent_id = NULL;
             }
             else {
@@ -141,7 +141,7 @@ class CategoryController extends Controller
             $category->name = Input::get('name');
             $category->slug = Input::get('slug');
             $category->description = Input::get('description');
-            if(Input::get('parent') === '') {
+            if(Input::get('parent') == 0) {
                 $category->parent_id = NULL;
             }
             else {

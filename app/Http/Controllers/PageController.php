@@ -10,10 +10,10 @@ class PageController extends Controller
 {
     public function index(){
         $skip = 3;
-    	$categories_start = \App\Entity\Category::all()->take($skip);
+    	$categories_start = \App\Entity\Category::where('parent_id', '=', null)->get()->take($skip);
 
         $limit = \App\Entity\Category::count() - $skip;
-        $categories_end = \App\Entity\Category::skip($skip)->take($limit)->get();
+        $categories_end = \App\Entity\Category::where('parent_id', '=', null)->skip($skip)->take($limit)->get();
 
         $quote = \App\Entity\Quote::orderByRaw("RAND()")->first();
 

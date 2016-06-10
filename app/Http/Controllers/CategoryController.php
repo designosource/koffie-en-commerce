@@ -18,6 +18,10 @@ class CategoryController extends Controller
             throw new \Exception('Category does not exist.');
         }
 
+        if($category->parent !== null) {
+            throw new \Exception('Could not load child category.');
+        }
+
         // Get all categories
         $categories = \App\Entity\Category::All();
 
