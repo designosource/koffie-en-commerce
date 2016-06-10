@@ -100,7 +100,7 @@ class CategoryController extends Controller
         $category = new \App\Entity\Category();
 
         // Get categories for checbkox
-        $categories = \App\Entity\Category::pluck('name', 'id');
+        $categories = \App\Entity\Category::where('parent_id', '=', null)->get()->pluck('name', 'id');
 
         return view('admin/category/createOrUpdate',[
             'category' => $category,
