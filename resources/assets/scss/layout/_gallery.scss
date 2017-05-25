@@ -15,7 +15,7 @@
         position: absolute;
         display: block;
         top: 100%;
-        margin-top: -60px; //change this to total height of h2
+        margin-top: -110px; //change this to total height of h2
         transition: top $anim, margin $anim;
         padding: 0px 24px;
         max-height: 100%;
@@ -26,9 +26,15 @@
     .content{
         transition: background-color $anim;
     }
+    p{
+        display: none;
+    }
     &:hover{
         .content{
             background-color: rgba(0,0,0,0.6);
+        }
+        p {
+            display: block;
         }
         .gallery-item-description{
             top: 0;
