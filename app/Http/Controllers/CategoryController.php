@@ -12,15 +12,16 @@ class CategoryController extends Controller
     public function category($slug) {
 
         $category = \App\Entity\Category::where('slug' , '=', $slug)->first();
+        //dd($category);
 
         // Categorie bestaat niet --> opvangen in front-end
         if(!$category) {
             throw new \Exception('Category does not exist.');
         }
-
+        /*
         if($category->parent !== null) {
             throw new \Exception('Could not load child category.');
-        }
+        } */
 
         // Get all categories
         $categories = \App\Entity\Category::All();

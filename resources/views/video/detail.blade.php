@@ -22,11 +22,15 @@
                     echo $parsed;
                 ?>
                 </p>
-
+                <h4>Categorieën:</h4>@if(!empty($video->categories[0]))
+                    @foreach ($video->categories as $v)
+                        <a href="/categorieen/{{$v->slug}}"><p>{{$v->slug}}</p></a>
+                    @endforeach
+                @endif
                 <div class="m-video-header__social-media">
                     <ul>
-                        <li><a href="#">{!! Html::image('image/twitter.png' , 'Logo above the fold')!!} Share on twitter</a></li>
-                        <li><a href="#">{!! Html::image('image/Facebook.png' , 'Logo above the fold')!!} Share on fb</a></li>
+                        <li><a href="https://twitter.com/intent/tweet?url={{ urlencode($uri) }}">{!! Html::image('image/twitter.png' , 'Logo above the fold')!!} Share on twitter</a></li>
+                        <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode($uri)}}">{!! Html::image('image/Facebook.png' , 'Logo above the fold')!!} Share on fb</a></li>
                     </ul>
                 </div>
             </div>
@@ -57,7 +61,7 @@
             </div>
 
         </div>
-
+        <h3>Gerelateerde videos:</h3>
         @if(!empty($video->categories[0]))
         <div class="gallery clearfix">
             @foreach ($video->categories->first()->videos as $rel_video)

@@ -13,13 +13,14 @@ class SpeakerController extends Controller
         $speaker = \App\Entity\Speaker::find($id);
 
         $top_video = $speaker->videos->first(); //TODO INTEGRATE VIEW COUNT
-        
+        $uri = url()->current();
         $all_videos = $speaker->videos;
 
         return view('speaker/detail',[
             'speaker' => $speaker,
             'top_video' => $top_video,
-            'all_videos' => $all_videos
+            'all_videos' => $all_videos,
+            'uri' => $uri
         ]);
     }
 

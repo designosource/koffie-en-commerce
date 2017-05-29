@@ -21,7 +21,7 @@
     </div>
     <div class="filter">
       @foreach($category->children as $subCategory)
-        <a href="#"><span class="filter--name">{{$subCategory->name}}</span></a>
+        <a href="{{$subCategory->slug}}"><span class="filter--name">{{$subCategory->name}}</span></a>
       @endforeach
     </div>
   </div>

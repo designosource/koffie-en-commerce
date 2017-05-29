@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Html;
 use DB;
-
+use SEOMeta;
+use OpenGraph;
+use Twitter;
+use SEO;
 use App\Http\Requests;
 
 class VideoController extends Controller
@@ -28,13 +31,25 @@ class VideoController extends Controller
 
         // Get video
         $video = \App\Entity\Video::where('slug','=', $slug)->first();
-
+        $uri = url()->current();
         if(!$video) {
             throw new \Exception('Video bestaat niet');
         }
 
+        SEOMeta::setTitle($video->title);
+        SEOMeta::setDescription($video->short_description);
+        SEOMeta::addMeta('article:published_time', $video->updated_at->toW3CString(), 'property');
+
+        OpenGraph::setDescription($video->short_description);
+        OpenGraph::setTitle($video->title);
+        OpenGraph::setUrl(url()->current());
+        OpenGraph::addProperty('type', 'video');
+
+        OpenGraph::addImage($video->vimeo_thumb);
+
         return view('video/detail',[
-            'video' => $video
+            'video' => $video,
+            'uri' => $uri
         ]);
     }
 }

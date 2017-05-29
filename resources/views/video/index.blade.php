@@ -19,7 +19,7 @@ Ontdek de verschillende navigeermogelijkheden om de onderwerpen, verhalen en med
 		</div>
 		<div class="category">
 			@foreach ($categories as $category)
-				<a href="#"><span class="namecat">{{$category->name}}</span></a>
+				<a href="categorieen/{{$category->slug}}"><span class="namecat">{{$category->name}}</span></a>
 			@endforeach
 		</div>
 		<section class="gallery clearfix">

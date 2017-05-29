@@ -29,9 +29,11 @@
   @if($top_video)
   <section class="spreker">
     <div>
-      <div class="col-xs-12 col-sm-7"
-        style=" background-image: url('{{ empty($top_video->vimeo_thumb) ? 'http://www.placehold.it/350x350' : $top_video->vimeo_thumb }}')">
-      </div>
+      <a href="/videos/{{$top_video->slug}}">
+        <div class="col-xs-12 col-sm-7"
+          style=" background-image: url('{{ empty($top_video->vimeo_thumb) ? 'http://www.placehold.it/350x350' : $top_video->vimeo_thumb }}')">
+        </div>
+      </a>
       <div class="col-xs-12 col-sm-5">
         <div class="content">
           <h3>{{$top_video->title}}</h3>
@@ -39,10 +41,10 @@
             {{$top_video->short_description}}
           </p>
           <ul class="social">
-            <li><a href="#" target="_blank" class="social__left">
+            <li><a href="https://twitter.com/intent/tweet?url={{ urlencode($uri) }}" target="_blank" class="social__left">
               {!! Html::image('image/twitter.png' , 'twitterbtn', array('class' => 'social__twitter'))!!} Share on twitter
             </a></li>
-            <li><a href="#" target="_blank" class="social__right">
+            <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode($uri)}}" target="_blank" class="social__right">
               {!! Html::image('image/facebook.png' , 'facebookbtn', array('class' => 'social__facebook'))!!} Share on facebook
             </a></li>
           </ul>
