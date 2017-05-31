@@ -38,10 +38,7 @@
                         <div class="col-xs-12 col-sm-7">
                             <div class="content">
                                 <h3>{{$category->name}}</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen
-                                    book.</p>
+                                <p>{{$category->description}}</p>
                                 <a href="categorieen/{{$category->slug}}">
                                     <div class="button">
                                         Bekijk video's
@@ -53,10 +50,7 @@
                         <div class="col-xs-12 col-sm-5">
                             <div class="content">
                                 <h3>{{$category->name}}</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen
-                                    book.</p>
+                                <p>{{$category->description}}</p>
                                 <a href="categorieen/{{$category->slug}}">
                                     <div class="button">
                                         Bekijk video's
@@ -95,7 +89,7 @@
                         <div class="col-xs-12 col-sm-5">
                             <div class="content">
                                 <h3>{{$category->name}}</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                <p>TestLucas. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                     Ipsum has been the industry's standard dummy text ever since the 1500s, when an
                                     unknown printer took a galley of type and scrambled it to make a type specimen
                                     book.</p>
