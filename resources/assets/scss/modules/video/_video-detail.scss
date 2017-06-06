@@ -229,3 +229,21 @@
   }
 
 }
+
+menu {
+  list-style-type: none;
+}
+
+li.list_item_cat_rel_videos {
+  font-size: 19px;
+  color:$green;
+  display: inline;
+}
+
+li.list_item_cat_rel_videos::after {
+  content: " | ";
+}
+
+li.list_item_cat_rel_videos:last-child:after {
+  content: "";
+}

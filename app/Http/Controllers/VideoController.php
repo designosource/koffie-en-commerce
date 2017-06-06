@@ -31,6 +31,7 @@ class VideoController extends Controller
 
         // Get video
         $video = \App\Entity\Video::where('slug','=', $slug)->first();
+        //dd($video->categories);
         $uri = url()->current();
         if(!$video) {
             throw new \Exception('Video bestaat niet');

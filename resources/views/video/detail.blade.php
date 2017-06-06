@@ -61,28 +61,47 @@
             </div>
 
         </div>
-        <h3>Gerelateerde videos:</h3>
+
+        <!-- Geen video's tonen die geen category hebben -->
         @if(!empty($video->categories[0]))
+            <h3>Andere filmpjes over:
+            </h3>
+            <menu>
+            @foreach ($video->categories as $category)
+                <li class="list_item_cat_rel_videos">{{$category->name}}</li>
+            @endforeach
+            </menu>
+            <br>
         <div class="gallery clearfix">
-            @foreach ($video->categories->first()->videos as $rel_video)
-                @if($video->id != $rel_video->id)
-                <a href="/videos/{{$rel_video->slug}}">
-                  <div
-                    class="gallery-item col-xs-6 col-sm-4 col-lg-3"
-                    style=" background-image: url('{{ empty($rel_video->vimeo_thumb) ? 'http://www.placehold.it/350x350' : $rel_video->vimeo_thumb }}')">
-                    <div class="content">
-                      <div class="gallery-item-description">
-                        <h2>{{$rel_video->title}}</h2>
-                        <p>{{$rel_video->short_description}}</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                @else
-                <p class="emptystate">
-                    Deze categorie heeft geen andere videos.
-                </p>
-                @endif
+            @php
+                $array_added_videos = [];
+            @endphp
+            @foreach ($video->categories as $category)
+                @foreach ($category->videos as $rel_video)
+                    @php //Check if the video has already been shown -> array with id's @endphp
+                        @if( in_array($rel_video->id,$array_added_videos) === false && $video->id != $rel_video->id)
+                        <a href="/videos/{{$rel_video->slug}}">
+                          <div
+                            class="gallery-item col-xs-6 col-sm-4 col-lg-3"
+                            style=" background-image: url('{{ empty($rel_video->vimeo_thumb) ? 'http://www.placehold.it/350x350' : $rel_video->vimeo_thumb }}')">
+                            <div class="content">
+                              <div class="gallery-item-description">
+                                <h2>{{$rel_video->title}}</h2>
+                                <p>{{$rel_video->short_description}}</p>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                            @php
+                            //Als een filmpje getoond wordt, deze toevoegen aan array
+                                $array_added_videos[] = $rel_video->id
+                            @endphp
+                        @else
+                        <p class="emptystate">
+                            Deze categorie heeft geen andere videos.
+                        </p>
+                        @endif
+                @endforeach
             @endforeach
         </div>
         @endif
