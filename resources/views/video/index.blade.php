@@ -17,9 +17,24 @@
 Ontdek de verschillende navigeermogelijkheden om de onderwerpen, verhalen en media-experten waar jouw interesse naar uitgaat te exploreren.</p>
 		</div>
 		</div>
-		<div class="category">
+		<div class="category col-xs-12">
+			<h4>Klik op één van de categorieën om een overzicht van alle videos van die categorie te krijgen.</h4>
+			<br>
 			@foreach ($categories as $category)
-				<a href="categorieen/{{$category->slug}}"><span class="namecat">{{$category->name}}</span></a>
+				<div class="col-xs-2">
+					@if(!$category->parent)
+						<div class="name_cat_container">
+							<a href="categorieen/{{$category->slug}}"><span class="namecat_parent">{{$category->name}}</span></a>
+						</div>
+					@endif
+					@if($category->children)
+						@foreach($category->children as $child)
+							<div class="">
+								<a href="categorieen/{{$child->slug}}"><span class="namecat_child">{{$child->name}}</span></a>
+							</div>
+						@endforeach
+					@endif
+				</div>
 			@endforeach
 		</div>
 		<section class="gallery clearfix">

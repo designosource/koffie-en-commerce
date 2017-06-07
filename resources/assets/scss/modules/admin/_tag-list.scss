@@ -26,3 +26,34 @@
         }
     }
 }
+
+.tag-list{
+    .parent-tag, .child-tag{
+        input{
+            display: none;
+            &:checked{
+                & + *{
+                    background-color: $brand-color;
+                    color: white;
+                    &:hover{
+                        background-color: lighten($brand-color,25);
+                        color: white;
+                    }
+                }
+            }
+        }
+        label{
+            cursor: pointer;
+            color: lightgray;
+            background-color: whitesmoke;
+            padding: 5px 10px;
+            transition: color $anim, background-color $anim;;
+            &:hover{
+                color: $brand-color;
+            }
+        }
+    }
+    .child-tag{
+        margin-left: 25px;
+    }
+}

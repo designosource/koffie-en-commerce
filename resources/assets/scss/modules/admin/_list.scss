@@ -7,7 +7,7 @@
     .admin-list-row{
         padding: 0px;
         &:nth-of-type(even){
-            background-color: whitesmoke;
+            /*background-color: whitesmoke*/
         }
         .list-thumb{
             display:block;
@@ -50,9 +50,22 @@
     }
     .label{
         padding: .4em;
-        background-color: $brand-color;
         margin-bottom: 5px;
         margin-right: 5px;
+    }
+    .label-primary {
+        background-color: $brand-color;
+    }
+    .label-danger {
+        margin-left: 14px;
+    }
+    input.btn-danger {
+        margin-left: 15px;
+        font-size: 7px;
+        width: 5.5%;
+    }
+    form.delete {
+        margin: 0px;
     }
     footer{
         text-align: left;
@@ -81,5 +94,8 @@
                 text-transform: lowercase;
             }
         }
+    }
+    .category_child {
+       background-color: whitesmoke
     }
 }

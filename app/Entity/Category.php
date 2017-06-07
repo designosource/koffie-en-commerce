@@ -23,7 +23,7 @@ class Category extends Model
     }
 
     /**
-     * The videos that belong to the video.
+     * The children categories that belong to the parent category.
      */
     public function children()
     {

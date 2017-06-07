@@ -32,8 +32,8 @@
 			</div>
 
 			<div class="input-group">
-				{{ Form::label('title', 'Titel:', array('class' => 'required')) }}
-				{{ Form::text('title', $speaker->title, array('class' => 'form-control')) }}
+				{{ Form::label('title', 'Bedrijf / functie:', array('class' => 'required')) }}
+				{{ Form::text('title', $speaker->title, array('class' => 'form-control', 'placeholder' => 'Bv. De Persgroep - Media Manager')) }}
 				<small class="text-muted">De jobtitel van de spreker.</small>
 			</div>
 
@@ -46,13 +46,13 @@
 			<div class="input-group">
 				{{ Form::label('short_description', 'Korte beschrijving:', array('class' => 'address')) }}
 				{{ Form::textarea('short_description', $speaker->short_description, array('class' => 'form-control')) }}
-				<small class="text-muted">De beschijving die bij de spreker komt te staan op een video pagina.</small>
+				<small class="text-muted">De beschijving die bij de spreker komt te staan op een video pagina. Max 250 karakters.</small>
 			</div>
 
 			<div class="input-group">
 				{{ Form::label('long_description', 'Lange beschrijving:', array('class' => 'address')) }}
 				{{ Form::textarea('long_description', $speaker->long_description, array('class' => 'form-control')) }}
-				<small class="text-muted">De beschrijving die op de pagina van de spreker zelf komt, links worden automatisch gedetecteerd en omgezet wanneer ze voorkomen.</small>
+				<small class="text-muted">De beschrijving die op de pagina van de spreker zelf komt, links worden automatisch gedetecteerd en omgezet wanneer ze voorkomen. Max 250 karakters.</small>
 			</div>
 
 		</div>

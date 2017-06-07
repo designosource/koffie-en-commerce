@@ -23,8 +23,18 @@
 							@endforeach
 						</div>
 					</div>
+					<form class="delete" action="{{ route('admin_speakers_delete', $speaker->id) }}" method="GET">
+						<input type="hidden" name="_method" value="DELETE">
+						<input type="hidden" name="_token" value="{{ csrf_token() }}" />
+						<input type="submit" class="btn btn-danger" value="Verwijderen">
+					</form>
 				</a>					
 			</li>
 		@endforeach
+			<script>
+                $(".delete").on("submit", function(){
+                    return confirm("Ben je zeker dat je deze spreker wil verwijderen?");
+                });
+			</script>
 	</ul>
 @endsection

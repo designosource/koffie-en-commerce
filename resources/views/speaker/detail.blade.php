@@ -81,7 +81,7 @@
   <section class="back">
     <a href="/videos">
     <div class="btn">
-    Ga naar overzicht
+    Terug naar overzicht video's
     </div>
     </a>
   </section>

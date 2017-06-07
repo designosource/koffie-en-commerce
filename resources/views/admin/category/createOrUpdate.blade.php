@@ -39,7 +39,7 @@
 			<div class="input-group">
 				{{ Form::label('description', 'Beschrijving:', array('class' => 'address')) }}
 				{{ Form::textarea('description', $category->description, array('class' => 'form-control')) }}
-				<small class="text-muted">Een beschrijving van de categorie.</small>
+				<small class="text-muted">Een beschrijving van de categorie. Max 250 karakters.</small>
 			</div>
 
 			<div class="input-group">
