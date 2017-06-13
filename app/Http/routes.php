@@ -22,11 +22,18 @@ Route::get('/over-ons', [
 	'uses' => 'PageController@about'
 ]);
 
-Route::get('/contact', [
-	'as' => 'contact',
-	'uses' => 'PageController@contact'
-]);
+Route::group(['middleware' => ['web']], function () {
 
+    Route::get('/contact', [
+        'as' => 'contact',
+        'uses' => 'PageController@contact'
+    ]);
+
+    Route::post('/contact', [
+        'as' => 'contact_email',
+        'uses' => 'PageController@mailContact'
+    ]);
+});
 
 /* VIDEO'S */
 Route::get('/videos', [

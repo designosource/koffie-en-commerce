@@ -26,38 +26,37 @@
       </p>
     </div>
   </div>
-  @if($top_video)
-  <section class="spreker">
-    <div>
-      <a href="/videos/{{$top_video->slug}}">
-        <div class="col-xs-12 col-sm-7"
-          style=" background-image: url('{{ empty($top_video->vimeo_thumb) ? 'http://www.placehold.it/350x350' : $top_video->vimeo_thumb }}')">
-        </div>
-      </a>
-      <div class="col-xs-12 col-sm-5">
-        <div class="content">
-          <h3>{{$top_video->title}}</h3>
-          <p>
-            {{$top_video->short_description}}
-          </p>
-          <ul class="social">
-            <li><a href="https://twitter.com/intent/tweet?url={{ urlencode($uri) }}" target="_blank" class="social__left">
-              {!! Html::image('image/twitter.png' , 'twitterbtn', array('class' => 'social__twitter'))!!} Share on twitter
-            </a></li>
-            <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode($uri)}}" target="_blank" class="social__right">
-              {!! Html::image('image/facebook.png' , 'facebookbtn', array('class' => 'social__facebook'))!!} Share on facebook
-            </a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  @endif
-
+  {{--@if($top_video)--}}
+  {{--<section class="spreker">--}}
+    {{--<div>--}}
+      {{--<a href="/videos/{{$top_video->slug}}">--}}
+        {{--<div class="col-xs-12 col-sm-7"--}}
+          {{--style=" background-image: url('{{ empty($top_video->vimeo_thumb) ? 'http://www.placehold.it/350x350' : $top_video->vimeo_thumb }}')">--}}
+        {{--</div>--}}
+      {{--</a>--}}
+      {{--<div class="col-xs-12 col-sm-5">--}}
+        {{--<div class="content">--}}
+          {{--<h3>{{$top_video->title}}</h3>--}}
+          {{--<p>--}}
+            {{--{{$top_video->short_description}}--}}
+          {{--</p>--}}
+          {{--<ul class="social">--}}
+            {{--<li><a href="https://twitter.com/intent/tweet?url={{ urlencode($uri) }}" target="_blank" class="social__left">--}}
+              {{--{!! Html::image('image/twitter.png' , 'twitterbtn', array('class' => 'social__twitter'))!!} Share on twitter--}}
+            {{--</a></li>--}}
+            {{--<li><a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode($uri)}}" target="_blank" class="social__right">--}}
+              {{--{!! Html::image('image/facebook.png' , 'facebookbtn', array('class' => 'social__facebook'))!!} Share on facebook--}}
+            {{--</a></li>--}}
+          {{--</ul>--}}
+        {{--</div>--}}
+      {{--</div>--}}
+    {{--</div>--}}
+  {{--</section>--}}
+  {{--@endif--}}
   @if(!empty($all_videos[0]))
   <div class="gallery clearfix">
     @foreach ($all_videos as $video)
-    @if ($video->id != $top_video->id)
+    {{--@if ($video->id != $top_video->id)--}}
     <a href="/videos/{{$video->slug}}">
       <div
         class="gallery-item col-xs-6 col-sm-4 col-lg-3"
@@ -70,7 +69,7 @@
         </div>
       </div>
     </a>
-    @endif
+    {{--@endif--}}
     @endforeach
   </div>
   @else

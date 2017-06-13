@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Http\Requests\ContactFormRequest;
+use Illuminate\Http\RedirectResponse;
 
 class PageController extends Controller
 {
@@ -29,6 +31,22 @@ class PageController extends Controller
     }
 
     public function contact() {
-        return view('page.contact');
+        return view('page.contact', ['errors' => []]);
+    }
+    public function mailContact(ContactFormRequest $request) {
+
+        \Mail::send('emails.contact',
+            array(
+                'voornaam' => $request->get('voornaam'),
+                'naam' => $request->get('naam'),
+                'email' => $request->get('email'),
+                'user_message' => $request->get('message')
+            ), function($message)
+            {
+                $message->from('info@memori.be');
+                $message->to('lpoignonnec@gmail.com', 'Admin')->subject('Contact Koffie & Commerce');
+            });
+        return redirect('contact')->with('message', 'Bedankt om contact op te nemen met Koffie & Commerce. Wij nemen spoedig contact op.');
+
     }
 }

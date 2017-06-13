@@ -11,6 +11,11 @@
   			</header>
       </div>
   </div>
+  @if (session('message'))
+    <div class="alert alert-success">
+      {{ session('message') }}
+    </div>
+  @endif
 <section class="introform">
   <div class="wrapp">
   <h2>Heb je vragen?</h2>
@@ -18,25 +23,46 @@
   <p>
     Wil je meer weten of misschien samen een probleem onder de loep nemen in verband met de zakelijke kant van media? <br>Vul dan onderstaand formulier in en je komt rechtstreeks in contact met de Thomas More experts More achter dit initiatief.
   </p>
+    @if($errors)
+    <ul>
+      @foreach($errors->all() as $error)
+        <li>{{ $error }}</li>
+      @endforeach
+    </ul>
+    @endif
+    {!! Form::open(array('route' => 'contact_email', 'class' => 'form')) !!}
+    <div class="form-group">
+      {!! Form::text('voornaam', null,
+          array('required',
+                'class'=>'form-control',
+                'placeholder'=>'Voornaam')) !!}
+    </div>
+    <div class="form-group">
+      {!! Form::text('naam', null,
+          array('required',
+                'class'=>'form-control',
+                'placeholder'=>'Naam')) !!}
+    </div>
+    <div class="form-group">
+      {!! Form::text('email', null,
+          array('required',
+                'class'=>'form-control',
+                'placeholder'=>'Emailadres')) !!}
+    </div>
+    <div class="form-group">
+      {!! Form::textarea('message', null,
+          array('required',
+                'class'=>'form-control',
+                'size' =>'30x5',
+                'placeholder'=>'Stel hier je vraag')) !!}
+    </div>
 
-  <form>
-  <div class="form-group">
-    <label for="firstname"></label>
-    <input type="firstname" class="form-control" id="firstname" placeholder="Voornaam">
-  </div>
-  <div class="form-group">
-    <label for="name"></label>
-    <input type="name" class="form-control" id="name" placeholder="Naam">
-  </div>
-  <div class="form-group">
-    <label for="email"></label>
-    <input type="email" class="form-control" id="email" placeholder="Emailadress">
-  </div>
-  <div>
-  <textarea class="form-control" rows="6" placeholder="Stel hier je vraag"></textarea>
-</div>
-  <button type="submit" class="btn btn-default">Verzenden</button>
-</form>
+    <div class="form-group">
+      {!! Form::submit('Verzenden',
+        array('class'=>'btn btn-default')) !!}
+    </div>
+    {!! Form::close() !!}
+
 </div>
 </section>
 </div>
