@@ -21,6 +21,12 @@ class UserSeeder extends Seeder
                 'password' => bcrypt('designosource'),
                 'role' => 'admin',
             ],
+            [
+                'name' => 'lucastest',
+                'email' => 'lpoignonnec@gmail.com',
+                'password' => bcrypt('designosource'),
+                'role' => 'admin',
+            ],
         ];
 
         DB::table('users')->insert($users);

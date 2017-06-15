@@ -84,6 +84,16 @@ Route::group(['middleware' => ['web', 'auth']], function () {
 	Route::get('admin/logout', 'Auth\AuthController@getLogout');
 });
 
+Route::group(['middleware' => ['web']], function () {
+
+// Password Reset Routes...
+
+    Route::get('password/reset', 'Auth\PasswordController@ShowEmailForm');
+    Route::get('password/reset/{token?}', 'Auth\PasswordController@showResetForm');
+    Route::post('password/email', 'Auth\PasswordController@sendResetLinkEmail');
+    Route::post('password/reset', 'Auth\PasswordController@reset');
+});
+
 /* ADMIN */
 Route::group(['middleware' => ['web', 'auth'], 'namespace' => 'Admin'], function () {
 
@@ -210,3 +220,6 @@ Route::group(['middleware' => ['web', 'auth'], 'namespace' => 'Admin'], function
 		'uses' => 'QuoteController@destroy'
 	]);
 });
+
+//Route::auth();
+
