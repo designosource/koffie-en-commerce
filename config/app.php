@@ -149,6 +149,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Mbarwick83\Shorty\ShortyServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -209,7 +210,7 @@ return [
         'OpenGraph' => Artesaos\SEOTools\Facades\OpenGraph::class,
         'Twitter'   => Artesaos\SEOTools\Facades\TwitterCard::class,
         'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
-
+        'Shorty'    => Mbarwick83\Shorty\Facades\Shorty::class
     ],
 
 ];

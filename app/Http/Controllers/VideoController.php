@@ -10,6 +10,7 @@ use OpenGraph;
 use Twitter;
 use SEO;
 use App\Http\Requests;
+use Mbarwick83\Shorty\Facades\Shorty;
 
 class VideoController extends Controller
 {
