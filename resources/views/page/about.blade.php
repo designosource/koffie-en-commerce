@@ -22,8 +22,11 @@
                 <div class="col-xs-12 col-sm-5 color">
                   <div class="content-left">
                       <h3>Memori</h3>
-                      <p>Memori is het onderzoeks- en expertisecentrum van Thomas More voor:</p><p>
-Communicatie en organisatie<br>﻿﻿﻿﻿ ﻿Future media concepts &amp; businesses<br> Marketing, management en ondernemen﻿ <br>Toerisme &amp; vrije tijd</p>
+                      <p>Memori is het onderzoeks- en expertisecentrum van Thomas More voor:</p>
+                      <p>Communicatie en organisatie</p>
+                      <p>Future media concepts &amp; businesses</p>
+                      <p>Marketing, management en ondernemen</p>
+                      <p>Toerisme &amp; vrije tijd</p>
   <a id="tm" href="http://thomasmore.be"></a>
                   </div>
                 </div>

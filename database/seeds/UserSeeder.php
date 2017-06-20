@@ -27,6 +27,12 @@ class UserSeeder extends Seeder
                 'password' => bcrypt('designosource'),
                 'role' => 'admin',
             ],
+            [
+                'name' => 'memori',
+                'email' => 'info@memori.be',
+                'password' => bcrypt('memori'),
+                'role' => 'admin',
+            ],
         ];
 
         DB::table('users')->insert($users);

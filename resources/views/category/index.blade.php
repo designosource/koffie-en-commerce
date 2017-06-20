@@ -19,9 +19,9 @@
       <p class="catego-info__description">{{$category->description}}</p>
         </div>
     </div>
-    <div class="filter">
+    <div class="category filter">
       @foreach($category->children as $subCategory)
-        <a href="{{$subCategory->slug}}"><span class="filter--name">{{$subCategory->name}}</span></a>
+        <a href="{{$subCategory->slug}}"><span class="filter--name namecat_parent">{{$subCategory->name}}</span></a>
       @endforeach
     </div>
   </div>

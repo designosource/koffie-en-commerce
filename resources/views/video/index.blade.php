@@ -21,15 +21,15 @@ Ontdek de verschillende navigeermogelijkheden om de onderwerpen, verhalen en med
 			<h4>Klik op één van de categorieën om een overzicht van alle videos van die categorie te krijgen.</h4>
 			<br>
 			@foreach ($categories as $category)
-				<div class="col-xs-2">
+				<div class="col-xs-12 col-md-2">
 					@if(!$category->parent)
-						<div class="name_cat_container">
+						<div class="name_cat_container col-xs-12">
 							<a href="categorieen/{{$category->slug}}"><span class="namecat_parent">{{$category->name}}</span></a>
 						</div>
 					@endif
 					@if($category->children)
 						@foreach($category->children as $child)
-							<div class="">
+							<div class="col-xs-12">
 								<a href="categorieen/{{$child->slug}}"><span class="namecat_child">{{$child->name}}</span></a>
 							</div>
 						@endforeach

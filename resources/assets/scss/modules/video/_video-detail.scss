@@ -1,3 +1,6 @@
+.category_link {
+    color: $green;
+}
 .m-video-header__item {
   @include respond-to('desktop') {
     float: left;
@@ -102,12 +105,14 @@
 }
 
 .m-video-info__description-block {
+    padding: 5% 5%;
   @include respond-to('tablet') {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
     left: 249px;
   }
+    
 }
 
 .m-video-info__name {
@@ -237,7 +242,13 @@ menu {
 li.list_item_cat_rel_videos {
   font-size: 19px;
   color:$green;
-  display: inline;
+  display: block;
+  width: 100%;
+  text-align: center;
+    
+  @include respond-to('desktop') {
+      display: inline;
+  }
 }
 
 li.list_item_cat_rel_videos::after {
@@ -246,4 +257,8 @@ li.list_item_cat_rel_videos::after {
 
 li.list_item_cat_rel_videos:last-child:after {
   content: "";
+}
+
+.txtcenter {
+    text-align: center;
 }

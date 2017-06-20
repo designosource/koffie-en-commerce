@@ -24,7 +24,7 @@
                 </p>
                 <h4>Categorieën:</h4>@if(!empty($video->categories[0]))
                     @foreach ($video->categories as $v)
-                        <a href="/categorieen/{{$v->slug}}"><p>{{$v->slug}}</p></a>
+                        <a href="/categorieen/{{$v->slug}}" class="category_link"><p>{{$v->slug}}</p></a>
                     @endforeach
                 @endif
                 <div class="m-video-header__social-media">
@@ -64,7 +64,7 @@
 
         <!-- Geen video's tonen die geen category hebben -->
         @if(!empty($video->categories[0]))
-            <h3>Andere filmpjes over:
+            <h3 class="txtcenter">Andere filmpjes over:
             </h3>
             <menu>
             @foreach ($video->categories as $category)
@@ -109,7 +109,7 @@
         <section class="back">
             <a href="/videos">
                 <div class="btn">
-                    Ga naar overzicht
+                    Terug naar overzicht video's.
                 </div>
             </a>
         </section>
